@@ -14,73 +14,73 @@ namespace Squiggle.Model {
   public class Template {
     
     /// <summary>
-    /// Gets or Sets Id
+    /// Gets or Sets id
     /// </summary>
     [DataMember(Name="id", EmitDefaultValue=false)]
-    public int? Id { get; set; }
+    public int? id { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Name
+    /// Gets or Sets name
     /// </summary>
     [DataMember(Name="name", EmitDefaultValue=false)]
-    public string Name { get; set; }
+    public string name { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Description
+    /// Gets or Sets description
     /// </summary>
     [DataMember(Name="description", EmitDefaultValue=false)]
-    public string Description { get; set; }
+    public string description { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Thumbnail
+    /// Gets or Sets thumbnail
     /// </summary>
     [DataMember(Name="thumbnail", EmitDefaultValue=false)]
-    public string Thumbnail { get; set; }
+    public string thumbnail { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets ContentHtml
+    /// Gets or Sets contentHtml
     /// </summary>
     [DataMember(Name="content_html", EmitDefaultValue=false)]
-    public string ContentHtml { get; set; }
+    public string contentHtml { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets ContentPlaintext
+    /// Gets or Sets contentPlaintext
     /// </summary>
     [DataMember(Name="content_plaintext", EmitDefaultValue=false)]
-    public string ContentPlaintext { get; set; }
+    public string contentPlaintext { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets ContentRichtext
+    /// Gets or Sets contentRichtext
     /// </summary>
     [DataMember(Name="content_richtext", EmitDefaultValue=false)]
-    public string ContentRichtext { get; set; }
+    public string contentRichtext { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Settings
+    /// Gets or Sets settings
     /// </summary>
     [DataMember(Name="settings", EmitDefaultValue=false)]
-    public string Settings { get; set; }
+    public string settings { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets User
+    /// Gets or Sets user
     /// </summary>
     [DataMember(Name="user", EmitDefaultValue=false)]
-    public int? User { get; set; }
+    public int? user { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Template
+    /// Gets or Sets template
     /// </summary>
     [DataMember(Name="template", EmitDefaultValue=false)]
-    public int? Template { get; set; }
+    public int? template { get; set; }
 
     
 
@@ -92,25 +92,25 @@ namespace Squiggle.Model {
       var sb = new StringBuilder();
       sb.Append("class Template {\n");
       
-      sb.Append("  Id: ").Append(Id).Append("\n");
+      sb.Append("  id: ").Append(id).Append("\n");
       
-      sb.Append("  Name: ").Append(Name).Append("\n");
+      sb.Append("  name: ").Append(name).Append("\n");
       
-      sb.Append("  Description: ").Append(Description).Append("\n");
+      sb.Append("  description: ").Append(description).Append("\n");
       
-      sb.Append("  Thumbnail: ").Append(Thumbnail).Append("\n");
+      sb.Append("  thumbnail: ").Append(thumbnail).Append("\n");
       
-      sb.Append("  ContentHtml: ").Append(ContentHtml).Append("\n");
+      sb.Append("  contentHtml: ").Append(contentHtml).Append("\n");
       
-      sb.Append("  ContentPlaintext: ").Append(ContentPlaintext).Append("\n");
+      sb.Append("  contentPlaintext: ").Append(contentPlaintext).Append("\n");
       
-      sb.Append("  ContentRichtext: ").Append(ContentRichtext).Append("\n");
+      sb.Append("  contentRichtext: ").Append(contentRichtext).Append("\n");
       
-      sb.Append("  Settings: ").Append(Settings).Append("\n");
+      sb.Append("  settings: ").Append(settings).Append("\n");
       
-      sb.Append("  User: ").Append(User).Append("\n");
+      sb.Append("  user: ").Append(user).Append("\n");
       
-      sb.Append("  Template: ").Append(Template).Append("\n");
+      sb.Append("  template: ").Append(template).Append("\n");
       
       sb.Append("}\n");
       return sb.ToString();

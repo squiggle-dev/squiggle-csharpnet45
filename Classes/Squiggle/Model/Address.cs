@@ -14,94 +14,94 @@ namespace Squiggle.Model {
   public class Address {
     
     /// <summary>
-    /// Gets or Sets Id
+    /// Gets or Sets id
     /// </summary>
     [DataMember(Name="id", EmitDefaultValue=false)]
-    public int? Id { get; set; }
+    public int? id { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Email
+    /// Gets or Sets email
     /// </summary>
     [DataMember(Name="email", EmitDefaultValue=false)]
-    public string Email { get; set; }
+    public string email { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets FirstName
+    /// Gets or Sets firstName
     /// </summary>
     [DataMember(Name="first_name", EmitDefaultValue=false)]
-    public string FirstName { get; set; }
+    public string firstName { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets LastName
+    /// Gets or Sets lastName
     /// </summary>
     [DataMember(Name="last_name", EmitDefaultValue=false)]
-    public string LastName { get; set; }
+    public string lastName { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets JobTitle
+    /// Gets or Sets jobTitle
     /// </summary>
     [DataMember(Name="job_title", EmitDefaultValue=false)]
-    public string JobTitle { get; set; }
+    public string jobTitle { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets TelMobile
+    /// Gets or Sets telMobile
     /// </summary>
     [DataMember(Name="tel_mobile", EmitDefaultValue=false)]
-    public string TelMobile { get; set; }
+    public string telMobile { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets TelDirect
+    /// Gets or Sets telDirect
     /// </summary>
     [DataMember(Name="tel_direct", EmitDefaultValue=false)]
-    public string TelDirect { get; set; }
+    public string telDirect { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Linkedin
+    /// Gets or Sets linkedin
     /// </summary>
     [DataMember(Name="linkedin", EmitDefaultValue=false)]
-    public string Linkedin { get; set; }
+    public string linkedin { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Facebook
+    /// Gets or Sets facebook
     /// </summary>
     [DataMember(Name="facebook", EmitDefaultValue=false)]
-    public string Facebook { get; set; }
+    public string facebook { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Twitter
+    /// Gets or Sets twitter
     /// </summary>
     [DataMember(Name="twitter", EmitDefaultValue=false)]
-    public string Twitter { get; set; }
+    public string twitter { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Instagram
+    /// Gets or Sets instagram
     /// </summary>
     [DataMember(Name="instagram", EmitDefaultValue=false)]
-    public string Instagram { get; set; }
+    public string instagram { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets Googleplus
+    /// Gets or Sets googleplus
     /// </summary>
     [DataMember(Name="googleplus", EmitDefaultValue=false)]
-    public string Googleplus { get; set; }
+    public string googleplus { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets User
+    /// Gets or Sets user
     /// </summary>
     [DataMember(Name="user", EmitDefaultValue=false)]
-    public int? User { get; set; }
+    public int? user { get; set; }
 
     
 
@@ -113,31 +113,31 @@ namespace Squiggle.Model {
       var sb = new StringBuilder();
       sb.Append("class Address {\n");
       
-      sb.Append("  Id: ").Append(Id).Append("\n");
+      sb.Append("  id: ").Append(id).Append("\n");
       
-      sb.Append("  Email: ").Append(Email).Append("\n");
+      sb.Append("  email: ").Append(email).Append("\n");
       
-      sb.Append("  FirstName: ").Append(FirstName).Append("\n");
+      sb.Append("  firstName: ").Append(firstName).Append("\n");
       
-      sb.Append("  LastName: ").Append(LastName).Append("\n");
+      sb.Append("  lastName: ").Append(lastName).Append("\n");
       
-      sb.Append("  JobTitle: ").Append(JobTitle).Append("\n");
+      sb.Append("  jobTitle: ").Append(jobTitle).Append("\n");
       
-      sb.Append("  TelMobile: ").Append(TelMobile).Append("\n");
+      sb.Append("  telMobile: ").Append(telMobile).Append("\n");
       
-      sb.Append("  TelDirect: ").Append(TelDirect).Append("\n");
+      sb.Append("  telDirect: ").Append(telDirect).Append("\n");
       
-      sb.Append("  Linkedin: ").Append(Linkedin).Append("\n");
+      sb.Append("  linkedin: ").Append(linkedin).Append("\n");
       
-      sb.Append("  Facebook: ").Append(Facebook).Append("\n");
+      sb.Append("  facebook: ").Append(facebook).Append("\n");
       
-      sb.Append("  Twitter: ").Append(Twitter).Append("\n");
+      sb.Append("  twitter: ").Append(twitter).Append("\n");
       
-      sb.Append("  Instagram: ").Append(Instagram).Append("\n");
+      sb.Append("  instagram: ").Append(instagram).Append("\n");
       
-      sb.Append("  Googleplus: ").Append(Googleplus).Append("\n");
+      sb.Append("  googleplus: ").Append(googleplus).Append("\n");
       
-      sb.Append("  User: ").Append(User).Append("\n");
+      sb.Append("  user: ").Append(user).Append("\n");
       
       sb.Append("}\n");
       return sb.ToString();
