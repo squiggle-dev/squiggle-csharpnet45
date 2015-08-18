@@ -1,0 +1,6 @@
+C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\bin\Debug\SquiggleApi.dll
+C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\bin\Debug\SquiggleApi.pdb
+C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\bin\Debug\Newtonsoft.Json.dll
+C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\bin\Debug\RestSharp.dll
+C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\obj\Debug\SquiggleApi.dll
+C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\obj\Debug\SquiggleApi.pdb
