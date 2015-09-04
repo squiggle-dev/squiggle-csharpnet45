@@ -7,7 +7,7 @@ using Squiggle.Client;
 namespace Squiggle
 {
     
-    public interface ISquiggle
+    public interface ISquiggleApi
     {
         
         /// <summary>
@@ -385,14 +385,14 @@ namespace Squiggle
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class Squiggle : ISquiggle
+    public class SquiggleApi : ISquiggleApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Squiggle"/> class.
+        /// Initializes a new instance of the <see cref="SquiggleApi"/> class.
         /// </summary>
         /// <param name="apiClient"> an instance of ApiClient (optional)</param>
         /// <returns></returns>
-        public Squiggle(ApiClient apiClient = null)
+        public SquiggleApi(ApiClient apiClient = null)
         {
             if (apiClient == null) // use the default one in Configuration
                 this.ApiClient = Configuration.DefaultApiClient; 
@@ -401,10 +401,10 @@ namespace Squiggle
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Squiggle"/> class.
+        /// Initializes a new instance of the <see cref="SquiggleApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public Squiggle(String basePath)
+        public SquiggleApi(String basePath)
         {
             this.ApiClient = new ApiClient(basePath);
         }
