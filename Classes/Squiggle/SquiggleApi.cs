@@ -11,6 +11,20 @@ namespace Squiggle
     {
         
         /// <summary>
+        ///  Request JWT for Address
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Object</returns>
+        Object RequestAddressToken (Object data);
+  
+        /// <summary>
+        ///  Request JWT for Address
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Object</returns>
+        System.Threading.Tasks.Task<Object> RequestAddressTokenAsync (Object data);
+        
+        /// <summary>
         ///  Gets addresses
         /// </summary>
         /// <param name="offset">The start offset of the result set</param>
@@ -437,6 +451,88 @@ namespace Squiggle
     
         
         /// <summary>
+        ///  Request JWT for Address
+        /// </summary>
+        /// <param name="data"></param> 
+        /// <returns>Object</returns>            
+        public Object RequestAddressToken (Object data)
+        {
+            
+            // verify the required parameter 'data' is set
+            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling RequestAddressToken");
+            
+    
+            var path = "/authentication/address";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = ApiClient.Serialize(data); // http body (model) parameter
+            
+    
+            // authentication setting, if any
+            String[] authSettings = new String[] {  };
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
+    
+            if (((int)response.StatusCode) >= 400)
+                throw new ApiException ((int)response.StatusCode, "Error calling RequestAddressToken: " + response.Content, response.Content);
+            else if (((int)response.StatusCode) == 0)
+                throw new ApiException ((int)response.StatusCode, "Error calling RequestAddressToken: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+        }
+    
+        /// <summary>
+        ///  Request JWT for Address
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Object</returns>
+        public async System.Threading.Tasks.Task<Object> RequestAddressTokenAsync (Object data)
+        {
+            // verify the required parameter 'data' is set
+            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling RequestAddressToken");
+            
+    
+            var path = "/authentication/address";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+    
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = ApiClient.Serialize(data); // http body (model) parameter
+            
+    
+            // authentication setting, if any
+            String[] authSettings = new String[] {  };
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
+            if (((int)response.StatusCode) >= 400)
+                throw new ApiException ((int)response.StatusCode, "Error calling RequestAddressToken: " + response.Content, response.Content);
+
+            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+        }
+        
+        /// <summary>
         ///  Gets addresses
         /// </summary>
         /// <param name="offset">The start offset of the result set</param> 
@@ -446,7 +542,7 @@ namespace Squiggle
         {
             
     
-            var path = "/addresses";
+            var path = "/v1/addresses";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -465,7 +561,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -488,7 +584,7 @@ namespace Squiggle
         {
             
     
-            var path = "/addresses";
+            var path = "/v1/addresses";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -507,7 +603,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -529,7 +625,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddAddress");
             
     
-            var path = "/addresses";
+            var path = "/v1/addresses";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -547,7 +643,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -571,7 +667,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddAddress");
             
     
-            var path = "/addresses";
+            var path = "/v1/addresses";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -589,7 +685,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -611,7 +707,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetAddress");
             
     
-            var path = "/addresses/{id}";
+            var path = "/v1/addresses/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -653,7 +749,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetAddress");
             
     
-            var path = "/addresses/{id}";
+            var path = "/v1/addresses/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -693,7 +789,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteAddress");
             
     
-            var path = "/addresses/{id}";
+            var path = "/v1/addresses/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -711,7 +807,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -735,7 +831,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteAddress");
             
     
-            var path = "/addresses/{id}";
+            var path = "/v1/addresses/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -753,7 +849,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -780,7 +876,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditAddress");
             
     
-            var path = "/addresses/{id}";
+            var path = "/v1/addresses/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -799,7 +895,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -826,7 +922,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditAddress");
             
     
-            var path = "/addresses/{id}";
+            var path = "/v1/addresses/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -845,7 +941,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -865,7 +961,7 @@ namespace Squiggle
         {
             
     
-            var path = "/global-templates";
+            var path = "/v1/global-templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -884,7 +980,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -907,7 +1003,7 @@ namespace Squiggle
         {
             
     
-            var path = "/global-templates";
+            var path = "/v1/global-templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -926,7 +1022,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -948,7 +1044,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddGlobalTemplate");
             
     
-            var path = "/global-templates";
+            var path = "/v1/global-templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -966,7 +1062,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -990,7 +1086,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddGlobalTemplate");
             
     
-            var path = "/global-templates";
+            var path = "/v1/global-templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1008,7 +1104,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1030,7 +1126,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetGlobalTemplate");
             
     
-            var path = "/global-templates/{id}";
+            var path = "/v1/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1048,7 +1144,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1072,7 +1168,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetGlobalTemplate");
             
     
-            var path = "/global-templates/{id}";
+            var path = "/v1/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1090,7 +1186,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1112,7 +1208,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteGlobalTemplate");
             
     
-            var path = "/global-templates/{id}";
+            var path = "/v1/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1130,7 +1226,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1154,7 +1250,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteGlobalTemplate");
             
     
-            var path = "/global-templates/{id}";
+            var path = "/v1/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1172,7 +1268,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1199,7 +1295,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditGlobalTemplate");
             
     
-            var path = "/global-templates/{id}";
+            var path = "/v1/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1218,7 +1314,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1245,7 +1341,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditGlobalTemplate");
             
     
-            var path = "/global-templates/{id}";
+            var path = "/v1/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1264,7 +1360,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1284,7 +1380,7 @@ namespace Squiggle
         {
             
     
-            var path = "/snippets";
+            var path = "/v1/snippets";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1303,7 +1399,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1326,7 +1422,7 @@ namespace Squiggle
         {
             
     
-            var path = "/snippets";
+            var path = "/v1/snippets";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1345,7 +1441,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1367,7 +1463,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddSnippet");
             
     
-            var path = "/snippets";
+            var path = "/v1/snippets";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1385,7 +1481,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1409,7 +1505,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddSnippet");
             
     
-            var path = "/snippets";
+            var path = "/v1/snippets";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1427,7 +1523,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1449,7 +1545,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetSnippet");
             
     
-            var path = "/snippets/{id}";
+            var path = "/v1/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1467,7 +1563,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1491,7 +1587,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetSnippet");
             
     
-            var path = "/snippets/{id}";
+            var path = "/v1/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1509,7 +1605,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1531,7 +1627,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteSnippet");
             
     
-            var path = "/snippets/{id}";
+            var path = "/v1/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1549,7 +1645,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1573,7 +1669,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteSnippet");
             
     
-            var path = "/snippets/{id}";
+            var path = "/v1/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1591,7 +1687,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1618,7 +1714,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditSnippet");
             
     
-            var path = "/snippets/{id}";
+            var path = "/v1/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1637,7 +1733,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1664,7 +1760,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditSnippet");
             
     
-            var path = "/snippets/{id}";
+            var path = "/v1/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1683,7 +1779,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1703,7 +1799,7 @@ namespace Squiggle
         {
             
     
-            var path = "/templates";
+            var path = "/v1/templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1722,7 +1818,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1745,7 +1841,7 @@ namespace Squiggle
         {
             
     
-            var path = "/templates";
+            var path = "/v1/templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1764,7 +1860,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1786,7 +1882,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddTemplate");
             
     
-            var path = "/templates";
+            var path = "/v1/templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1804,7 +1900,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1828,7 +1924,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddTemplate");
             
     
-            var path = "/templates";
+            var path = "/v1/templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1846,7 +1942,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1868,7 +1964,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetTemplate");
             
     
-            var path = "/templates/{id}";
+            var path = "/v1/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1886,7 +1982,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1910,7 +2006,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetTemplate");
             
     
-            var path = "/templates/{id}";
+            var path = "/v1/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1928,7 +2024,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1950,7 +2046,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteTemplate");
             
     
-            var path = "/templates/{id}";
+            var path = "/v1/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -1968,7 +2064,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -1992,7 +2088,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteTemplate");
             
     
-            var path = "/templates/{id}";
+            var path = "/v1/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2010,7 +2106,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2037,7 +2133,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditTemplate");
             
     
-            var path = "/templates/{id}";
+            var path = "/v1/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2056,7 +2152,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2083,7 +2179,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditTemplate");
             
     
-            var path = "/templates/{id}";
+            var path = "/v1/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2102,7 +2198,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2122,7 +2218,7 @@ namespace Squiggle
         {
             
     
-            var path = "/users";
+            var path = "/v1/users";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2141,7 +2237,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2164,7 +2260,7 @@ namespace Squiggle
         {
             
     
-            var path = "/users";
+            var path = "/v1/users";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2183,7 +2279,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2205,7 +2301,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddUser");
             
     
-            var path = "/users";
+            var path = "/v1/users";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2223,7 +2319,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2247,7 +2343,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddUser");
             
     
-            var path = "/users";
+            var path = "/v1/users";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2265,7 +2361,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2287,7 +2383,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetUser");
             
     
-            var path = "/users/{id}";
+            var path = "/v1/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2305,7 +2401,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2329,7 +2425,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetUser");
             
     
-            var path = "/users/{id}";
+            var path = "/v1/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2347,7 +2443,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2369,7 +2465,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteUser");
             
     
-            var path = "/users/{id}";
+            var path = "/v1/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2387,7 +2483,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2411,7 +2507,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteUser");
             
     
-            var path = "/users/{id}";
+            var path = "/v1/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2429,7 +2525,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2456,7 +2552,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditUser");
             
     
-            var path = "/users/{id}";
+            var path = "/v1/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2475,7 +2571,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
@@ -2502,7 +2598,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditUser");
             
     
-            var path = "/users/{id}";
+            var path = "/v1/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2521,7 +2617,7 @@ namespace Squiggle
             
     
             // authentication setting, if any
-            String[] authSettings = new String[] { "jwt" };
+            String[] authSettings = new String[] {  };
     
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);

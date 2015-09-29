@@ -28,6 +28,13 @@ namespace Squiggle.Model {
 
     
     /// <summary>
+    /// Gets or Sets password
+    /// </summary>
+    [DataMember(Name="password", EmitDefaultValue=false)]
+    public string password { get; set; }
+
+    
+    /// <summary>
     /// Gets or Sets firstName
     /// </summary>
     [DataMember(Name="first_name", EmitDefaultValue=false)]
@@ -116,6 +123,8 @@ namespace Squiggle.Model {
       sb.Append("  id: ").Append(id).Append("\n");
       
       sb.Append("  email: ").Append(email).Append("\n");
+      
+      sb.Append("  password: ").Append(password).Append("\n");
       
       sb.Append("  firstName: ").Append(firstName).Append("\n");
       
