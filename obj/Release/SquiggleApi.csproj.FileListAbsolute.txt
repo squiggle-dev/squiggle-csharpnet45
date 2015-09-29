@@ -5,3 +5,9 @@ C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\bin\RestSharp.dll
 C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\obj\Release\SquiggleApi.csprojResolveAssemblyReference.cache
 C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\obj\Release\SquiggleApi.dll
 C:\Work\Squiggle\squiggle-api-codegen\clients\squiggle-csharp\obj\Release\SquiggleApi.pdb
+C:\Work\Squiggle\squiggle-csharp\bin\SquiggleApi.dll
+C:\Work\Squiggle\squiggle-csharp\bin\SquiggleApi.pdb
+C:\Work\Squiggle\squiggle-csharp\bin\Newtonsoft.Json.dll
+C:\Work\Squiggle\squiggle-csharp\bin\RestSharp.dll
+C:\Work\Squiggle\squiggle-csharp\obj\Release\SquiggleApi.dll
+C:\Work\Squiggle\squiggle-csharp\obj\Release\SquiggleApi.pdb
