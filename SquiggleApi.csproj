@@ -30,13 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp">
+      <HintPath>packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,12 +51,18 @@
     <Compile Include="Classes\Squiggle\Client\ApiException.cs" />
     <Compile Include="Classes\Squiggle\Client\Configuration.cs" />
     <Compile Include="Classes\Squiggle\Model\Address.cs" />
+    <Compile Include="Classes\Squiggle\Model\AddressResp.cs" />
     <Compile Include="Classes\Squiggle\Model\GlobalTemplate.cs" />
+    <Compile Include="Classes\Squiggle\Model\Links.cs" />
+    <Compile Include="Classes\Squiggle\Model\Signature.cs" />
     <Compile Include="Classes\Squiggle\Model\Snippet.cs" />
     <Compile Include="Classes\Squiggle\Model\Template.cs" />
     <Compile Include="Classes\Squiggle\Model\User.cs" />
     <Compile Include="Classes\Squiggle\SquiggleApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
