@@ -20,7 +20,6 @@ namespace Squiggle.Client {
       /// <summary>
       /// Initializes a new instance of the <see cref="ApiException"/> class.
       /// </summary>
-      /// <param name="basePath">The base path.</param>
       public ApiException() {}
 
       /// <summary>
