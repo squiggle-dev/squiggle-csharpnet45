@@ -631,7 +631,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -683,7 +683,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -731,7 +731,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -783,7 +783,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -834,7 +834,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -886,7 +886,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -936,7 +936,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -988,7 +988,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1038,7 +1038,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1090,7 +1090,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1145,7 +1145,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1201,7 +1201,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1250,7 +1250,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1302,7 +1302,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1353,7 +1353,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1405,7 +1405,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1455,7 +1455,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1507,7 +1507,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1557,7 +1557,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1609,7 +1609,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1664,7 +1664,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1720,7 +1720,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1769,7 +1769,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1821,7 +1821,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1872,7 +1872,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1924,7 +1924,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -1974,7 +1974,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2026,7 +2026,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2076,7 +2076,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2128,7 +2128,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2183,7 +2183,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2239,7 +2239,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2288,7 +2288,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2340,7 +2340,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2391,7 +2391,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2443,7 +2443,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2493,7 +2493,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2545,7 +2545,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2595,7 +2595,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2647,7 +2647,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2702,7 +2702,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2758,7 +2758,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2807,7 +2807,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2859,7 +2859,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2910,7 +2910,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -2962,7 +2962,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -3012,7 +3012,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -3064,7 +3064,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -3114,7 +3114,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -3166,7 +3166,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -3221,7 +3221,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
@@ -3277,7 +3277,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] http_header_accepts = new String[] {
-                
+                "application/vnd.api+json"
             };
             String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
             if (http_header_accept != null)
