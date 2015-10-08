@@ -7,388 +7,547 @@ using Squiggle.Client;
 namespace Squiggle
 {
     
+    /// <summary>
+    /// Represents a collection of functions to interact with the API endpoints
+    /// </summary>
     public interface ISquiggleApi
     {
         
         /// <summary>
-        ///  Request JWT for Address
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object RequestAddressToken (Object data);
   
         /// <summary>
-        ///  Request JWT for Address
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> RequestAddressTokenAsync (Object data);
         
         /// <summary>
-        ///  Gets addresses
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets addresses
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         Object FindAddresses (int? offset, int? limit);
   
         /// <summary>
-        ///  Gets addresses
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets addresses
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> FindAddressesAsync (int? offset, int? limit);
         
         /// <summary>
-        ///  Creates a new address
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new address
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object AddAddress (Object data);
   
         /// <summary>
-        ///  Creates a new address
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new address
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> AddAddressAsync (Object data);
         
         /// <summary>
-        ///  Gets an address with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets an address with the specified ID
+        /// </remarks>
         /// <param name="id">ID of address to get</param>
         /// <returns>Object</returns>
         Object GetAddress (long? id);
   
         /// <summary>
-        ///  Gets an address with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets an address with the specified ID
+        /// </remarks>
         /// <param name="id">ID of address to get</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> GetAddressAsync (long? id);
         
         /// <summary>
-        ///  Deletes an address with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes an address with the specified ID
+        /// </remarks>
         /// <param name="id">ID of address to delete</param>
         /// <returns></returns>
         void DeleteAddress (long? id);
   
         /// <summary>
-        ///  Deletes an address with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes an address with the specified ID
+        /// </remarks>
         /// <param name="id">ID of address to delete</param>
         /// <returns></returns>
         System.Threading.Tasks.Task DeleteAddressAsync (long? id);
         
         /// <summary>
-        ///  Updates an existing address with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing address with the specified ID
+        /// </remarks>
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object EditAddress (long? id, Object data);
   
         /// <summary>
-        ///  Updates an existing address with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing address with the specified ID
+        /// </remarks>
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> EditAddressAsync (long? id, Object data);
         
         /// <summary>
-        ///  Gets global templates
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets global templates
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         Object FindGlobalTemplates (int? offset, int? limit);
   
         /// <summary>
-        ///  Gets global templates
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets global templates
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> FindGlobalTemplatesAsync (int? offset, int? limit);
         
         /// <summary>
-        ///  Creates a new global template
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new global template
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object AddGlobalTemplate (Object data);
   
         /// <summary>
-        ///  Creates a new global template
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new global template
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> AddGlobalTemplateAsync (Object data);
         
         /// <summary>
-        ///  Gets a global template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets a global template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of global template to get</param>
         /// <returns>Object</returns>
         Object GetGlobalTemplate (long? id);
   
         /// <summary>
-        ///  Gets a global template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets a global template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of global template to get</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> GetGlobalTemplateAsync (long? id);
         
         /// <summary>
-        ///  Deletes a global template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes a global template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of global template to delete</param>
         /// <returns></returns>
         void DeleteGlobalTemplate (long? id);
   
         /// <summary>
-        ///  Deletes a global template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes a global template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of global template to delete</param>
         /// <returns></returns>
         System.Threading.Tasks.Task DeleteGlobalTemplateAsync (long? id);
         
         /// <summary>
-        ///  Updates an existing global template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing global template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object EditGlobalTemplate (long? id, Object data);
   
         /// <summary>
-        ///  Updates an existing global template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing global template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> EditGlobalTemplateAsync (long? id, Object data);
         
         /// <summary>
-        ///  Gets snippets
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets snippets
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         Object FindSnippets (int? offset, int? limit);
   
         /// <summary>
-        ///  Gets snippets
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets snippets
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> FindSnippetsAsync (int? offset, int? limit);
         
         /// <summary>
-        ///  Creates a new snippet
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new snippet
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object AddSnippet (Object data);
   
         /// <summary>
-        ///  Creates a new snippet
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new snippet
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> AddSnippetAsync (Object data);
         
         /// <summary>
-        ///  Gets a snippet with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets a snippet with the specified ID
+        /// </remarks>
         /// <param name="id">ID of snippet to get</param>
         /// <returns>Object</returns>
         Object GetSnippet (long? id);
   
         /// <summary>
-        ///  Gets a snippet with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets a snippet with the specified ID
+        /// </remarks>
         /// <param name="id">ID of snippet to get</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> GetSnippetAsync (long? id);
         
         /// <summary>
-        ///  Deletes a snippet with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes a snippet with the specified ID
+        /// </remarks>
         /// <param name="id">ID of snippet to delete</param>
         /// <returns></returns>
         void DeleteSnippet (long? id);
   
         /// <summary>
-        ///  Deletes a snippet with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes a snippet with the specified ID
+        /// </remarks>
         /// <param name="id">ID of snippet to delete</param>
         /// <returns></returns>
         System.Threading.Tasks.Task DeleteSnippetAsync (long? id);
         
         /// <summary>
-        ///  Updates an existing snippet with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing snippet with the specified ID
+        /// </remarks>
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object EditSnippet (long? id, Object data);
   
         /// <summary>
-        ///  Updates an existing snippet with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing snippet with the specified ID
+        /// </remarks>
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> EditSnippetAsync (long? id, Object data);
         
         /// <summary>
-        ///  Gets templates
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets templates
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         Object FindTemplates (int? offset, int? limit);
   
         /// <summary>
-        ///  Gets templates
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets templates
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> FindTemplatesAsync (int? offset, int? limit);
         
         /// <summary>
-        ///  Creates a new template
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new template
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object AddTemplate (Object data);
   
         /// <summary>
-        ///  Creates a new template
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new template
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> AddTemplateAsync (Object data);
         
         /// <summary>
-        ///  Gets a template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets a template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of template to get</param>
         /// <returns>Object</returns>
         Object GetTemplate (long? id);
   
         /// <summary>
-        ///  Gets a template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets a template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of template to get</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> GetTemplateAsync (long? id);
         
         /// <summary>
-        ///  Deletes a template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes a template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of template to delete</param>
         /// <returns></returns>
         void DeleteTemplate (long? id);
   
         /// <summary>
-        ///  Deletes a template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes a template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of template to delete</param>
         /// <returns></returns>
         System.Threading.Tasks.Task DeleteTemplateAsync (long? id);
         
         /// <summary>
-        ///  Updates an existing template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object EditTemplate (long? id, Object data);
   
         /// <summary>
-        ///  Updates an existing template with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing template with the specified ID
+        /// </remarks>
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> EditTemplateAsync (long? id, Object data);
         
         /// <summary>
-        ///  Gets users
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets users
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         Object FindUsers (int? offset, int? limit);
   
         /// <summary>
-        ///  Gets users
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets users
+        /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> FindUsersAsync (int? offset, int? limit);
         
         /// <summary>
-        ///  Creates a new user
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new user
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object AddUser (Object data);
   
         /// <summary>
-        ///  Creates a new user
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Creates a new user
+        /// </remarks>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> AddUserAsync (Object data);
         
         /// <summary>
-        ///  Gets a user with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets a user with the specified ID
+        /// </remarks>
         /// <param name="id">ID of user to get</param>
         /// <returns>Object</returns>
         Object GetUser (long? id);
   
         /// <summary>
-        ///  Gets a user with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets a user with the specified ID
+        /// </remarks>
         /// <param name="id">ID of user to get</param>
         /// <returns>Object</returns>
         System.Threading.Tasks.Task<Object> GetUserAsync (long? id);
         
         /// <summary>
-        ///  Deletes a user with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes a user with the specified ID
+        /// </remarks>
         /// <param name="id">ID of user to delete</param>
         /// <returns></returns>
         void DeleteUser (long? id);
   
         /// <summary>
-        ///  Deletes a user with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Deletes a user with the specified ID
+        /// </remarks>
         /// <param name="id">ID of user to delete</param>
         /// <returns></returns>
         System.Threading.Tasks.Task DeleteUserAsync (long? id);
         
         /// <summary>
-        ///  Updates an existing user with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing user with the specified ID
+        /// </remarks>
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
         Object EditUser (long? id, Object data);
   
         /// <summary>
-        ///  Updates an existing user with the specified ID
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Updates an existing user with the specified ID
+        /// </remarks>
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
         /// <returns>Object</returns>
@@ -436,9 +595,8 @@ namespace Squiggle
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
-        /// <param name="basePath">The base path</param>
         /// <value>The base path</value>
-        public String GetBasePath(String basePath)
+        public String GetBasePath()
         {
             return this.ApiClient.BasePath;
         }
@@ -446,7 +604,7 @@ namespace Squiggle
         /// <summary>
         /// Gets or sets the API client.
         /// </summary>
-        /// <value>An instance of the ApiClient</param>
+        /// <value>An instance of the ApiClient</value>
         public ApiClient ApiClient {get; set;}
     
         
@@ -471,6 +629,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -512,7 +680,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -551,6 +729,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -592,7 +780,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -634,6 +832,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -675,7 +883,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -716,6 +934,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -757,7 +985,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -798,6 +1036,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -839,7 +1087,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -885,6 +1143,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -930,7 +1198,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -970,6 +1248,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -1011,7 +1299,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -1053,6 +1351,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -1094,7 +1402,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -1135,6 +1453,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1176,7 +1504,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1217,6 +1555,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1258,7 +1606,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1304,6 +1662,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1349,7 +1717,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1389,6 +1767,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -1430,7 +1818,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -1472,6 +1870,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -1513,7 +1921,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -1554,6 +1972,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1595,7 +2023,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1636,6 +2074,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1677,7 +2125,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1723,6 +2181,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1768,7 +2236,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -1808,6 +2286,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -1849,7 +2337,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -1891,6 +2389,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -1932,7 +2440,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -1973,6 +2491,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2014,7 +2542,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2055,6 +2593,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2096,7 +2644,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2142,6 +2700,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2187,7 +2755,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2227,6 +2805,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -2268,7 +2856,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             if (offset != null) queryParams.Add("offset", ApiClient.ParameterToString(offset)); // query parameter
@@ -2310,6 +2908,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -2351,7 +2959,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             
             
@@ -2392,6 +3010,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2433,7 +3061,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2474,6 +3112,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2515,7 +3163,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2561,6 +3219,16 @@ namespace Squiggle
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
 
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
@@ -2606,7 +3274,17 @@ namespace Squiggle
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
-    
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
             if (id != null) pathParams.Add("id", ApiClient.ParameterToString(id)); // path parameter
             
