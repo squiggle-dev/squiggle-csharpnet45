@@ -316,7 +316,7 @@ namespace Squiggle.Client
                 {
                     
                     case "jwt":
-                        headerParams["Authorization"] = GetApiKeyWithPrefix("Authorization");
+                        headerParams["Authorization"] = GetApiKeyWithPrefix("jwt");
                         
                         break;
                     
