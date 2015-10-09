@@ -56,6 +56,8 @@
     <Compile Include="Classes\Squiggle\Model\GlobalTemplate.cs" />
     <Compile Include="Classes\Squiggle\Model\GlobalTemplateResponseMultiple.cs" />
     <Compile Include="Classes\Squiggle\Model\GlobalTemplateResponseSingle.cs" />
+    <Compile Include="Classes\Squiggle\Model\JSONWebToken.cs" />
+    <Compile Include="Classes\Squiggle\Model\JSONWebTokenResponse.cs" />
     <Compile Include="Classes\Squiggle\Model\Response.cs" />
     <Compile Include="Classes\Squiggle\Model\ResponseLinks.cs" />
     <Compile Include="Classes\Squiggle\Model\Signature.cs" />

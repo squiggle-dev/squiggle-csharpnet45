@@ -21,8 +21,8 @@ namespace Squiggle
         /// Request JWT for Address
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object RequestAddressToken (Object data);
+        /// <returns>JSONWebTokenResponse</returns>
+        JSONWebTokenResponse RequestAddressToken (Object data);
   
         /// <summary>
         /// 
@@ -31,8 +31,8 @@ namespace Squiggle
         /// Request JWT for Address
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> RequestAddressTokenAsync (Object data);
+        /// <returns>JSONWebTokenResponse</returns>
+        System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (Object data);
         
         /// <summary>
         /// 
@@ -613,8 +613,8 @@ namespace Squiggle
         ///  Request JWT for Address
         /// </summary>
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object RequestAddressToken (Object data)
+        /// <returns>JSONWebTokenResponse</returns>            
+        public JSONWebTokenResponse RequestAddressToken (Object data)
         {
             
             // verify the required parameter 'data' is set
@@ -659,15 +659,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling RequestAddressToken: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (JSONWebTokenResponse) ApiClient.Deserialize(response.Content, typeof(JSONWebTokenResponse), response.Headers);
         }
     
         /// <summary>
         ///  Request JWT for Address
         /// </summary>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> RequestAddressTokenAsync (Object data)
+        /// <returns>JSONWebTokenResponse</returns>
+        public async System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (Object data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling RequestAddressToken");
@@ -708,7 +708,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling RequestAddressToken: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (JSONWebTokenResponse) ApiClient.Deserialize(response.Content, typeof(JSONWebTokenResponse), response.Headers);
         }
         
         /// <summary>
