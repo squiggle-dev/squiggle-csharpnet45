@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using RestSharp;
 using Squiggle.Client;
+using Squiggle.Model;
 
 namespace Squiggle
 {
@@ -41,8 +42,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        Object FindAddresses (int? offset, int? limit);
+        /// <returns>AddressResponseMultiple</returns>
+        AddressResponseMultiple FindAddresses (int? offset, int? limit);
   
         /// <summary>
         /// 
@@ -52,8 +53,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> FindAddressesAsync (int? offset, int? limit);
+        /// <returns>AddressResponseMultiple</returns>
+        System.Threading.Tasks.Task<AddressResponseMultiple> FindAddressesAsync (int? offset, int? limit);
         
         /// <summary>
         /// 
@@ -62,8 +63,8 @@ namespace Squiggle
         /// Creates a new address
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object AddAddress (Object data);
+        /// <returns>AddressResponseSingle</returns>
+        AddressResponseSingle AddAddress (Object data);
   
         /// <summary>
         /// 
@@ -72,8 +73,8 @@ namespace Squiggle
         /// Creates a new address
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> AddAddressAsync (Object data);
+        /// <returns>AddressResponseSingle</returns>
+        System.Threading.Tasks.Task<AddressResponseSingle> AddAddressAsync (Object data);
         
         /// <summary>
         /// 
@@ -82,8 +83,8 @@ namespace Squiggle
         /// Gets an address with the specified ID
         /// </remarks>
         /// <param name="id">ID of address to get</param>
-        /// <returns>Object</returns>
-        Object GetAddress (long? id);
+        /// <returns>AddressResponseSingle</returns>
+        AddressResponseSingle GetAddress (long? id);
   
         /// <summary>
         /// 
@@ -92,8 +93,8 @@ namespace Squiggle
         /// Gets an address with the specified ID
         /// </remarks>
         /// <param name="id">ID of address to get</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> GetAddressAsync (long? id);
+        /// <returns>AddressResponseSingle</returns>
+        System.Threading.Tasks.Task<AddressResponseSingle> GetAddressAsync (long? id);
         
         /// <summary>
         /// 
@@ -123,8 +124,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object EditAddress (long? id, Object data);
+        /// <returns>AddressResponseSingle</returns>
+        AddressResponseSingle EditAddress (long? id, Object data);
   
         /// <summary>
         /// 
@@ -134,8 +135,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> EditAddressAsync (long? id, Object data);
+        /// <returns>AddressResponseSingle</returns>
+        System.Threading.Tasks.Task<AddressResponseSingle> EditAddressAsync (long? id, Object data);
         
         /// <summary>
         /// 
@@ -145,8 +146,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        Object FindGlobalTemplates (int? offset, int? limit);
+        /// <returns>GlobalTemplateResponseMultiple</returns>
+        GlobalTemplateResponseMultiple FindGlobalTemplates (int? offset, int? limit);
   
         /// <summary>
         /// 
@@ -156,8 +157,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> FindGlobalTemplatesAsync (int? offset, int? limit);
+        /// <returns>GlobalTemplateResponseMultiple</returns>
+        System.Threading.Tasks.Task<GlobalTemplateResponseMultiple> FindGlobalTemplatesAsync (int? offset, int? limit);
         
         /// <summary>
         /// 
@@ -166,8 +167,8 @@ namespace Squiggle
         /// Creates a new global template
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object AddGlobalTemplate (Object data);
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        GlobalTemplateResponseSingle AddGlobalTemplate (Object data);
   
         /// <summary>
         /// 
@@ -176,8 +177,8 @@ namespace Squiggle
         /// Creates a new global template
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> AddGlobalTemplateAsync (Object data);
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        System.Threading.Tasks.Task<GlobalTemplateResponseSingle> AddGlobalTemplateAsync (Object data);
         
         /// <summary>
         /// 
@@ -186,8 +187,8 @@ namespace Squiggle
         /// Gets a global template with the specified ID
         /// </remarks>
         /// <param name="id">ID of global template to get</param>
-        /// <returns>Object</returns>
-        Object GetGlobalTemplate (long? id);
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        GlobalTemplateResponseSingle GetGlobalTemplate (long? id);
   
         /// <summary>
         /// 
@@ -196,8 +197,8 @@ namespace Squiggle
         /// Gets a global template with the specified ID
         /// </remarks>
         /// <param name="id">ID of global template to get</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> GetGlobalTemplateAsync (long? id);
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        System.Threading.Tasks.Task<GlobalTemplateResponseSingle> GetGlobalTemplateAsync (long? id);
         
         /// <summary>
         /// 
@@ -227,8 +228,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object EditGlobalTemplate (long? id, Object data);
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        GlobalTemplateResponseSingle EditGlobalTemplate (long? id, Object data);
   
         /// <summary>
         /// 
@@ -238,8 +239,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> EditGlobalTemplateAsync (long? id, Object data);
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        System.Threading.Tasks.Task<GlobalTemplateResponseSingle> EditGlobalTemplateAsync (long? id, Object data);
         
         /// <summary>
         /// 
@@ -249,8 +250,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        Object FindSnippets (int? offset, int? limit);
+        /// <returns>SnippetResponseMultiple</returns>
+        SnippetResponseMultiple FindSnippets (int? offset, int? limit);
   
         /// <summary>
         /// 
@@ -260,8 +261,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> FindSnippetsAsync (int? offset, int? limit);
+        /// <returns>SnippetResponseMultiple</returns>
+        System.Threading.Tasks.Task<SnippetResponseMultiple> FindSnippetsAsync (int? offset, int? limit);
         
         /// <summary>
         /// 
@@ -270,8 +271,8 @@ namespace Squiggle
         /// Creates a new snippet
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object AddSnippet (Object data);
+        /// <returns>SnippetResponseSingle</returns>
+        SnippetResponseSingle AddSnippet (Object data);
   
         /// <summary>
         /// 
@@ -280,8 +281,8 @@ namespace Squiggle
         /// Creates a new snippet
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> AddSnippetAsync (Object data);
+        /// <returns>SnippetResponseSingle</returns>
+        System.Threading.Tasks.Task<SnippetResponseSingle> AddSnippetAsync (Object data);
         
         /// <summary>
         /// 
@@ -290,8 +291,8 @@ namespace Squiggle
         /// Gets a snippet with the specified ID
         /// </remarks>
         /// <param name="id">ID of snippet to get</param>
-        /// <returns>Object</returns>
-        Object GetSnippet (long? id);
+        /// <returns>SnippetResponseSingle</returns>
+        SnippetResponseSingle GetSnippet (long? id);
   
         /// <summary>
         /// 
@@ -300,8 +301,8 @@ namespace Squiggle
         /// Gets a snippet with the specified ID
         /// </remarks>
         /// <param name="id">ID of snippet to get</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> GetSnippetAsync (long? id);
+        /// <returns>SnippetResponseSingle</returns>
+        System.Threading.Tasks.Task<SnippetResponseSingle> GetSnippetAsync (long? id);
         
         /// <summary>
         /// 
@@ -331,8 +332,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object EditSnippet (long? id, Object data);
+        /// <returns>SnippetResponseSingle</returns>
+        SnippetResponseSingle EditSnippet (long? id, Object data);
   
         /// <summary>
         /// 
@@ -342,8 +343,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> EditSnippetAsync (long? id, Object data);
+        /// <returns>SnippetResponseSingle</returns>
+        System.Threading.Tasks.Task<SnippetResponseSingle> EditSnippetAsync (long? id, Object data);
         
         /// <summary>
         /// 
@@ -353,8 +354,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        Object FindTemplates (int? offset, int? limit);
+        /// <returns>TemplateResponseMultiple</returns>
+        TemplateResponseMultiple FindTemplates (int? offset, int? limit);
   
         /// <summary>
         /// 
@@ -364,8 +365,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> FindTemplatesAsync (int? offset, int? limit);
+        /// <returns>TemplateResponseMultiple</returns>
+        System.Threading.Tasks.Task<TemplateResponseMultiple> FindTemplatesAsync (int? offset, int? limit);
         
         /// <summary>
         /// 
@@ -374,8 +375,8 @@ namespace Squiggle
         /// Creates a new template
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object AddTemplate (Object data);
+        /// <returns>TemplateResponseSingle</returns>
+        TemplateResponseSingle AddTemplate (Object data);
   
         /// <summary>
         /// 
@@ -384,8 +385,8 @@ namespace Squiggle
         /// Creates a new template
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> AddTemplateAsync (Object data);
+        /// <returns>TemplateResponseSingle</returns>
+        System.Threading.Tasks.Task<TemplateResponseSingle> AddTemplateAsync (Object data);
         
         /// <summary>
         /// 
@@ -394,8 +395,8 @@ namespace Squiggle
         /// Gets a template with the specified ID
         /// </remarks>
         /// <param name="id">ID of template to get</param>
-        /// <returns>Object</returns>
-        Object GetTemplate (long? id);
+        /// <returns>TemplateResponseSingle</returns>
+        TemplateResponseSingle GetTemplate (long? id);
   
         /// <summary>
         /// 
@@ -404,8 +405,8 @@ namespace Squiggle
         /// Gets a template with the specified ID
         /// </remarks>
         /// <param name="id">ID of template to get</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> GetTemplateAsync (long? id);
+        /// <returns>TemplateResponseSingle</returns>
+        System.Threading.Tasks.Task<TemplateResponseSingle> GetTemplateAsync (long? id);
         
         /// <summary>
         /// 
@@ -435,8 +436,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object EditTemplate (long? id, Object data);
+        /// <returns>TemplateResponseSingle</returns>
+        TemplateResponseSingle EditTemplate (long? id, Object data);
   
         /// <summary>
         /// 
@@ -446,8 +447,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> EditTemplateAsync (long? id, Object data);
+        /// <returns>TemplateResponseSingle</returns>
+        System.Threading.Tasks.Task<TemplateResponseSingle> EditTemplateAsync (long? id, Object data);
         
         /// <summary>
         /// 
@@ -457,8 +458,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        Object FindUsers (int? offset, int? limit);
+        /// <returns>UserResponseMultiple</returns>
+        UserResponseMultiple FindUsers (int? offset, int? limit);
   
         /// <summary>
         /// 
@@ -468,8 +469,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> FindUsersAsync (int? offset, int? limit);
+        /// <returns>UserResponseMultiple</returns>
+        System.Threading.Tasks.Task<UserResponseMultiple> FindUsersAsync (int? offset, int? limit);
         
         /// <summary>
         /// 
@@ -478,8 +479,8 @@ namespace Squiggle
         /// Creates a new user
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object AddUser (Object data);
+        /// <returns>UserResponseSingle</returns>
+        UserResponseSingle AddUser (Object data);
   
         /// <summary>
         /// 
@@ -488,8 +489,8 @@ namespace Squiggle
         /// Creates a new user
         /// </remarks>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> AddUserAsync (Object data);
+        /// <returns>UserResponseSingle</returns>
+        System.Threading.Tasks.Task<UserResponseSingle> AddUserAsync (Object data);
         
         /// <summary>
         /// 
@@ -498,8 +499,8 @@ namespace Squiggle
         /// Gets a user with the specified ID
         /// </remarks>
         /// <param name="id">ID of user to get</param>
-        /// <returns>Object</returns>
-        Object GetUser (long? id);
+        /// <returns>UserResponseSingle</returns>
+        UserResponseSingle GetUser (long? id);
   
         /// <summary>
         /// 
@@ -508,8 +509,8 @@ namespace Squiggle
         /// Gets a user with the specified ID
         /// </remarks>
         /// <param name="id">ID of user to get</param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> GetUserAsync (long? id);
+        /// <returns>UserResponseSingle</returns>
+        System.Threading.Tasks.Task<UserResponseSingle> GetUserAsync (long? id);
         
         /// <summary>
         /// 
@@ -539,8 +540,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        Object EditUser (long? id, Object data);
+        /// <returns>UserResponseSingle</returns>
+        UserResponseSingle EditUser (long? id, Object data);
   
         /// <summary>
         /// 
@@ -550,8 +551,8 @@ namespace Squiggle
         /// </remarks>
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        System.Threading.Tasks.Task<Object> EditUserAsync (long? id, Object data);
+        /// <returns>UserResponseSingle</returns>
+        System.Threading.Tasks.Task<UserResponseSingle> EditUserAsync (long? id, Object data);
         
     }
   
@@ -715,8 +716,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
-        /// <returns>Object</returns>            
-        public Object FindAddresses (int? offset, int? limit)
+        /// <returns>AddressResponseMultiple</returns>            
+        public AddressResponseMultiple FindAddresses (int? offset, int? limit)
         {
             
     
@@ -759,7 +760,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindAddresses: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (AddressResponseMultiple) ApiClient.Deserialize(response.Content, typeof(AddressResponseMultiple), response.Headers);
         }
     
         /// <summary>
@@ -767,8 +768,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> FindAddressesAsync (int? offset, int? limit)
+        /// <returns>AddressResponseMultiple</returns>
+        public async System.Threading.Tasks.Task<AddressResponseMultiple> FindAddressesAsync (int? offset, int? limit)
         {
             
     
@@ -808,15 +809,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindAddresses: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (AddressResponseMultiple) ApiClient.Deserialize(response.Content, typeof(AddressResponseMultiple), response.Headers);
         }
         
         /// <summary>
         ///  Creates a new address
         /// </summary>
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object AddAddress (Object data)
+        /// <returns>AddressResponseSingle</returns>            
+        public AddressResponseSingle AddAddress (Object data)
         {
             
             // verify the required parameter 'data' is set
@@ -861,15 +862,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddAddress: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (AddressResponseSingle) ApiClient.Deserialize(response.Content, typeof(AddressResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Creates a new address
         /// </summary>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> AddAddressAsync (Object data)
+        /// <returns>AddressResponseSingle</returns>
+        public async System.Threading.Tasks.Task<AddressResponseSingle> AddAddressAsync (Object data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddAddress");
@@ -910,15 +911,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddAddress: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (AddressResponseSingle) ApiClient.Deserialize(response.Content, typeof(AddressResponseSingle), response.Headers);
         }
         
         /// <summary>
         ///  Gets an address with the specified ID
         /// </summary>
         /// <param name="id">ID of address to get</param> 
-        /// <returns>Object</returns>            
-        public Object GetAddress (long? id)
+        /// <returns>AddressResponseSingle</returns>            
+        public AddressResponseSingle GetAddress (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -963,15 +964,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetAddress: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (AddressResponseSingle) ApiClient.Deserialize(response.Content, typeof(AddressResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Gets an address with the specified ID
         /// </summary>
         /// <param name="id">ID of address to get</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetAddressAsync (long? id)
+        /// <returns>AddressResponseSingle</returns>
+        public async System.Threading.Tasks.Task<AddressResponseSingle> GetAddressAsync (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetAddress");
@@ -1012,7 +1013,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetAddress: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (AddressResponseSingle) ApiClient.Deserialize(response.Content, typeof(AddressResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -1123,8 +1124,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of address to update</param> 
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object EditAddress (long? id, Object data)
+        /// <returns>AddressResponseSingle</returns>            
+        public AddressResponseSingle EditAddress (long? id, Object data)
         {
             
             // verify the required parameter 'id' is set
@@ -1173,7 +1174,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditAddress: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (AddressResponseSingle) ApiClient.Deserialize(response.Content, typeof(AddressResponseSingle), response.Headers);
         }
     
         /// <summary>
@@ -1181,8 +1182,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditAddressAsync (long? id, Object data)
+        /// <returns>AddressResponseSingle</returns>
+        public async System.Threading.Tasks.Task<AddressResponseSingle> EditAddressAsync (long? id, Object data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditAddress");
@@ -1226,7 +1227,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditAddress: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (AddressResponseSingle) ApiClient.Deserialize(response.Content, typeof(AddressResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -1234,8 +1235,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
-        /// <returns>Object</returns>            
-        public Object FindGlobalTemplates (int? offset, int? limit)
+        /// <returns>GlobalTemplateResponseMultiple</returns>            
+        public GlobalTemplateResponseMultiple FindGlobalTemplates (int? offset, int? limit)
         {
             
     
@@ -1278,7 +1279,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindGlobalTemplates: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (GlobalTemplateResponseMultiple) ApiClient.Deserialize(response.Content, typeof(GlobalTemplateResponseMultiple), response.Headers);
         }
     
         /// <summary>
@@ -1286,8 +1287,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> FindGlobalTemplatesAsync (int? offset, int? limit)
+        /// <returns>GlobalTemplateResponseMultiple</returns>
+        public async System.Threading.Tasks.Task<GlobalTemplateResponseMultiple> FindGlobalTemplatesAsync (int? offset, int? limit)
         {
             
     
@@ -1327,15 +1328,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindGlobalTemplates: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (GlobalTemplateResponseMultiple) ApiClient.Deserialize(response.Content, typeof(GlobalTemplateResponseMultiple), response.Headers);
         }
         
         /// <summary>
         ///  Creates a new global template
         /// </summary>
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object AddGlobalTemplate (Object data)
+        /// <returns>GlobalTemplateResponseSingle</returns>            
+        public GlobalTemplateResponseSingle AddGlobalTemplate (Object data)
         {
             
             // verify the required parameter 'data' is set
@@ -1380,15 +1381,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddGlobalTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (GlobalTemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(GlobalTemplateResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Creates a new global template
         /// </summary>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> AddGlobalTemplateAsync (Object data)
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        public async System.Threading.Tasks.Task<GlobalTemplateResponseSingle> AddGlobalTemplateAsync (Object data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddGlobalTemplate");
@@ -1429,15 +1430,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddGlobalTemplate: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (GlobalTemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(GlobalTemplateResponseSingle), response.Headers);
         }
         
         /// <summary>
         ///  Gets a global template with the specified ID
         /// </summary>
         /// <param name="id">ID of global template to get</param> 
-        /// <returns>Object</returns>            
-        public Object GetGlobalTemplate (long? id)
+        /// <returns>GlobalTemplateResponseSingle</returns>            
+        public GlobalTemplateResponseSingle GetGlobalTemplate (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -1482,15 +1483,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetGlobalTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (GlobalTemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(GlobalTemplateResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Gets a global template with the specified ID
         /// </summary>
         /// <param name="id">ID of global template to get</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetGlobalTemplateAsync (long? id)
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        public async System.Threading.Tasks.Task<GlobalTemplateResponseSingle> GetGlobalTemplateAsync (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetGlobalTemplate");
@@ -1531,7 +1532,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetGlobalTemplate: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (GlobalTemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(GlobalTemplateResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -1642,8 +1643,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of global template to update</param> 
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object EditGlobalTemplate (long? id, Object data)
+        /// <returns>GlobalTemplateResponseSingle</returns>            
+        public GlobalTemplateResponseSingle EditGlobalTemplate (long? id, Object data)
         {
             
             // verify the required parameter 'id' is set
@@ -1692,7 +1693,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditGlobalTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (GlobalTemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(GlobalTemplateResponseSingle), response.Headers);
         }
     
         /// <summary>
@@ -1700,8 +1701,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditGlobalTemplateAsync (long? id, Object data)
+        /// <returns>GlobalTemplateResponseSingle</returns>
+        public async System.Threading.Tasks.Task<GlobalTemplateResponseSingle> EditGlobalTemplateAsync (long? id, Object data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditGlobalTemplate");
@@ -1745,7 +1746,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditGlobalTemplate: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (GlobalTemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(GlobalTemplateResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -1753,8 +1754,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
-        /// <returns>Object</returns>            
-        public Object FindSnippets (int? offset, int? limit)
+        /// <returns>SnippetResponseMultiple</returns>            
+        public SnippetResponseMultiple FindSnippets (int? offset, int? limit)
         {
             
     
@@ -1797,7 +1798,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindSnippets: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (SnippetResponseMultiple) ApiClient.Deserialize(response.Content, typeof(SnippetResponseMultiple), response.Headers);
         }
     
         /// <summary>
@@ -1805,8 +1806,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> FindSnippetsAsync (int? offset, int? limit)
+        /// <returns>SnippetResponseMultiple</returns>
+        public async System.Threading.Tasks.Task<SnippetResponseMultiple> FindSnippetsAsync (int? offset, int? limit)
         {
             
     
@@ -1846,15 +1847,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindSnippets: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (SnippetResponseMultiple) ApiClient.Deserialize(response.Content, typeof(SnippetResponseMultiple), response.Headers);
         }
         
         /// <summary>
         ///  Creates a new snippet
         /// </summary>
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object AddSnippet (Object data)
+        /// <returns>SnippetResponseSingle</returns>            
+        public SnippetResponseSingle AddSnippet (Object data)
         {
             
             // verify the required parameter 'data' is set
@@ -1899,15 +1900,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddSnippet: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (SnippetResponseSingle) ApiClient.Deserialize(response.Content, typeof(SnippetResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Creates a new snippet
         /// </summary>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> AddSnippetAsync (Object data)
+        /// <returns>SnippetResponseSingle</returns>
+        public async System.Threading.Tasks.Task<SnippetResponseSingle> AddSnippetAsync (Object data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddSnippet");
@@ -1948,15 +1949,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddSnippet: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (SnippetResponseSingle) ApiClient.Deserialize(response.Content, typeof(SnippetResponseSingle), response.Headers);
         }
         
         /// <summary>
         ///  Gets a snippet with the specified ID
         /// </summary>
         /// <param name="id">ID of snippet to get</param> 
-        /// <returns>Object</returns>            
-        public Object GetSnippet (long? id)
+        /// <returns>SnippetResponseSingle</returns>            
+        public SnippetResponseSingle GetSnippet (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2001,15 +2002,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetSnippet: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (SnippetResponseSingle) ApiClient.Deserialize(response.Content, typeof(SnippetResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Gets a snippet with the specified ID
         /// </summary>
         /// <param name="id">ID of snippet to get</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetSnippetAsync (long? id)
+        /// <returns>SnippetResponseSingle</returns>
+        public async System.Threading.Tasks.Task<SnippetResponseSingle> GetSnippetAsync (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetSnippet");
@@ -2050,7 +2051,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetSnippet: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (SnippetResponseSingle) ApiClient.Deserialize(response.Content, typeof(SnippetResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -2161,8 +2162,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of snippet to update</param> 
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object EditSnippet (long? id, Object data)
+        /// <returns>SnippetResponseSingle</returns>            
+        public SnippetResponseSingle EditSnippet (long? id, Object data)
         {
             
             // verify the required parameter 'id' is set
@@ -2211,7 +2212,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditSnippet: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (SnippetResponseSingle) ApiClient.Deserialize(response.Content, typeof(SnippetResponseSingle), response.Headers);
         }
     
         /// <summary>
@@ -2219,8 +2220,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditSnippetAsync (long? id, Object data)
+        /// <returns>SnippetResponseSingle</returns>
+        public async System.Threading.Tasks.Task<SnippetResponseSingle> EditSnippetAsync (long? id, Object data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditSnippet");
@@ -2264,7 +2265,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditSnippet: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (SnippetResponseSingle) ApiClient.Deserialize(response.Content, typeof(SnippetResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -2272,8 +2273,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
-        /// <returns>Object</returns>            
-        public Object FindTemplates (int? offset, int? limit)
+        /// <returns>TemplateResponseMultiple</returns>            
+        public TemplateResponseMultiple FindTemplates (int? offset, int? limit)
         {
             
     
@@ -2316,7 +2317,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindTemplates: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (TemplateResponseMultiple) ApiClient.Deserialize(response.Content, typeof(TemplateResponseMultiple), response.Headers);
         }
     
         /// <summary>
@@ -2324,8 +2325,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> FindTemplatesAsync (int? offset, int? limit)
+        /// <returns>TemplateResponseMultiple</returns>
+        public async System.Threading.Tasks.Task<TemplateResponseMultiple> FindTemplatesAsync (int? offset, int? limit)
         {
             
     
@@ -2365,15 +2366,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindTemplates: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (TemplateResponseMultiple) ApiClient.Deserialize(response.Content, typeof(TemplateResponseMultiple), response.Headers);
         }
         
         /// <summary>
         ///  Creates a new template
         /// </summary>
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object AddTemplate (Object data)
+        /// <returns>TemplateResponseSingle</returns>            
+        public TemplateResponseSingle AddTemplate (Object data)
         {
             
             // verify the required parameter 'data' is set
@@ -2418,15 +2419,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (TemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(TemplateResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Creates a new template
         /// </summary>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> AddTemplateAsync (Object data)
+        /// <returns>TemplateResponseSingle</returns>
+        public async System.Threading.Tasks.Task<TemplateResponseSingle> AddTemplateAsync (Object data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddTemplate");
@@ -2467,15 +2468,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddTemplate: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (TemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(TemplateResponseSingle), response.Headers);
         }
         
         /// <summary>
         ///  Gets a template with the specified ID
         /// </summary>
         /// <param name="id">ID of template to get</param> 
-        /// <returns>Object</returns>            
-        public Object GetTemplate (long? id)
+        /// <returns>TemplateResponseSingle</returns>            
+        public TemplateResponseSingle GetTemplate (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2520,15 +2521,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (TemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(TemplateResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Gets a template with the specified ID
         /// </summary>
         /// <param name="id">ID of template to get</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetTemplateAsync (long? id)
+        /// <returns>TemplateResponseSingle</returns>
+        public async System.Threading.Tasks.Task<TemplateResponseSingle> GetTemplateAsync (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetTemplate");
@@ -2569,7 +2570,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetTemplate: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (TemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(TemplateResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -2680,8 +2681,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of template to update</param> 
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object EditTemplate (long? id, Object data)
+        /// <returns>TemplateResponseSingle</returns>            
+        public TemplateResponseSingle EditTemplate (long? id, Object data)
         {
             
             // verify the required parameter 'id' is set
@@ -2730,7 +2731,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (TemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(TemplateResponseSingle), response.Headers);
         }
     
         /// <summary>
@@ -2738,8 +2739,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditTemplateAsync (long? id, Object data)
+        /// <returns>TemplateResponseSingle</returns>
+        public async System.Threading.Tasks.Task<TemplateResponseSingle> EditTemplateAsync (long? id, Object data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditTemplate");
@@ -2783,7 +2784,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditTemplate: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (TemplateResponseSingle) ApiClient.Deserialize(response.Content, typeof(TemplateResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -2791,8 +2792,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
-        /// <returns>Object</returns>            
-        public Object FindUsers (int? offset, int? limit)
+        /// <returns>UserResponseMultiple</returns>            
+        public UserResponseMultiple FindUsers (int? offset, int? limit)
         {
             
     
@@ -2835,7 +2836,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindUsers: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (UserResponseMultiple) ApiClient.Deserialize(response.Content, typeof(UserResponseMultiple), response.Headers);
         }
     
         /// <summary>
@@ -2843,8 +2844,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> FindUsersAsync (int? offset, int? limit)
+        /// <returns>UserResponseMultiple</returns>
+        public async System.Threading.Tasks.Task<UserResponseMultiple> FindUsersAsync (int? offset, int? limit)
         {
             
     
@@ -2884,15 +2885,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling FindUsers: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (UserResponseMultiple) ApiClient.Deserialize(response.Content, typeof(UserResponseMultiple), response.Headers);
         }
         
         /// <summary>
         ///  Creates a new user
         /// </summary>
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object AddUser (Object data)
+        /// <returns>UserResponseSingle</returns>            
+        public UserResponseSingle AddUser (Object data)
         {
             
             // verify the required parameter 'data' is set
@@ -2937,15 +2938,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddUser: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (UserResponseSingle) ApiClient.Deserialize(response.Content, typeof(UserResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Creates a new user
         /// </summary>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> AddUserAsync (Object data)
+        /// <returns>UserResponseSingle</returns>
+        public async System.Threading.Tasks.Task<UserResponseSingle> AddUserAsync (Object data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddUser");
@@ -2986,15 +2987,15 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddUser: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (UserResponseSingle) ApiClient.Deserialize(response.Content, typeof(UserResponseSingle), response.Headers);
         }
         
         /// <summary>
         ///  Gets a user with the specified ID
         /// </summary>
         /// <param name="id">ID of user to get</param> 
-        /// <returns>Object</returns>            
-        public Object GetUser (long? id)
+        /// <returns>UserResponseSingle</returns>            
+        public UserResponseSingle GetUser (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3039,15 +3040,15 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetUser: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (UserResponseSingle) ApiClient.Deserialize(response.Content, typeof(UserResponseSingle), response.Headers);
         }
     
         /// <summary>
         ///  Gets a user with the specified ID
         /// </summary>
         /// <param name="id">ID of user to get</param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetUserAsync (long? id)
+        /// <returns>UserResponseSingle</returns>
+        public async System.Threading.Tasks.Task<UserResponseSingle> GetUserAsync (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetUser");
@@ -3088,7 +3089,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetUser: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (UserResponseSingle) ApiClient.Deserialize(response.Content, typeof(UserResponseSingle), response.Headers);
         }
         
         /// <summary>
@@ -3199,8 +3200,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of user to update</param> 
         /// <param name="data"></param> 
-        /// <returns>Object</returns>            
-        public Object EditUser (long? id, Object data)
+        /// <returns>UserResponseSingle</returns>            
+        public UserResponseSingle EditUser (long? id, Object data)
         {
             
             // verify the required parameter 'id' is set
@@ -3249,7 +3250,7 @@ namespace Squiggle
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditUser: " + response.ErrorMessage, response.ErrorMessage);
     
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (UserResponseSingle) ApiClient.Deserialize(response.Content, typeof(UserResponseSingle), response.Headers);
         }
     
         /// <summary>
@@ -3257,8 +3258,8 @@ namespace Squiggle
         /// </summary>
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
-        /// <returns>Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditUserAsync (long? id, Object data)
+        /// <returns>UserResponseSingle</returns>
+        public async System.Threading.Tasks.Task<UserResponseSingle> EditUserAsync (long? id, Object data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditUser");
@@ -3302,7 +3303,7 @@ namespace Squiggle
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling EditUser: " + response.Content, response.Content);
 
-            return (Object) ApiClient.Deserialize(response.Content, typeof(Object), response.Headers);
+            return (UserResponseSingle) ApiClient.Deserialize(response.Content, typeof(UserResponseSingle), response.Headers);
         }
         
     }

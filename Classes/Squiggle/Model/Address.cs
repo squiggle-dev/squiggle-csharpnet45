@@ -105,6 +105,13 @@ namespace Squiggle.Model {
 
     
     /// <summary>
+    /// Gets or Sets signatures
+    /// </summary>
+    [DataMember(Name="signatures", EmitDefaultValue=false)]
+    public List<Signature> signatures { get; set; }
+
+    
+    /// <summary>
     /// Gets or Sets user
     /// </summary>
     [DataMember(Name="user", EmitDefaultValue=false)]
@@ -145,6 +152,8 @@ namespace Squiggle.Model {
       sb.Append("  instagram: ").Append(instagram).Append("\n");
       
       sb.Append("  googleplus: ").Append(googleplus).Append("\n");
+      
+      sb.Append("  signatures: ").Append(signatures).Append("\n");
       
       sb.Append("  user: ").Append(user).Append("\n");
       

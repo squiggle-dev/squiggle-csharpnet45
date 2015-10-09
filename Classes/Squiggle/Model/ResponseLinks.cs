@@ -11,20 +11,34 @@ namespace Squiggle.Model {
   /// 
   /// </summary>
   [DataContract]
-  public class AddressResp {
+  public class ResponseLinks {
     
     /// <summary>
-    /// Gets or Sets address
+    /// Gets or Sets self
     /// </summary>
-    [DataMember(Name="address", EmitDefaultValue=false)]
-    public Address address { get; set; }
+    [DataMember(Name="self", EmitDefaultValue=false)]
+    public string self { get; set; }
 
     
     /// <summary>
-    /// Gets or Sets signatures
+    /// Gets or Sets related
     /// </summary>
-    [DataMember(Name="signatures", EmitDefaultValue=false)]
-    public Signature signatures { get; set; }
+    [DataMember(Name="related", EmitDefaultValue=false)]
+    public string related { get; set; }
+
+    
+    /// <summary>
+    /// Gets or Sets next
+    /// </summary>
+    [DataMember(Name="next", EmitDefaultValue=false)]
+    public string next { get; set; }
+
+    
+    /// <summary>
+    /// Gets or Sets last
+    /// </summary>
+    [DataMember(Name="last", EmitDefaultValue=false)]
+    public string last { get; set; }
 
     
 
@@ -34,11 +48,15 @@ namespace Squiggle.Model {
     /// <returns>String presentation of the object</returns>
     public override string ToString()  {
       var sb = new StringBuilder();
-      sb.Append("class AddressResp {\n");
+      sb.Append("class ResponseLinks {\n");
       
-      sb.Append("  address: ").Append(address).Append("\n");
+      sb.Append("  self: ").Append(self).Append("\n");
       
-      sb.Append("  signatures: ").Append(signatures).Append("\n");
+      sb.Append("  related: ").Append(related).Append("\n");
+      
+      sb.Append("  next: ").Append(next).Append("\n");
+      
+      sb.Append("  last: ").Append(last).Append("\n");
       
       sb.Append("}\n");
       return sb.ToString();
