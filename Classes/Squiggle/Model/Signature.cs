@@ -14,6 +14,27 @@ namespace Squiggle.Model {
   public class Signature {
     
     /// <summary>
+    /// Gets or Sets id
+    /// </summary>
+    [DataMember(Name="id", EmitDefaultValue=false)]
+    public int? id { get; set; }
+
+    
+    /// <summary>
+    /// Gets or Sets address
+    /// </summary>
+    [DataMember(Name="address", EmitDefaultValue=false)]
+    public int? address { get; set; }
+
+    
+    /// <summary>
+    /// Gets or Sets template
+    /// </summary>
+    [DataMember(Name="template", EmitDefaultValue=false)]
+    public int? template { get; set; }
+
+    
+    /// <summary>
     /// Gets or Sets plain
     /// </summary>
     [DataMember(Name="plain", EmitDefaultValue=false)]
@@ -42,6 +63,12 @@ namespace Squiggle.Model {
     public override string ToString()  {
       var sb = new StringBuilder();
       sb.Append("class Signature {\n");
+      
+      sb.Append("  id: ").Append(id).Append("\n");
+      
+      sb.Append("  address: ").Append(address).Append("\n");
+      
+      sb.Append("  template: ").Append(template).Append("\n");
       
       sb.Append("  plain: ").Append(plain).Append("\n");
       
