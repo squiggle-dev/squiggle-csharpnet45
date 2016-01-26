@@ -22,16 +22,15 @@ namespace Squiggle.Model
         /// </summary>
         public JSONWebToken()
         {
-            this.token = null;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets token
+        /// Gets or Sets Token
         /// </summary>
         [DataMember(Name="token", EmitDefaultValue=false)]
-        public string token { get; set; }
+        public string Token { get; set; }
   
         
   
@@ -43,7 +42,7 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JSONWebToken {\n");
-            sb.Append("  token: ").Append(token).Append("\n");
+            sb.Append("  Token: ").Append(Token).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -82,9 +81,9 @@ namespace Squiggle.Model
 
             return 
                 (
-                    this.token == other.token ||
-                    this.token != null &&
-                    this.token.Equals(other.token)
+                    this.Token == other.Token ||
+                    this.Token != null &&
+                    this.Token.Equals(other.Token)
                 );
         }
 
@@ -100,8 +99,8 @@ namespace Squiggle.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.token != null)
-                    hash = hash * 59 + this.token.GetHashCode();
+                if (this.Token != null)
+                    hash = hash * 59 + this.Token.GetHashCode();
                 
                 return hash;
             }

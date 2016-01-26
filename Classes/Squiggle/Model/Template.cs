@@ -22,88 +22,78 @@ namespace Squiggle.Model
         /// </summary>
         public Template()
         {
-            this.id = null;
-            this.name = null;
-            this.description = null;
-            this.thumbnail = null;
-            this.contentHtml = null;
-            this.contentPlaintext = null;
-            this.contentRichtext = null;
-            this.settings = null;
-            this.user = null;
-            this.template = null;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets id
+        /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets name
+        /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets description
+        /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
-        public string description { get; set; }
+        public string Description { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets thumbnail
+        /// Gets or Sets Thumbnail
         /// </summary>
         [DataMember(Name="thumbnail", EmitDefaultValue=false)]
-        public string thumbnail { get; set; }
+        public string Thumbnail { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets contentHtml
+        /// Gets or Sets ContentHtml
         /// </summary>
         [DataMember(Name="content_html", EmitDefaultValue=false)]
-        public string contentHtml { get; set; }
+        public string ContentHtml { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets contentPlaintext
+        /// Gets or Sets ContentPlaintext
         /// </summary>
         [DataMember(Name="content_plaintext", EmitDefaultValue=false)]
-        public string contentPlaintext { get; set; }
+        public string ContentPlaintext { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets contentRichtext
+        /// Gets or Sets ContentRichtext
         /// </summary>
         [DataMember(Name="content_richtext", EmitDefaultValue=false)]
-        public string contentRichtext { get; set; }
+        public string ContentRichtext { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets settings
+        /// Gets or Sets Settings
         /// </summary>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public string settings { get; set; }
+        public string Settings { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets user
+        /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public int? user { get; set; }
+        public int? User { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets template
+        /// Gets or Sets _Template
         /// </summary>
         [DataMember(Name="template", EmitDefaultValue=false)]
-        public int? template { get; set; }
+        public int? _Template { get; set; }
   
         
   
@@ -115,16 +105,16 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Template {\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  description: ").Append(description).Append("\n");
-            sb.Append("  thumbnail: ").Append(thumbnail).Append("\n");
-            sb.Append("  contentHtml: ").Append(contentHtml).Append("\n");
-            sb.Append("  contentPlaintext: ").Append(contentPlaintext).Append("\n");
-            sb.Append("  contentRichtext: ").Append(contentRichtext).Append("\n");
-            sb.Append("  settings: ").Append(settings).Append("\n");
-            sb.Append("  user: ").Append(user).Append("\n");
-            sb.Append("  template: ").Append(template).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Thumbnail: ").Append(Thumbnail).Append("\n");
+            sb.Append("  ContentHtml: ").Append(ContentHtml).Append("\n");
+            sb.Append("  ContentPlaintext: ").Append(ContentPlaintext).Append("\n");
+            sb.Append("  ContentRichtext: ").Append(ContentRichtext).Append("\n");
+            sb.Append("  Settings: ").Append(Settings).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  _Template: ").Append(_Template).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -163,54 +153,54 @@ namespace Squiggle.Model
 
             return 
                 (
-                    this.id == other.id ||
-                    this.id != null &&
-                    this.id.Equals(other.id)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.name == other.name ||
-                    this.name != null &&
-                    this.name.Equals(other.name)
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 ) && 
                 (
-                    this.description == other.description ||
-                    this.description != null &&
-                    this.description.Equals(other.description)
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
                 ) && 
                 (
-                    this.thumbnail == other.thumbnail ||
-                    this.thumbnail != null &&
-                    this.thumbnail.Equals(other.thumbnail)
+                    this.Thumbnail == other.Thumbnail ||
+                    this.Thumbnail != null &&
+                    this.Thumbnail.Equals(other.Thumbnail)
                 ) && 
                 (
-                    this.contentHtml == other.contentHtml ||
-                    this.contentHtml != null &&
-                    this.contentHtml.Equals(other.contentHtml)
+                    this.ContentHtml == other.ContentHtml ||
+                    this.ContentHtml != null &&
+                    this.ContentHtml.Equals(other.ContentHtml)
                 ) && 
                 (
-                    this.contentPlaintext == other.contentPlaintext ||
-                    this.contentPlaintext != null &&
-                    this.contentPlaintext.Equals(other.contentPlaintext)
+                    this.ContentPlaintext == other.ContentPlaintext ||
+                    this.ContentPlaintext != null &&
+                    this.ContentPlaintext.Equals(other.ContentPlaintext)
                 ) && 
                 (
-                    this.contentRichtext == other.contentRichtext ||
-                    this.contentRichtext != null &&
-                    this.contentRichtext.Equals(other.contentRichtext)
+                    this.ContentRichtext == other.ContentRichtext ||
+                    this.ContentRichtext != null &&
+                    this.ContentRichtext.Equals(other.ContentRichtext)
                 ) && 
                 (
-                    this.settings == other.settings ||
-                    this.settings != null &&
-                    this.settings.Equals(other.settings)
+                    this.Settings == other.Settings ||
+                    this.Settings != null &&
+                    this.Settings.Equals(other.Settings)
                 ) && 
                 (
-                    this.user == other.user ||
-                    this.user != null &&
-                    this.user.Equals(other.user)
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
                 ) && 
                 (
-                    this.template == other.template ||
-                    this.template != null &&
-                    this.template.Equals(other.template)
+                    this._Template == other._Template ||
+                    this._Template != null &&
+                    this._Template.Equals(other._Template)
                 );
         }
 
@@ -226,35 +216,35 @@ namespace Squiggle.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.id != null)
-                    hash = hash * 59 + this.id.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.name != null)
-                    hash = hash * 59 + this.name.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.description != null)
-                    hash = hash * 59 + this.description.GetHashCode();
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
-                if (this.thumbnail != null)
-                    hash = hash * 59 + this.thumbnail.GetHashCode();
+                if (this.Thumbnail != null)
+                    hash = hash * 59 + this.Thumbnail.GetHashCode();
                 
-                if (this.contentHtml != null)
-                    hash = hash * 59 + this.contentHtml.GetHashCode();
+                if (this.ContentHtml != null)
+                    hash = hash * 59 + this.ContentHtml.GetHashCode();
                 
-                if (this.contentPlaintext != null)
-                    hash = hash * 59 + this.contentPlaintext.GetHashCode();
+                if (this.ContentPlaintext != null)
+                    hash = hash * 59 + this.ContentPlaintext.GetHashCode();
                 
-                if (this.contentRichtext != null)
-                    hash = hash * 59 + this.contentRichtext.GetHashCode();
+                if (this.ContentRichtext != null)
+                    hash = hash * 59 + this.ContentRichtext.GetHashCode();
                 
-                if (this.settings != null)
-                    hash = hash * 59 + this.settings.GetHashCode();
+                if (this.Settings != null)
+                    hash = hash * 59 + this.Settings.GetHashCode();
                 
-                if (this.user != null)
-                    hash = hash * 59 + this.user.GetHashCode();
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
                 
-                if (this.template != null)
-                    hash = hash * 59 + this.template.GetHashCode();
+                if (this._Template != null)
+                    hash = hash * 59 + this._Template.GetHashCode();
                 
                 return hash;
             }

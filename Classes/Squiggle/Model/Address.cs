@@ -22,128 +22,113 @@ namespace Squiggle.Model
         /// </summary>
         public Address()
         {
-            this.id = null;
-            this.email = null;
-            this.password = null;
-            this.firstName = null;
-            this.lastName = null;
-            this.jobTitle = null;
-            this.telMobile = null;
-            this.telDirect = null;
-            this.linkedin = null;
-            this.facebook = null;
-            this.twitter = null;
-            this.instagram = null;
-            this.googleplus = null;
-            this.signatures = null;
-            this.user = null;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets id
+        /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets email
+        /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
-        public string email { get; set; }
+        public string Email { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets password
+        /// Gets or Sets Password
         /// </summary>
         [DataMember(Name="password", EmitDefaultValue=false)]
-        public string password { get; set; }
+        public string Password { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets firstName
+        /// Gets or Sets FirstName
         /// </summary>
         [DataMember(Name="first_name", EmitDefaultValue=false)]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets lastName
+        /// Gets or Sets LastName
         /// </summary>
         [DataMember(Name="last_name", EmitDefaultValue=false)]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets jobTitle
+        /// Gets or Sets JobTitle
         /// </summary>
         [DataMember(Name="job_title", EmitDefaultValue=false)]
-        public string jobTitle { get; set; }
+        public string JobTitle { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets telMobile
+        /// Gets or Sets TelMobile
         /// </summary>
         [DataMember(Name="tel_mobile", EmitDefaultValue=false)]
-        public string telMobile { get; set; }
+        public string TelMobile { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets telDirect
+        /// Gets or Sets TelDirect
         /// </summary>
         [DataMember(Name="tel_direct", EmitDefaultValue=false)]
-        public string telDirect { get; set; }
+        public string TelDirect { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets linkedin
+        /// Gets or Sets Linkedin
         /// </summary>
         [DataMember(Name="linkedin", EmitDefaultValue=false)]
-        public string linkedin { get; set; }
+        public string Linkedin { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets facebook
+        /// Gets or Sets Facebook
         /// </summary>
         [DataMember(Name="facebook", EmitDefaultValue=false)]
-        public string facebook { get; set; }
+        public string Facebook { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets twitter
+        /// Gets or Sets Twitter
         /// </summary>
         [DataMember(Name="twitter", EmitDefaultValue=false)]
-        public string twitter { get; set; }
+        public string Twitter { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets instagram
+        /// Gets or Sets Instagram
         /// </summary>
         [DataMember(Name="instagram", EmitDefaultValue=false)]
-        public string instagram { get; set; }
+        public string Instagram { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets googleplus
+        /// Gets or Sets Googleplus
         /// </summary>
         [DataMember(Name="googleplus", EmitDefaultValue=false)]
-        public string googleplus { get; set; }
+        public string Googleplus { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets signatures
+        /// Gets or Sets Signatures
         /// </summary>
         [DataMember(Name="signatures", EmitDefaultValue=false)]
-        public List<Signature> signatures { get; set; }
+        public List<Signature> Signatures { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets user
+        /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public int? user { get; set; }
+        public int? User { get; set; }
   
         
   
@@ -155,21 +140,21 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Address {\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  email: ").Append(email).Append("\n");
-            sb.Append("  password: ").Append(password).Append("\n");
-            sb.Append("  firstName: ").Append(firstName).Append("\n");
-            sb.Append("  lastName: ").Append(lastName).Append("\n");
-            sb.Append("  jobTitle: ").Append(jobTitle).Append("\n");
-            sb.Append("  telMobile: ").Append(telMobile).Append("\n");
-            sb.Append("  telDirect: ").Append(telDirect).Append("\n");
-            sb.Append("  linkedin: ").Append(linkedin).Append("\n");
-            sb.Append("  facebook: ").Append(facebook).Append("\n");
-            sb.Append("  twitter: ").Append(twitter).Append("\n");
-            sb.Append("  instagram: ").Append(instagram).Append("\n");
-            sb.Append("  googleplus: ").Append(googleplus).Append("\n");
-            sb.Append("  signatures: ").Append(signatures).Append("\n");
-            sb.Append("  user: ").Append(user).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
+            sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("  JobTitle: ").Append(JobTitle).Append("\n");
+            sb.Append("  TelMobile: ").Append(TelMobile).Append("\n");
+            sb.Append("  TelDirect: ").Append(TelDirect).Append("\n");
+            sb.Append("  Linkedin: ").Append(Linkedin).Append("\n");
+            sb.Append("  Facebook: ").Append(Facebook).Append("\n");
+            sb.Append("  Twitter: ").Append(Twitter).Append("\n");
+            sb.Append("  Instagram: ").Append(Instagram).Append("\n");
+            sb.Append("  Googleplus: ").Append(Googleplus).Append("\n");
+            sb.Append("  Signatures: ").Append(Signatures).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -208,79 +193,79 @@ namespace Squiggle.Model
 
             return 
                 (
-                    this.id == other.id ||
-                    this.id != null &&
-                    this.id.Equals(other.id)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.email == other.email ||
-                    this.email != null &&
-                    this.email.Equals(other.email)
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
                 ) && 
                 (
-                    this.password == other.password ||
-                    this.password != null &&
-                    this.password.Equals(other.password)
+                    this.Password == other.Password ||
+                    this.Password != null &&
+                    this.Password.Equals(other.Password)
                 ) && 
                 (
-                    this.firstName == other.firstName ||
-                    this.firstName != null &&
-                    this.firstName.Equals(other.firstName)
+                    this.FirstName == other.FirstName ||
+                    this.FirstName != null &&
+                    this.FirstName.Equals(other.FirstName)
                 ) && 
                 (
-                    this.lastName == other.lastName ||
-                    this.lastName != null &&
-                    this.lastName.Equals(other.lastName)
+                    this.LastName == other.LastName ||
+                    this.LastName != null &&
+                    this.LastName.Equals(other.LastName)
                 ) && 
                 (
-                    this.jobTitle == other.jobTitle ||
-                    this.jobTitle != null &&
-                    this.jobTitle.Equals(other.jobTitle)
+                    this.JobTitle == other.JobTitle ||
+                    this.JobTitle != null &&
+                    this.JobTitle.Equals(other.JobTitle)
                 ) && 
                 (
-                    this.telMobile == other.telMobile ||
-                    this.telMobile != null &&
-                    this.telMobile.Equals(other.telMobile)
+                    this.TelMobile == other.TelMobile ||
+                    this.TelMobile != null &&
+                    this.TelMobile.Equals(other.TelMobile)
                 ) && 
                 (
-                    this.telDirect == other.telDirect ||
-                    this.telDirect != null &&
-                    this.telDirect.Equals(other.telDirect)
+                    this.TelDirect == other.TelDirect ||
+                    this.TelDirect != null &&
+                    this.TelDirect.Equals(other.TelDirect)
                 ) && 
                 (
-                    this.linkedin == other.linkedin ||
-                    this.linkedin != null &&
-                    this.linkedin.Equals(other.linkedin)
+                    this.Linkedin == other.Linkedin ||
+                    this.Linkedin != null &&
+                    this.Linkedin.Equals(other.Linkedin)
                 ) && 
                 (
-                    this.facebook == other.facebook ||
-                    this.facebook != null &&
-                    this.facebook.Equals(other.facebook)
+                    this.Facebook == other.Facebook ||
+                    this.Facebook != null &&
+                    this.Facebook.Equals(other.Facebook)
                 ) && 
                 (
-                    this.twitter == other.twitter ||
-                    this.twitter != null &&
-                    this.twitter.Equals(other.twitter)
+                    this.Twitter == other.Twitter ||
+                    this.Twitter != null &&
+                    this.Twitter.Equals(other.Twitter)
                 ) && 
                 (
-                    this.instagram == other.instagram ||
-                    this.instagram != null &&
-                    this.instagram.Equals(other.instagram)
+                    this.Instagram == other.Instagram ||
+                    this.Instagram != null &&
+                    this.Instagram.Equals(other.Instagram)
                 ) && 
                 (
-                    this.googleplus == other.googleplus ||
-                    this.googleplus != null &&
-                    this.googleplus.Equals(other.googleplus)
+                    this.Googleplus == other.Googleplus ||
+                    this.Googleplus != null &&
+                    this.Googleplus.Equals(other.Googleplus)
                 ) && 
                 (
-                    this.signatures == other.signatures ||
-                    this.signatures != null &&
-                    this.signatures.SequenceEqual(other.signatures)
+                    this.Signatures == other.Signatures ||
+                    this.Signatures != null &&
+                    this.Signatures.SequenceEqual(other.Signatures)
                 ) && 
                 (
-                    this.user == other.user ||
-                    this.user != null &&
-                    this.user.Equals(other.user)
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
                 );
         }
 
@@ -296,50 +281,50 @@ namespace Squiggle.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.id != null)
-                    hash = hash * 59 + this.id.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.email != null)
-                    hash = hash * 59 + this.email.GetHashCode();
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
                 
-                if (this.password != null)
-                    hash = hash * 59 + this.password.GetHashCode();
+                if (this.Password != null)
+                    hash = hash * 59 + this.Password.GetHashCode();
                 
-                if (this.firstName != null)
-                    hash = hash * 59 + this.firstName.GetHashCode();
+                if (this.FirstName != null)
+                    hash = hash * 59 + this.FirstName.GetHashCode();
                 
-                if (this.lastName != null)
-                    hash = hash * 59 + this.lastName.GetHashCode();
+                if (this.LastName != null)
+                    hash = hash * 59 + this.LastName.GetHashCode();
                 
-                if (this.jobTitle != null)
-                    hash = hash * 59 + this.jobTitle.GetHashCode();
+                if (this.JobTitle != null)
+                    hash = hash * 59 + this.JobTitle.GetHashCode();
                 
-                if (this.telMobile != null)
-                    hash = hash * 59 + this.telMobile.GetHashCode();
+                if (this.TelMobile != null)
+                    hash = hash * 59 + this.TelMobile.GetHashCode();
                 
-                if (this.telDirect != null)
-                    hash = hash * 59 + this.telDirect.GetHashCode();
+                if (this.TelDirect != null)
+                    hash = hash * 59 + this.TelDirect.GetHashCode();
                 
-                if (this.linkedin != null)
-                    hash = hash * 59 + this.linkedin.GetHashCode();
+                if (this.Linkedin != null)
+                    hash = hash * 59 + this.Linkedin.GetHashCode();
                 
-                if (this.facebook != null)
-                    hash = hash * 59 + this.facebook.GetHashCode();
+                if (this.Facebook != null)
+                    hash = hash * 59 + this.Facebook.GetHashCode();
                 
-                if (this.twitter != null)
-                    hash = hash * 59 + this.twitter.GetHashCode();
+                if (this.Twitter != null)
+                    hash = hash * 59 + this.Twitter.GetHashCode();
                 
-                if (this.instagram != null)
-                    hash = hash * 59 + this.instagram.GetHashCode();
+                if (this.Instagram != null)
+                    hash = hash * 59 + this.Instagram.GetHashCode();
                 
-                if (this.googleplus != null)
-                    hash = hash * 59 + this.googleplus.GetHashCode();
+                if (this.Googleplus != null)
+                    hash = hash * 59 + this.Googleplus.GetHashCode();
                 
-                if (this.signatures != null)
-                    hash = hash * 59 + this.signatures.GetHashCode();
+                if (this.Signatures != null)
+                    hash = hash * 59 + this.Signatures.GetHashCode();
                 
-                if (this.user != null)
-                    hash = hash * 59 + this.user.GetHashCode();
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 return hash;
             }

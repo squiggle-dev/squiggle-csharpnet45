@@ -22,16 +22,15 @@ namespace Squiggle.Model
         /// </summary>
         public UnexpectedErrorResponse()
         {
-            this.errors = null;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets errors
+        /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name="errors", EmitDefaultValue=false)]
-        public List<Object> errors { get; set; }
+        public List<Error> Errors { get; set; }
   
         
   
@@ -43,7 +42,7 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UnexpectedErrorResponse {\n");
-            sb.Append("  errors: ").Append(errors).Append("\n");
+            sb.Append("  Errors: ").Append(Errors).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -82,9 +81,9 @@ namespace Squiggle.Model
 
             return 
                 (
-                    this.errors == other.errors ||
-                    this.errors != null &&
-                    this.errors.SequenceEqual(other.errors)
+                    this.Errors == other.Errors ||
+                    this.Errors != null &&
+                    this.Errors.SequenceEqual(other.Errors)
                 );
         }
 
@@ -100,8 +99,8 @@ namespace Squiggle.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.errors != null)
-                    hash = hash * 59 + this.errors.GetHashCode();
+                if (this.Errors != null)
+                    hash = hash * 59 + this.Errors.GetHashCode();
                 
                 return hash;
             }

@@ -22,40 +22,36 @@ namespace Squiggle.Model
         /// </summary>
         public ResponseLinks()
         {
-            this.self = null;
-            this.related = null;
-            this.next = null;
-            this.last = null;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets self
+        /// Gets or Sets Self
         /// </summary>
         [DataMember(Name="self", EmitDefaultValue=false)]
-        public string self { get; set; }
+        public string Self { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets related
+        /// Gets or Sets Related
         /// </summary>
         [DataMember(Name="related", EmitDefaultValue=false)]
-        public string related { get; set; }
+        public string Related { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets next
+        /// Gets or Sets Next
         /// </summary>
         [DataMember(Name="next", EmitDefaultValue=false)]
-        public string next { get; set; }
+        public string Next { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets last
+        /// Gets or Sets Last
         /// </summary>
         [DataMember(Name="last", EmitDefaultValue=false)]
-        public string last { get; set; }
+        public string Last { get; set; }
   
         
   
@@ -67,10 +63,10 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseLinks {\n");
-            sb.Append("  self: ").Append(self).Append("\n");
-            sb.Append("  related: ").Append(related).Append("\n");
-            sb.Append("  next: ").Append(next).Append("\n");
-            sb.Append("  last: ").Append(last).Append("\n");
+            sb.Append("  Self: ").Append(Self).Append("\n");
+            sb.Append("  Related: ").Append(Related).Append("\n");
+            sb.Append("  Next: ").Append(Next).Append("\n");
+            sb.Append("  Last: ").Append(Last).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -109,24 +105,24 @@ namespace Squiggle.Model
 
             return 
                 (
-                    this.self == other.self ||
-                    this.self != null &&
-                    this.self.Equals(other.self)
+                    this.Self == other.Self ||
+                    this.Self != null &&
+                    this.Self.Equals(other.Self)
                 ) && 
                 (
-                    this.related == other.related ||
-                    this.related != null &&
-                    this.related.Equals(other.related)
+                    this.Related == other.Related ||
+                    this.Related != null &&
+                    this.Related.Equals(other.Related)
                 ) && 
                 (
-                    this.next == other.next ||
-                    this.next != null &&
-                    this.next.Equals(other.next)
+                    this.Next == other.Next ||
+                    this.Next != null &&
+                    this.Next.Equals(other.Next)
                 ) && 
                 (
-                    this.last == other.last ||
-                    this.last != null &&
-                    this.last.Equals(other.last)
+                    this.Last == other.Last ||
+                    this.Last != null &&
+                    this.Last.Equals(other.Last)
                 );
         }
 
@@ -142,17 +138,17 @@ namespace Squiggle.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.self != null)
-                    hash = hash * 59 + this.self.GetHashCode();
+                if (this.Self != null)
+                    hash = hash * 59 + this.Self.GetHashCode();
                 
-                if (this.related != null)
-                    hash = hash * 59 + this.related.GetHashCode();
+                if (this.Related != null)
+                    hash = hash * 59 + this.Related.GetHashCode();
                 
-                if (this.next != null)
-                    hash = hash * 59 + this.next.GetHashCode();
+                if (this.Next != null)
+                    hash = hash * 59 + this.Next.GetHashCode();
                 
-                if (this.last != null)
-                    hash = hash * 59 + this.last.GetHashCode();
+                if (this.Last != null)
+                    hash = hash * 59 + this.Last.GetHashCode();
                 
                 return hash;
             }

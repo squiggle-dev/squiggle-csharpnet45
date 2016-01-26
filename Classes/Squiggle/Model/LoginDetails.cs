@@ -15,29 +15,29 @@ namespace Squiggle.Model
     /// 
     /// </summary>
     [DataContract]
-    public class JSONWebTokenResponse : Response,  IEquatable<JSONWebTokenResponse>
+    public class LoginDetails :  IEquatable<LoginDetails>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="JSONWebTokenResponse" /> class.
+        /// Initializes a new instance of the <see cref="LoginDetails" /> class.
         /// </summary>
-        public JSONWebTokenResponse()
+        public LoginDetails()
         {
             
         }
 
         
         /// <summary>
-        /// Gets or Sets Data
+        /// Gets or Sets Username
         /// </summary>
-        [DataMember(Name="data", EmitDefaultValue=false)]
-        public JSONWebToken Data { get; set; }
+        [DataMember(Name="username", EmitDefaultValue=false)]
+        public string Username { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Links
+        /// Gets or Sets Password
         /// </summary>
-        [DataMember(Name="links", EmitDefaultValue=false)]
-        public ResponseLinks Links { get; set; }
+        [DataMember(Name="password", EmitDefaultValue=false)]
+        public string Password { get; set; }
   
         
   
@@ -48,9 +48,9 @@ namespace Squiggle.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class JSONWebTokenResponse {\n");
-            sb.Append("  Data: ").Append(Data).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("class LoginDetails {\n");
+            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  Password: ").Append(Password).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -60,7 +60,7 @@ namespace Squiggle.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -73,15 +73,15 @@ namespace Squiggle.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as JSONWebTokenResponse);
+            return this.Equals(obj as LoginDetails);
         }
 
         /// <summary>
-        /// Returns true if JSONWebTokenResponse instances are equal
+        /// Returns true if LoginDetails instances are equal
         /// </summary>
-        /// <param name="other">Instance of JSONWebTokenResponse to be compared</param>
+        /// <param name="other">Instance of LoginDetails to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(JSONWebTokenResponse other)
+        public bool Equals(LoginDetails other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,14 +89,14 @@ namespace Squiggle.Model
 
             return 
                 (
-                    this.Data == other.Data ||
-                    this.Data != null &&
-                    this.Data.Equals(other.Data)
+                    this.Username == other.Username ||
+                    this.Username != null &&
+                    this.Username.Equals(other.Username)
                 ) && 
                 (
-                    this.Links == other.Links ||
-                    this.Links != null &&
-                    this.Links.Equals(other.Links)
+                    this.Password == other.Password ||
+                    this.Password != null &&
+                    this.Password.Equals(other.Password)
                 );
         }
 
@@ -112,11 +112,11 @@ namespace Squiggle.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Data != null)
-                    hash = hash * 59 + this.Data.GetHashCode();
+                if (this.Username != null)
+                    hash = hash * 59 + this.Username.GetHashCode();
                 
-                if (this.Links != null)
-                    hash = hash * 59 + this.Links.GetHashCode();
+                if (this.Password != null)
+                    hash = hash * 59 + this.Password.GetHashCode();
                 
                 return hash;
             }

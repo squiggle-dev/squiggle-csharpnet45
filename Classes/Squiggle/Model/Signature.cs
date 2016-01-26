@@ -22,32 +22,29 @@ namespace Squiggle.Model
         /// </summary>
         public Signature()
         {
-            this.plain = null;
-            this.rich = null;
-            this.html = null;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets plain
+        /// Gets or Sets Plain
         /// </summary>
         [DataMember(Name="plain", EmitDefaultValue=false)]
-        public string plain { get; set; }
+        public string Plain { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets rich
+        /// Gets or Sets Rich
         /// </summary>
         [DataMember(Name="rich", EmitDefaultValue=false)]
-        public string rich { get; set; }
+        public string Rich { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets html
+        /// Gets or Sets Html
         /// </summary>
         [DataMember(Name="html", EmitDefaultValue=false)]
-        public string html { get; set; }
+        public string Html { get; set; }
   
         
   
@@ -59,9 +56,9 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Signature {\n");
-            sb.Append("  plain: ").Append(plain).Append("\n");
-            sb.Append("  rich: ").Append(rich).Append("\n");
-            sb.Append("  html: ").Append(html).Append("\n");
+            sb.Append("  Plain: ").Append(Plain).Append("\n");
+            sb.Append("  Rich: ").Append(Rich).Append("\n");
+            sb.Append("  Html: ").Append(Html).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -100,19 +97,19 @@ namespace Squiggle.Model
 
             return 
                 (
-                    this.plain == other.plain ||
-                    this.plain != null &&
-                    this.plain.Equals(other.plain)
+                    this.Plain == other.Plain ||
+                    this.Plain != null &&
+                    this.Plain.Equals(other.Plain)
                 ) && 
                 (
-                    this.rich == other.rich ||
-                    this.rich != null &&
-                    this.rich.Equals(other.rich)
+                    this.Rich == other.Rich ||
+                    this.Rich != null &&
+                    this.Rich.Equals(other.Rich)
                 ) && 
                 (
-                    this.html == other.html ||
-                    this.html != null &&
-                    this.html.Equals(other.html)
+                    this.Html == other.Html ||
+                    this.Html != null &&
+                    this.Html.Equals(other.Html)
                 );
         }
 
@@ -128,14 +125,14 @@ namespace Squiggle.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.plain != null)
-                    hash = hash * 59 + this.plain.GetHashCode();
+                if (this.Plain != null)
+                    hash = hash * 59 + this.Plain.GetHashCode();
                 
-                if (this.rich != null)
-                    hash = hash * 59 + this.rich.GetHashCode();
+                if (this.Rich != null)
+                    hash = hash * 59 + this.Rich.GetHashCode();
                 
-                if (this.html != null)
-                    hash = hash * 59 + this.html.GetHashCode();
+                if (this.Html != null)
+                    hash = hash * 59 + this.Html.GetHashCode();
                 
                 return hash;
             }

@@ -22,16 +22,15 @@ namespace Squiggle.Model
         /// </summary>
         public Response()
         {
-            this.links = null;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets links
+        /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public ResponseLinks links { get; set; }
+        public ResponseLinks Links { get; set; }
   
         
   
@@ -43,7 +42,7 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Response {\n");
-            sb.Append("  links: ").Append(links).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -82,9 +81,9 @@ namespace Squiggle.Model
 
             return 
                 (
-                    this.links == other.links ||
-                    this.links != null &&
-                    this.links.Equals(other.links)
+                    this.Links == other.Links ||
+                    this.Links != null &&
+                    this.Links.Equals(other.Links)
                 );
         }
 
@@ -100,8 +99,8 @@ namespace Squiggle.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.links != null)
-                    hash = hash * 59 + this.links.GetHashCode();
+                if (this.Links != null)
+                    hash = hash * 59 + this.Links.GetHashCode();
                 
                 return hash;
             }
