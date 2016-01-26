@@ -27,6 +27,27 @@ namespace Squiggle.Model
 
         
         /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public int? Id { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name="address", EmitDefaultValue=false)]
+        public int? Address { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Template
+        /// </summary>
+        [DataMember(Name="template", EmitDefaultValue=false)]
+        public int? Template { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Plain
         /// </summary>
         [DataMember(Name="plain", EmitDefaultValue=false)]
@@ -56,6 +77,9 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Signature {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  Plain: ").Append(Plain).Append("\n");
             sb.Append("  Rich: ").Append(Rich).Append("\n");
             sb.Append("  Html: ").Append(Html).Append("\n");
@@ -97,6 +121,21 @@ namespace Squiggle.Model
 
             return 
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.Address == other.Address ||
+                    this.Address != null &&
+                    this.Address.Equals(other.Address)
+                ) && 
+                (
+                    this.Template == other.Template ||
+                    this.Template != null &&
+                    this.Template.Equals(other.Template)
+                ) && 
+                (
                     this.Plain == other.Plain ||
                     this.Plain != null &&
                     this.Plain.Equals(other.Plain)
@@ -124,6 +163,15 @@ namespace Squiggle.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Address != null)
+                    hash = hash * 59 + this.Address.GetHashCode();
+                
+                if (this.Template != null)
+                    hash = hash * 59 + this.Template.GetHashCode();
                 
                 if (this.Plain != null)
                     hash = hash * 59 + this.Plain.GetHashCode();
