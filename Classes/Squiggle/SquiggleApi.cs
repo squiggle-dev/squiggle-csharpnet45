@@ -24,7 +24,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>JSONWebTokenResponse</returns>
-        JSONWebTokenResponse RequestAddressToken (Object data);
+        JSONWebTokenResponse RequestAddressToken (LoginDetails data);
   
         /// <summary>
         /// 
@@ -34,7 +34,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>ApiResponse of JSONWebTokenResponse</returns>
-        ApiResponse<JSONWebTokenResponse> RequestAddressTokenWithHttpInfo (Object data);
+        ApiResponse<JSONWebTokenResponse> RequestAddressTokenWithHttpInfo (LoginDetails data);
 
         /// <summary>
         /// 
@@ -44,7 +44,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of JSONWebTokenResponse</returns>
-        System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (Object data);
+        System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (LoginDetails data);
 
         /// <summary>
         /// 
@@ -54,7 +54,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> RequestAddressTokenAsyncWithHttpInfo (Object data);
+        System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> RequestAddressTokenAsyncWithHttpInfo (LoginDetails data);
         
         /// <summary>
         /// 
@@ -65,7 +65,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>AddressResponseMultiple</returns>
-        AddressResponseMultiple FindAddresses (int? offset, int? limit);
+        AddressResponseMultiple FindAddresses (int? offset = null, int? limit = null);
   
         /// <summary>
         /// 
@@ -76,7 +76,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>ApiResponse of AddressResponseMultiple</returns>
-        ApiResponse<AddressResponseMultiple> FindAddressesWithHttpInfo (int? offset, int? limit);
+        ApiResponse<AddressResponseMultiple> FindAddressesWithHttpInfo (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -87,7 +87,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of AddressResponseMultiple</returns>
-        System.Threading.Tasks.Task<AddressResponseMultiple> FindAddressesAsync (int? offset, int? limit);
+        System.Threading.Tasks.Task<AddressResponseMultiple> FindAddressesAsync (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -98,7 +98,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (AddressResponseMultiple)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddressResponseMultiple>> FindAddressesAsyncWithHttpInfo (int? offset, int? limit);
+        System.Threading.Tasks.Task<ApiResponse<AddressResponseMultiple>> FindAddressesAsyncWithHttpInfo (int? offset = null, int? limit = null);
         
         /// <summary>
         /// 
@@ -108,7 +108,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>AddressResponseSingle</returns>
-        AddressResponseSingle AddAddress (Object data);
+        AddressResponseSingle AddAddress (Address data);
   
         /// <summary>
         /// 
@@ -118,7 +118,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>ApiResponse of AddressResponseSingle</returns>
-        ApiResponse<AddressResponseSingle> AddAddressWithHttpInfo (Object data);
+        ApiResponse<AddressResponseSingle> AddAddressWithHttpInfo (Address data);
 
         /// <summary>
         /// 
@@ -128,7 +128,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of AddressResponseSingle</returns>
-        System.Threading.Tasks.Task<AddressResponseSingle> AddAddressAsync (Object data);
+        System.Threading.Tasks.Task<AddressResponseSingle> AddAddressAsync (Address data);
 
         /// <summary>
         /// 
@@ -138,7 +138,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> AddAddressAsyncWithHttpInfo (Object data);
+        System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> AddAddressAsyncWithHttpInfo (Address data);
         
         /// <summary>
         /// 
@@ -229,7 +229,7 @@ namespace Squiggle
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
         /// <returns>AddressResponseSingle</returns>
-        AddressResponseSingle EditAddress (long? id, Object data);
+        AddressResponseSingle EditAddress (long? id, Address data);
   
         /// <summary>
         /// 
@@ -240,7 +240,7 @@ namespace Squiggle
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
         /// <returns>ApiResponse of AddressResponseSingle</returns>
-        ApiResponse<AddressResponseSingle> EditAddressWithHttpInfo (long? id, Object data);
+        ApiResponse<AddressResponseSingle> EditAddressWithHttpInfo (long? id, Address data);
 
         /// <summary>
         /// 
@@ -251,7 +251,7 @@ namespace Squiggle
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
         /// <returns>Task of AddressResponseSingle</returns>
-        System.Threading.Tasks.Task<AddressResponseSingle> EditAddressAsync (long? id, Object data);
+        System.Threading.Tasks.Task<AddressResponseSingle> EditAddressAsync (long? id, Address data);
 
         /// <summary>
         /// 
@@ -262,7 +262,7 @@ namespace Squiggle
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> EditAddressAsyncWithHttpInfo (long? id, Object data);
+        System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> EditAddressAsyncWithHttpInfo (long? id, Address data);
         
         /// <summary>
         /// 
@@ -273,7 +273,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>GlobalTemplateResponseMultiple</returns>
-        GlobalTemplateResponseMultiple FindGlobalTemplates (int? offset, int? limit);
+        GlobalTemplateResponseMultiple FindGlobalTemplates (int? offset = null, int? limit = null);
   
         /// <summary>
         /// 
@@ -284,7 +284,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>ApiResponse of GlobalTemplateResponseMultiple</returns>
-        ApiResponse<GlobalTemplateResponseMultiple> FindGlobalTemplatesWithHttpInfo (int? offset, int? limit);
+        ApiResponse<GlobalTemplateResponseMultiple> FindGlobalTemplatesWithHttpInfo (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -295,7 +295,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of GlobalTemplateResponseMultiple</returns>
-        System.Threading.Tasks.Task<GlobalTemplateResponseMultiple> FindGlobalTemplatesAsync (int? offset, int? limit);
+        System.Threading.Tasks.Task<GlobalTemplateResponseMultiple> FindGlobalTemplatesAsync (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -306,7 +306,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (GlobalTemplateResponseMultiple)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseMultiple>> FindGlobalTemplatesAsyncWithHttpInfo (int? offset, int? limit);
+        System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseMultiple>> FindGlobalTemplatesAsyncWithHttpInfo (int? offset = null, int? limit = null);
         
         /// <summary>
         /// 
@@ -316,7 +316,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>GlobalTemplateResponseSingle</returns>
-        GlobalTemplateResponseSingle AddGlobalTemplate (Object data);
+        GlobalTemplateResponseSingle AddGlobalTemplate (GlobalTemplate data);
   
         /// <summary>
         /// 
@@ -326,7 +326,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>ApiResponse of GlobalTemplateResponseSingle</returns>
-        ApiResponse<GlobalTemplateResponseSingle> AddGlobalTemplateWithHttpInfo (Object data);
+        ApiResponse<GlobalTemplateResponseSingle> AddGlobalTemplateWithHttpInfo (GlobalTemplate data);
 
         /// <summary>
         /// 
@@ -336,7 +336,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of GlobalTemplateResponseSingle</returns>
-        System.Threading.Tasks.Task<GlobalTemplateResponseSingle> AddGlobalTemplateAsync (Object data);
+        System.Threading.Tasks.Task<GlobalTemplateResponseSingle> AddGlobalTemplateAsync (GlobalTemplate data);
 
         /// <summary>
         /// 
@@ -346,7 +346,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (GlobalTemplateResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseSingle>> AddGlobalTemplateAsyncWithHttpInfo (Object data);
+        System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseSingle>> AddGlobalTemplateAsyncWithHttpInfo (GlobalTemplate data);
         
         /// <summary>
         /// 
@@ -437,7 +437,7 @@ namespace Squiggle
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
         /// <returns>GlobalTemplateResponseSingle</returns>
-        GlobalTemplateResponseSingle EditGlobalTemplate (long? id, Object data);
+        GlobalTemplateResponseSingle EditGlobalTemplate (long? id, GlobalTemplate data);
   
         /// <summary>
         /// 
@@ -448,7 +448,7 @@ namespace Squiggle
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
         /// <returns>ApiResponse of GlobalTemplateResponseSingle</returns>
-        ApiResponse<GlobalTemplateResponseSingle> EditGlobalTemplateWithHttpInfo (long? id, Object data);
+        ApiResponse<GlobalTemplateResponseSingle> EditGlobalTemplateWithHttpInfo (long? id, GlobalTemplate data);
 
         /// <summary>
         /// 
@@ -459,7 +459,7 @@ namespace Squiggle
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
         /// <returns>Task of GlobalTemplateResponseSingle</returns>
-        System.Threading.Tasks.Task<GlobalTemplateResponseSingle> EditGlobalTemplateAsync (long? id, Object data);
+        System.Threading.Tasks.Task<GlobalTemplateResponseSingle> EditGlobalTemplateAsync (long? id, GlobalTemplate data);
 
         /// <summary>
         /// 
@@ -470,7 +470,7 @@ namespace Squiggle
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (GlobalTemplateResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseSingle>> EditGlobalTemplateAsyncWithHttpInfo (long? id, Object data);
+        System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseSingle>> EditGlobalTemplateAsyncWithHttpInfo (long? id, GlobalTemplate data);
         
         /// <summary>
         /// 
@@ -481,7 +481,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>SnippetResponseMultiple</returns>
-        SnippetResponseMultiple FindSnippets (int? offset, int? limit);
+        SnippetResponseMultiple FindSnippets (int? offset = null, int? limit = null);
   
         /// <summary>
         /// 
@@ -492,7 +492,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>ApiResponse of SnippetResponseMultiple</returns>
-        ApiResponse<SnippetResponseMultiple> FindSnippetsWithHttpInfo (int? offset, int? limit);
+        ApiResponse<SnippetResponseMultiple> FindSnippetsWithHttpInfo (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -503,7 +503,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of SnippetResponseMultiple</returns>
-        System.Threading.Tasks.Task<SnippetResponseMultiple> FindSnippetsAsync (int? offset, int? limit);
+        System.Threading.Tasks.Task<SnippetResponseMultiple> FindSnippetsAsync (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -514,7 +514,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (SnippetResponseMultiple)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SnippetResponseMultiple>> FindSnippetsAsyncWithHttpInfo (int? offset, int? limit);
+        System.Threading.Tasks.Task<ApiResponse<SnippetResponseMultiple>> FindSnippetsAsyncWithHttpInfo (int? offset = null, int? limit = null);
         
         /// <summary>
         /// 
@@ -524,7 +524,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>SnippetResponseSingle</returns>
-        SnippetResponseSingle AddSnippet (Object data);
+        SnippetResponseSingle AddSnippet (Snippet data);
   
         /// <summary>
         /// 
@@ -534,7 +534,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>ApiResponse of SnippetResponseSingle</returns>
-        ApiResponse<SnippetResponseSingle> AddSnippetWithHttpInfo (Object data);
+        ApiResponse<SnippetResponseSingle> AddSnippetWithHttpInfo (Snippet data);
 
         /// <summary>
         /// 
@@ -544,7 +544,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of SnippetResponseSingle</returns>
-        System.Threading.Tasks.Task<SnippetResponseSingle> AddSnippetAsync (Object data);
+        System.Threading.Tasks.Task<SnippetResponseSingle> AddSnippetAsync (Snippet data);
 
         /// <summary>
         /// 
@@ -554,7 +554,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (SnippetResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SnippetResponseSingle>> AddSnippetAsyncWithHttpInfo (Object data);
+        System.Threading.Tasks.Task<ApiResponse<SnippetResponseSingle>> AddSnippetAsyncWithHttpInfo (Snippet data);
         
         /// <summary>
         /// 
@@ -645,7 +645,7 @@ namespace Squiggle
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
         /// <returns>SnippetResponseSingle</returns>
-        SnippetResponseSingle EditSnippet (long? id, Object data);
+        SnippetResponseSingle EditSnippet (long? id, Snippet data);
   
         /// <summary>
         /// 
@@ -656,7 +656,7 @@ namespace Squiggle
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
         /// <returns>ApiResponse of SnippetResponseSingle</returns>
-        ApiResponse<SnippetResponseSingle> EditSnippetWithHttpInfo (long? id, Object data);
+        ApiResponse<SnippetResponseSingle> EditSnippetWithHttpInfo (long? id, Snippet data);
 
         /// <summary>
         /// 
@@ -667,7 +667,7 @@ namespace Squiggle
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
         /// <returns>Task of SnippetResponseSingle</returns>
-        System.Threading.Tasks.Task<SnippetResponseSingle> EditSnippetAsync (long? id, Object data);
+        System.Threading.Tasks.Task<SnippetResponseSingle> EditSnippetAsync (long? id, Snippet data);
 
         /// <summary>
         /// 
@@ -678,7 +678,7 @@ namespace Squiggle
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (SnippetResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SnippetResponseSingle>> EditSnippetAsyncWithHttpInfo (long? id, Object data);
+        System.Threading.Tasks.Task<ApiResponse<SnippetResponseSingle>> EditSnippetAsyncWithHttpInfo (long? id, Snippet data);
         
         /// <summary>
         /// 
@@ -689,7 +689,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>TemplateResponseMultiple</returns>
-        TemplateResponseMultiple FindTemplates (int? offset, int? limit);
+        TemplateResponseMultiple FindTemplates (int? offset = null, int? limit = null);
   
         /// <summary>
         /// 
@@ -700,7 +700,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>ApiResponse of TemplateResponseMultiple</returns>
-        ApiResponse<TemplateResponseMultiple> FindTemplatesWithHttpInfo (int? offset, int? limit);
+        ApiResponse<TemplateResponseMultiple> FindTemplatesWithHttpInfo (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -711,7 +711,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of TemplateResponseMultiple</returns>
-        System.Threading.Tasks.Task<TemplateResponseMultiple> FindTemplatesAsync (int? offset, int? limit);
+        System.Threading.Tasks.Task<TemplateResponseMultiple> FindTemplatesAsync (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -722,7 +722,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (TemplateResponseMultiple)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateResponseMultiple>> FindTemplatesAsyncWithHttpInfo (int? offset, int? limit);
+        System.Threading.Tasks.Task<ApiResponse<TemplateResponseMultiple>> FindTemplatesAsyncWithHttpInfo (int? offset = null, int? limit = null);
         
         /// <summary>
         /// 
@@ -732,7 +732,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>TemplateResponseSingle</returns>
-        TemplateResponseSingle AddTemplate (Object data);
+        TemplateResponseSingle AddTemplate (Template data);
   
         /// <summary>
         /// 
@@ -742,7 +742,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>ApiResponse of TemplateResponseSingle</returns>
-        ApiResponse<TemplateResponseSingle> AddTemplateWithHttpInfo (Object data);
+        ApiResponse<TemplateResponseSingle> AddTemplateWithHttpInfo (Template data);
 
         /// <summary>
         /// 
@@ -752,7 +752,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of TemplateResponseSingle</returns>
-        System.Threading.Tasks.Task<TemplateResponseSingle> AddTemplateAsync (Object data);
+        System.Threading.Tasks.Task<TemplateResponseSingle> AddTemplateAsync (Template data);
 
         /// <summary>
         /// 
@@ -762,7 +762,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (TemplateResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> AddTemplateAsyncWithHttpInfo (Object data);
+        System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> AddTemplateAsyncWithHttpInfo (Template data);
         
         /// <summary>
         /// 
@@ -853,7 +853,7 @@ namespace Squiggle
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
         /// <returns>TemplateResponseSingle</returns>
-        TemplateResponseSingle EditTemplate (long? id, Object data);
+        TemplateResponseSingle EditTemplate (long? id, Template data);
   
         /// <summary>
         /// 
@@ -864,7 +864,7 @@ namespace Squiggle
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
         /// <returns>ApiResponse of TemplateResponseSingle</returns>
-        ApiResponse<TemplateResponseSingle> EditTemplateWithHttpInfo (long? id, Object data);
+        ApiResponse<TemplateResponseSingle> EditTemplateWithHttpInfo (long? id, Template data);
 
         /// <summary>
         /// 
@@ -875,7 +875,7 @@ namespace Squiggle
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
         /// <returns>Task of TemplateResponseSingle</returns>
-        System.Threading.Tasks.Task<TemplateResponseSingle> EditTemplateAsync (long? id, Object data);
+        System.Threading.Tasks.Task<TemplateResponseSingle> EditTemplateAsync (long? id, Template data);
 
         /// <summary>
         /// 
@@ -886,7 +886,7 @@ namespace Squiggle
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (TemplateResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> EditTemplateAsyncWithHttpInfo (long? id, Object data);
+        System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> EditTemplateAsyncWithHttpInfo (long? id, Template data);
         
         /// <summary>
         /// 
@@ -897,7 +897,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>UserResponseMultiple</returns>
-        UserResponseMultiple FindUsers (int? offset, int? limit);
+        UserResponseMultiple FindUsers (int? offset = null, int? limit = null);
   
         /// <summary>
         /// 
@@ -908,7 +908,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>ApiResponse of UserResponseMultiple</returns>
-        ApiResponse<UserResponseMultiple> FindUsersWithHttpInfo (int? offset, int? limit);
+        ApiResponse<UserResponseMultiple> FindUsersWithHttpInfo (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -919,7 +919,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of UserResponseMultiple</returns>
-        System.Threading.Tasks.Task<UserResponseMultiple> FindUsersAsync (int? offset, int? limit);
+        System.Threading.Tasks.Task<UserResponseMultiple> FindUsersAsync (int? offset = null, int? limit = null);
 
         /// <summary>
         /// 
@@ -930,7 +930,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (UserResponseMultiple)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserResponseMultiple>> FindUsersAsyncWithHttpInfo (int? offset, int? limit);
+        System.Threading.Tasks.Task<ApiResponse<UserResponseMultiple>> FindUsersAsyncWithHttpInfo (int? offset = null, int? limit = null);
         
         /// <summary>
         /// 
@@ -940,7 +940,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>UserResponseSingle</returns>
-        UserResponseSingle AddUser (Object data);
+        UserResponseSingle AddUser (User data);
   
         /// <summary>
         /// 
@@ -950,7 +950,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>ApiResponse of UserResponseSingle</returns>
-        ApiResponse<UserResponseSingle> AddUserWithHttpInfo (Object data);
+        ApiResponse<UserResponseSingle> AddUserWithHttpInfo (User data);
 
         /// <summary>
         /// 
@@ -960,7 +960,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of UserResponseSingle</returns>
-        System.Threading.Tasks.Task<UserResponseSingle> AddUserAsync (Object data);
+        System.Threading.Tasks.Task<UserResponseSingle> AddUserAsync (User data);
 
         /// <summary>
         /// 
@@ -970,7 +970,7 @@ namespace Squiggle
         /// </remarks>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (UserResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserResponseSingle>> AddUserAsyncWithHttpInfo (Object data);
+        System.Threading.Tasks.Task<ApiResponse<UserResponseSingle>> AddUserAsyncWithHttpInfo (User data);
         
         /// <summary>
         /// 
@@ -1061,7 +1061,7 @@ namespace Squiggle
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
         /// <returns>UserResponseSingle</returns>
-        UserResponseSingle EditUser (long? id, Object data);
+        UserResponseSingle EditUser (long? id, User data);
   
         /// <summary>
         /// 
@@ -1072,7 +1072,7 @@ namespace Squiggle
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
         /// <returns>ApiResponse of UserResponseSingle</returns>
-        ApiResponse<UserResponseSingle> EditUserWithHttpInfo (long? id, Object data);
+        ApiResponse<UserResponseSingle> EditUserWithHttpInfo (long? id, User data);
 
         /// <summary>
         /// 
@@ -1083,7 +1083,7 @@ namespace Squiggle
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
         /// <returns>Task of UserResponseSingle</returns>
-        System.Threading.Tasks.Task<UserResponseSingle> EditUserAsync (long? id, Object data);
+        System.Threading.Tasks.Task<UserResponseSingle> EditUserAsync (long? id, User data);
 
         /// <summary>
         /// 
@@ -1094,7 +1094,7 @@ namespace Squiggle
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (UserResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserResponseSingle>> EditUserAsyncWithHttpInfo (long? id, Object data);
+        System.Threading.Tasks.Task<ApiResponse<UserResponseSingle>> EditUserAsyncWithHttpInfo (long? id, User data);
         
     }
   
@@ -1179,7 +1179,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>JSONWebTokenResponse</returns>
-        public JSONWebTokenResponse RequestAddressToken (Object data)
+        public JSONWebTokenResponse RequestAddressToken (LoginDetails data)
         {
              ApiResponse<JSONWebTokenResponse> response = RequestAddressTokenWithHttpInfo(data);
              return response.Data;
@@ -1190,7 +1190,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>ApiResponse of JSONWebTokenResponse</returns>
-        public ApiResponse< JSONWebTokenResponse > RequestAddressTokenWithHttpInfo (Object data)
+        public ApiResponse< JSONWebTokenResponse > RequestAddressTokenWithHttpInfo (LoginDetails data)
         {
             
             // verify the required parameter 'data' is set
@@ -1209,7 +1209,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1262,7 +1262,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of JSONWebTokenResponse</returns>
-        public async System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (Object data)
+        public async System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (LoginDetails data)
         {
              ApiResponse<JSONWebTokenResponse> response = await RequestAddressTokenAsyncWithHttpInfo(data);
              return response.Data;
@@ -1274,7 +1274,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> RequestAddressTokenAsyncWithHttpInfo (Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> RequestAddressTokenAsyncWithHttpInfo (LoginDetails data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling RequestAddressToken");
@@ -1291,7 +1291,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1339,7 +1339,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>AddressResponseMultiple</returns>
-        public AddressResponseMultiple FindAddresses (int? offset, int? limit)
+        public AddressResponseMultiple FindAddresses (int? offset = null, int? limit = null)
         {
              ApiResponse<AddressResponseMultiple> response = FindAddressesWithHttpInfo(offset, limit);
              return response.Data;
@@ -1351,7 +1351,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>ApiResponse of AddressResponseMultiple</returns>
-        public ApiResponse< AddressResponseMultiple > FindAddressesWithHttpInfo (int? offset, int? limit)
+        public ApiResponse< AddressResponseMultiple > FindAddressesWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -1366,7 +1366,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1422,7 +1422,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of AddressResponseMultiple</returns>
-        public async System.Threading.Tasks.Task<AddressResponseMultiple> FindAddressesAsync (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<AddressResponseMultiple> FindAddressesAsync (int? offset = null, int? limit = null)
         {
              ApiResponse<AddressResponseMultiple> response = await FindAddressesAsyncWithHttpInfo(offset, limit);
              return response.Data;
@@ -1435,7 +1435,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (AddressResponseMultiple)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseMultiple>> FindAddressesAsyncWithHttpInfo (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseMultiple>> FindAddressesAsyncWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -1450,7 +1450,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1506,7 +1506,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>AddressResponseSingle</returns>
-        public AddressResponseSingle AddAddress (Object data)
+        public AddressResponseSingle AddAddress (Address data)
         {
              ApiResponse<AddressResponseSingle> response = AddAddressWithHttpInfo(data);
              return response.Data;
@@ -1517,7 +1517,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>ApiResponse of AddressResponseSingle</returns>
-        public ApiResponse< AddressResponseSingle > AddAddressWithHttpInfo (Object data)
+        public ApiResponse< AddressResponseSingle > AddAddressWithHttpInfo (Address data)
         {
             
             // verify the required parameter 'data' is set
@@ -1536,7 +1536,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1596,7 +1596,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of AddressResponseSingle</returns>
-        public async System.Threading.Tasks.Task<AddressResponseSingle> AddAddressAsync (Object data)
+        public async System.Threading.Tasks.Task<AddressResponseSingle> AddAddressAsync (Address data)
         {
              ApiResponse<AddressResponseSingle> response = await AddAddressAsyncWithHttpInfo(data);
              return response.Data;
@@ -1608,7 +1608,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> AddAddressAsyncWithHttpInfo (Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> AddAddressAsyncWithHttpInfo (Address data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddAddress");
@@ -1625,7 +1625,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1710,7 +1710,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1793,7 +1793,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1877,7 +1877,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -1959,7 +1959,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2015,7 +2015,7 @@ namespace Squiggle
         /// <param name="id">ID of address to update</param> 
         /// <param name="data"></param> 
         /// <returns>AddressResponseSingle</returns>
-        public AddressResponseSingle EditAddress (long? id, Object data)
+        public AddressResponseSingle EditAddress (long? id, Address data)
         {
              ApiResponse<AddressResponseSingle> response = EditAddressWithHttpInfo(id, data);
              return response.Data;
@@ -2027,7 +2027,7 @@ namespace Squiggle
         /// <param name="id">ID of address to update</param> 
         /// <param name="data"></param> 
         /// <returns>ApiResponse of AddressResponseSingle</returns>
-        public ApiResponse< AddressResponseSingle > EditAddressWithHttpInfo (long? id, Object data)
+        public ApiResponse< AddressResponseSingle > EditAddressWithHttpInfo (long? id, Address data)
         {
             
             // verify the required parameter 'id' is set
@@ -2050,7 +2050,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2112,7 +2112,7 @@ namespace Squiggle
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
         /// <returns>Task of AddressResponseSingle</returns>
-        public async System.Threading.Tasks.Task<AddressResponseSingle> EditAddressAsync (long? id, Object data)
+        public async System.Threading.Tasks.Task<AddressResponseSingle> EditAddressAsync (long? id, Address data)
         {
              ApiResponse<AddressResponseSingle> response = await EditAddressAsyncWithHttpInfo(id, data);
              return response.Data;
@@ -2125,7 +2125,7 @@ namespace Squiggle
         /// <param name="id">ID of address to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> EditAddressAsyncWithHttpInfo (long? id, Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> EditAddressAsyncWithHttpInfo (long? id, Address data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditAddress");
@@ -2144,7 +2144,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2201,7 +2201,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>GlobalTemplateResponseMultiple</returns>
-        public GlobalTemplateResponseMultiple FindGlobalTemplates (int? offset, int? limit)
+        public GlobalTemplateResponseMultiple FindGlobalTemplates (int? offset = null, int? limit = null)
         {
              ApiResponse<GlobalTemplateResponseMultiple> response = FindGlobalTemplatesWithHttpInfo(offset, limit);
              return response.Data;
@@ -2213,7 +2213,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>ApiResponse of GlobalTemplateResponseMultiple</returns>
-        public ApiResponse< GlobalTemplateResponseMultiple > FindGlobalTemplatesWithHttpInfo (int? offset, int? limit)
+        public ApiResponse< GlobalTemplateResponseMultiple > FindGlobalTemplatesWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -2228,7 +2228,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2284,7 +2284,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of GlobalTemplateResponseMultiple</returns>
-        public async System.Threading.Tasks.Task<GlobalTemplateResponseMultiple> FindGlobalTemplatesAsync (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<GlobalTemplateResponseMultiple> FindGlobalTemplatesAsync (int? offset = null, int? limit = null)
         {
              ApiResponse<GlobalTemplateResponseMultiple> response = await FindGlobalTemplatesAsyncWithHttpInfo(offset, limit);
              return response.Data;
@@ -2297,7 +2297,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (GlobalTemplateResponseMultiple)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseMultiple>> FindGlobalTemplatesAsyncWithHttpInfo (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseMultiple>> FindGlobalTemplatesAsyncWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -2312,7 +2312,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2368,7 +2368,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>GlobalTemplateResponseSingle</returns>
-        public GlobalTemplateResponseSingle AddGlobalTemplate (Object data)
+        public GlobalTemplateResponseSingle AddGlobalTemplate (GlobalTemplate data)
         {
              ApiResponse<GlobalTemplateResponseSingle> response = AddGlobalTemplateWithHttpInfo(data);
              return response.Data;
@@ -2379,7 +2379,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>ApiResponse of GlobalTemplateResponseSingle</returns>
-        public ApiResponse< GlobalTemplateResponseSingle > AddGlobalTemplateWithHttpInfo (Object data)
+        public ApiResponse< GlobalTemplateResponseSingle > AddGlobalTemplateWithHttpInfo (GlobalTemplate data)
         {
             
             // verify the required parameter 'data' is set
@@ -2398,7 +2398,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2458,7 +2458,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of GlobalTemplateResponseSingle</returns>
-        public async System.Threading.Tasks.Task<GlobalTemplateResponseSingle> AddGlobalTemplateAsync (Object data)
+        public async System.Threading.Tasks.Task<GlobalTemplateResponseSingle> AddGlobalTemplateAsync (GlobalTemplate data)
         {
              ApiResponse<GlobalTemplateResponseSingle> response = await AddGlobalTemplateAsyncWithHttpInfo(data);
              return response.Data;
@@ -2470,7 +2470,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (GlobalTemplateResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseSingle>> AddGlobalTemplateAsyncWithHttpInfo (Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseSingle>> AddGlobalTemplateAsyncWithHttpInfo (GlobalTemplate data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddGlobalTemplate");
@@ -2487,7 +2487,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2572,7 +2572,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2655,7 +2655,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2739,7 +2739,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2821,7 +2821,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2877,7 +2877,7 @@ namespace Squiggle
         /// <param name="id">ID of global template to update</param> 
         /// <param name="data"></param> 
         /// <returns>GlobalTemplateResponseSingle</returns>
-        public GlobalTemplateResponseSingle EditGlobalTemplate (long? id, Object data)
+        public GlobalTemplateResponseSingle EditGlobalTemplate (long? id, GlobalTemplate data)
         {
              ApiResponse<GlobalTemplateResponseSingle> response = EditGlobalTemplateWithHttpInfo(id, data);
              return response.Data;
@@ -2889,7 +2889,7 @@ namespace Squiggle
         /// <param name="id">ID of global template to update</param> 
         /// <param name="data"></param> 
         /// <returns>ApiResponse of GlobalTemplateResponseSingle</returns>
-        public ApiResponse< GlobalTemplateResponseSingle > EditGlobalTemplateWithHttpInfo (long? id, Object data)
+        public ApiResponse< GlobalTemplateResponseSingle > EditGlobalTemplateWithHttpInfo (long? id, GlobalTemplate data)
         {
             
             // verify the required parameter 'id' is set
@@ -2912,7 +2912,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -2974,7 +2974,7 @@ namespace Squiggle
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
         /// <returns>Task of GlobalTemplateResponseSingle</returns>
-        public async System.Threading.Tasks.Task<GlobalTemplateResponseSingle> EditGlobalTemplateAsync (long? id, Object data)
+        public async System.Threading.Tasks.Task<GlobalTemplateResponseSingle> EditGlobalTemplateAsync (long? id, GlobalTemplate data)
         {
              ApiResponse<GlobalTemplateResponseSingle> response = await EditGlobalTemplateAsyncWithHttpInfo(id, data);
              return response.Data;
@@ -2987,7 +2987,7 @@ namespace Squiggle
         /// <param name="id">ID of global template to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (GlobalTemplateResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseSingle>> EditGlobalTemplateAsyncWithHttpInfo (long? id, Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<GlobalTemplateResponseSingle>> EditGlobalTemplateAsyncWithHttpInfo (long? id, GlobalTemplate data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditGlobalTemplate");
@@ -3006,7 +3006,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3063,7 +3063,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>SnippetResponseMultiple</returns>
-        public SnippetResponseMultiple FindSnippets (int? offset, int? limit)
+        public SnippetResponseMultiple FindSnippets (int? offset = null, int? limit = null)
         {
              ApiResponse<SnippetResponseMultiple> response = FindSnippetsWithHttpInfo(offset, limit);
              return response.Data;
@@ -3075,7 +3075,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>ApiResponse of SnippetResponseMultiple</returns>
-        public ApiResponse< SnippetResponseMultiple > FindSnippetsWithHttpInfo (int? offset, int? limit)
+        public ApiResponse< SnippetResponseMultiple > FindSnippetsWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -3090,7 +3090,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3146,7 +3146,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of SnippetResponseMultiple</returns>
-        public async System.Threading.Tasks.Task<SnippetResponseMultiple> FindSnippetsAsync (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<SnippetResponseMultiple> FindSnippetsAsync (int? offset = null, int? limit = null)
         {
              ApiResponse<SnippetResponseMultiple> response = await FindSnippetsAsyncWithHttpInfo(offset, limit);
              return response.Data;
@@ -3159,7 +3159,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (SnippetResponseMultiple)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SnippetResponseMultiple>> FindSnippetsAsyncWithHttpInfo (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<ApiResponse<SnippetResponseMultiple>> FindSnippetsAsyncWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -3174,7 +3174,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3230,7 +3230,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>SnippetResponseSingle</returns>
-        public SnippetResponseSingle AddSnippet (Object data)
+        public SnippetResponseSingle AddSnippet (Snippet data)
         {
              ApiResponse<SnippetResponseSingle> response = AddSnippetWithHttpInfo(data);
              return response.Data;
@@ -3241,7 +3241,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>ApiResponse of SnippetResponseSingle</returns>
-        public ApiResponse< SnippetResponseSingle > AddSnippetWithHttpInfo (Object data)
+        public ApiResponse< SnippetResponseSingle > AddSnippetWithHttpInfo (Snippet data)
         {
             
             // verify the required parameter 'data' is set
@@ -3260,7 +3260,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3320,7 +3320,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of SnippetResponseSingle</returns>
-        public async System.Threading.Tasks.Task<SnippetResponseSingle> AddSnippetAsync (Object data)
+        public async System.Threading.Tasks.Task<SnippetResponseSingle> AddSnippetAsync (Snippet data)
         {
              ApiResponse<SnippetResponseSingle> response = await AddSnippetAsyncWithHttpInfo(data);
              return response.Data;
@@ -3332,7 +3332,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (SnippetResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SnippetResponseSingle>> AddSnippetAsyncWithHttpInfo (Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<SnippetResponseSingle>> AddSnippetAsyncWithHttpInfo (Snippet data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddSnippet");
@@ -3349,7 +3349,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3434,7 +3434,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3517,7 +3517,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3601,7 +3601,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3683,7 +3683,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3739,7 +3739,7 @@ namespace Squiggle
         /// <param name="id">ID of snippet to update</param> 
         /// <param name="data"></param> 
         /// <returns>SnippetResponseSingle</returns>
-        public SnippetResponseSingle EditSnippet (long? id, Object data)
+        public SnippetResponseSingle EditSnippet (long? id, Snippet data)
         {
              ApiResponse<SnippetResponseSingle> response = EditSnippetWithHttpInfo(id, data);
              return response.Data;
@@ -3751,7 +3751,7 @@ namespace Squiggle
         /// <param name="id">ID of snippet to update</param> 
         /// <param name="data"></param> 
         /// <returns>ApiResponse of SnippetResponseSingle</returns>
-        public ApiResponse< SnippetResponseSingle > EditSnippetWithHttpInfo (long? id, Object data)
+        public ApiResponse< SnippetResponseSingle > EditSnippetWithHttpInfo (long? id, Snippet data)
         {
             
             // verify the required parameter 'id' is set
@@ -3774,7 +3774,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3836,7 +3836,7 @@ namespace Squiggle
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
         /// <returns>Task of SnippetResponseSingle</returns>
-        public async System.Threading.Tasks.Task<SnippetResponseSingle> EditSnippetAsync (long? id, Object data)
+        public async System.Threading.Tasks.Task<SnippetResponseSingle> EditSnippetAsync (long? id, Snippet data)
         {
              ApiResponse<SnippetResponseSingle> response = await EditSnippetAsyncWithHttpInfo(id, data);
              return response.Data;
@@ -3849,7 +3849,7 @@ namespace Squiggle
         /// <param name="id">ID of snippet to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (SnippetResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SnippetResponseSingle>> EditSnippetAsyncWithHttpInfo (long? id, Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<SnippetResponseSingle>> EditSnippetAsyncWithHttpInfo (long? id, Snippet data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditSnippet");
@@ -3868,7 +3868,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -3925,7 +3925,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>TemplateResponseMultiple</returns>
-        public TemplateResponseMultiple FindTemplates (int? offset, int? limit)
+        public TemplateResponseMultiple FindTemplates (int? offset = null, int? limit = null)
         {
              ApiResponse<TemplateResponseMultiple> response = FindTemplatesWithHttpInfo(offset, limit);
              return response.Data;
@@ -3937,7 +3937,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>ApiResponse of TemplateResponseMultiple</returns>
-        public ApiResponse< TemplateResponseMultiple > FindTemplatesWithHttpInfo (int? offset, int? limit)
+        public ApiResponse< TemplateResponseMultiple > FindTemplatesWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -3952,7 +3952,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4008,7 +4008,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of TemplateResponseMultiple</returns>
-        public async System.Threading.Tasks.Task<TemplateResponseMultiple> FindTemplatesAsync (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<TemplateResponseMultiple> FindTemplatesAsync (int? offset = null, int? limit = null)
         {
              ApiResponse<TemplateResponseMultiple> response = await FindTemplatesAsyncWithHttpInfo(offset, limit);
              return response.Data;
@@ -4021,7 +4021,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (TemplateResponseMultiple)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TemplateResponseMultiple>> FindTemplatesAsyncWithHttpInfo (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<ApiResponse<TemplateResponseMultiple>> FindTemplatesAsyncWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -4036,7 +4036,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4092,7 +4092,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>TemplateResponseSingle</returns>
-        public TemplateResponseSingle AddTemplate (Object data)
+        public TemplateResponseSingle AddTemplate (Template data)
         {
              ApiResponse<TemplateResponseSingle> response = AddTemplateWithHttpInfo(data);
              return response.Data;
@@ -4103,7 +4103,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>ApiResponse of TemplateResponseSingle</returns>
-        public ApiResponse< TemplateResponseSingle > AddTemplateWithHttpInfo (Object data)
+        public ApiResponse< TemplateResponseSingle > AddTemplateWithHttpInfo (Template data)
         {
             
             // verify the required parameter 'data' is set
@@ -4122,7 +4122,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4182,7 +4182,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of TemplateResponseSingle</returns>
-        public async System.Threading.Tasks.Task<TemplateResponseSingle> AddTemplateAsync (Object data)
+        public async System.Threading.Tasks.Task<TemplateResponseSingle> AddTemplateAsync (Template data)
         {
              ApiResponse<TemplateResponseSingle> response = await AddTemplateAsyncWithHttpInfo(data);
              return response.Data;
@@ -4194,7 +4194,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (TemplateResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> AddTemplateAsyncWithHttpInfo (Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> AddTemplateAsyncWithHttpInfo (Template data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddTemplate");
@@ -4211,7 +4211,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4296,7 +4296,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4379,7 +4379,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4463,7 +4463,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4545,7 +4545,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4601,7 +4601,7 @@ namespace Squiggle
         /// <param name="id">ID of template to update</param> 
         /// <param name="data"></param> 
         /// <returns>TemplateResponseSingle</returns>
-        public TemplateResponseSingle EditTemplate (long? id, Object data)
+        public TemplateResponseSingle EditTemplate (long? id, Template data)
         {
              ApiResponse<TemplateResponseSingle> response = EditTemplateWithHttpInfo(id, data);
              return response.Data;
@@ -4613,7 +4613,7 @@ namespace Squiggle
         /// <param name="id">ID of template to update</param> 
         /// <param name="data"></param> 
         /// <returns>ApiResponse of TemplateResponseSingle</returns>
-        public ApiResponse< TemplateResponseSingle > EditTemplateWithHttpInfo (long? id, Object data)
+        public ApiResponse< TemplateResponseSingle > EditTemplateWithHttpInfo (long? id, Template data)
         {
             
             // verify the required parameter 'id' is set
@@ -4636,7 +4636,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4698,7 +4698,7 @@ namespace Squiggle
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
         /// <returns>Task of TemplateResponseSingle</returns>
-        public async System.Threading.Tasks.Task<TemplateResponseSingle> EditTemplateAsync (long? id, Object data)
+        public async System.Threading.Tasks.Task<TemplateResponseSingle> EditTemplateAsync (long? id, Template data)
         {
              ApiResponse<TemplateResponseSingle> response = await EditTemplateAsyncWithHttpInfo(id, data);
              return response.Data;
@@ -4711,7 +4711,7 @@ namespace Squiggle
         /// <param name="id">ID of template to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (TemplateResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> EditTemplateAsyncWithHttpInfo (long? id, Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> EditTemplateAsyncWithHttpInfo (long? id, Template data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditTemplate");
@@ -4730,7 +4730,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4787,7 +4787,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>UserResponseMultiple</returns>
-        public UserResponseMultiple FindUsers (int? offset, int? limit)
+        public UserResponseMultiple FindUsers (int? offset = null, int? limit = null)
         {
              ApiResponse<UserResponseMultiple> response = FindUsersWithHttpInfo(offset, limit);
              return response.Data;
@@ -4799,7 +4799,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param> 
         /// <param name="limit">Max records to return</param> 
         /// <returns>ApiResponse of UserResponseMultiple</returns>
-        public ApiResponse< UserResponseMultiple > FindUsersWithHttpInfo (int? offset, int? limit)
+        public ApiResponse< UserResponseMultiple > FindUsersWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -4814,7 +4814,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4870,7 +4870,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of UserResponseMultiple</returns>
-        public async System.Threading.Tasks.Task<UserResponseMultiple> FindUsersAsync (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<UserResponseMultiple> FindUsersAsync (int? offset = null, int? limit = null)
         {
              ApiResponse<UserResponseMultiple> response = await FindUsersAsyncWithHttpInfo(offset, limit);
              return response.Data;
@@ -4883,7 +4883,7 @@ namespace Squiggle
         /// <param name="offset">The start offset of the result set</param>
         /// <param name="limit">Max records to return</param>
         /// <returns>Task of ApiResponse (UserResponseMultiple)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserResponseMultiple>> FindUsersAsyncWithHttpInfo (int? offset, int? limit)
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponseMultiple>> FindUsersAsyncWithHttpInfo (int? offset = null, int? limit = null)
         {
             
     
@@ -4898,7 +4898,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -4954,7 +4954,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>UserResponseSingle</returns>
-        public UserResponseSingle AddUser (Object data)
+        public UserResponseSingle AddUser (User data)
         {
              ApiResponse<UserResponseSingle> response = AddUserWithHttpInfo(data);
              return response.Data;
@@ -4965,7 +4965,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param> 
         /// <returns>ApiResponse of UserResponseSingle</returns>
-        public ApiResponse< UserResponseSingle > AddUserWithHttpInfo (Object data)
+        public ApiResponse< UserResponseSingle > AddUserWithHttpInfo (User data)
         {
             
             // verify the required parameter 'data' is set
@@ -4984,7 +4984,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -5044,7 +5044,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of UserResponseSingle</returns>
-        public async System.Threading.Tasks.Task<UserResponseSingle> AddUserAsync (Object data)
+        public async System.Threading.Tasks.Task<UserResponseSingle> AddUserAsync (User data)
         {
              ApiResponse<UserResponseSingle> response = await AddUserAsyncWithHttpInfo(data);
              return response.Data;
@@ -5056,7 +5056,7 @@ namespace Squiggle
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (UserResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserResponseSingle>> AddUserAsyncWithHttpInfo (Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponseSingle>> AddUserAsyncWithHttpInfo (User data)
         {
             // verify the required parameter 'data' is set
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddUser");
@@ -5073,7 +5073,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -5158,7 +5158,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -5241,7 +5241,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -5325,7 +5325,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -5407,7 +5407,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -5463,7 +5463,7 @@ namespace Squiggle
         /// <param name="id">ID of user to update</param> 
         /// <param name="data"></param> 
         /// <returns>UserResponseSingle</returns>
-        public UserResponseSingle EditUser (long? id, Object data)
+        public UserResponseSingle EditUser (long? id, User data)
         {
              ApiResponse<UserResponseSingle> response = EditUserWithHttpInfo(id, data);
              return response.Data;
@@ -5475,7 +5475,7 @@ namespace Squiggle
         /// <param name="id">ID of user to update</param> 
         /// <param name="data"></param> 
         /// <returns>ApiResponse of UserResponseSingle</returns>
-        public ApiResponse< UserResponseSingle > EditUserWithHttpInfo (long? id, Object data)
+        public ApiResponse< UserResponseSingle > EditUserWithHttpInfo (long? id, User data)
         {
             
             // verify the required parameter 'id' is set
@@ -5498,7 +5498,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
@@ -5560,7 +5560,7 @@ namespace Squiggle
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
         /// <returns>Task of UserResponseSingle</returns>
-        public async System.Threading.Tasks.Task<UserResponseSingle> EditUserAsync (long? id, Object data)
+        public async System.Threading.Tasks.Task<UserResponseSingle> EditUserAsync (long? id, User data)
         {
              ApiResponse<UserResponseSingle> response = await EditUserAsyncWithHttpInfo(id, data);
              return response.Data;
@@ -5573,7 +5573,7 @@ namespace Squiggle
         /// <param name="id">ID of user to update</param>
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (UserResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserResponseSingle>> EditUserAsyncWithHttpInfo (long? id, Object data)
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponseSingle>> EditUserAsyncWithHttpInfo (long? id, User data)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditUser");
@@ -5592,7 +5592,7 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                
+                "application/vnd.api+json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
