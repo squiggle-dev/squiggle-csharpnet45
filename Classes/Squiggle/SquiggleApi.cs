@@ -268,6 +268,214 @@ namespace Squiggle
         /// 
         /// </summary>
         /// <remarks>
+        /// Gets files
+        /// </remarks>
+        /// <param name="offset">The start offset of the result set</param>
+        /// <param name="limit">Max records to return</param>
+        /// <returns>FileResponseMultiple</returns>
+        FileResponseMultiple FindFiles (int? offset = null, int? limit = null);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Gets files
+        /// </remarks>
+        /// <param name="offset">The start offset of the result set</param>
+        /// <param name="limit">Max records to return</param>
+        /// <returns>ApiResponse of FileResponseMultiple</returns>
+        ApiResponse<FileResponseMultiple> FindFilesWithHttpInfo (int? offset = null, int? limit = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Gets files
+        /// </remarks>
+        /// <param name="offset">The start offset of the result set</param>
+        /// <param name="limit">Max records to return</param>
+        /// <returns>Task of FileResponseMultiple</returns>
+        System.Threading.Tasks.Task<FileResponseMultiple> FindFilesAsync (int? offset = null, int? limit = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Gets files
+        /// </remarks>
+        /// <param name="offset">The start offset of the result set</param>
+        /// <param name="limit">Max records to return</param>
+        /// <returns>Task of ApiResponse (FileResponseMultiple)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FileResponseMultiple>> FindFilesAsyncWithHttpInfo (int? offset = null, int? limit = null);
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Upload a new file
+        /// </remarks>
+        /// <param name="file"></param>
+        /// <returns>FileResponseSingle</returns>
+        FileResponseSingle AddFile (Stream file);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Upload a new file
+        /// </remarks>
+        /// <param name="file"></param>
+        /// <returns>ApiResponse of FileResponseSingle</returns>
+        ApiResponse<FileResponseSingle> AddFileWithHttpInfo (Stream file);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Upload a new file
+        /// </remarks>
+        /// <param name="file"></param>
+        /// <returns>Task of FileResponseSingle</returns>
+        System.Threading.Tasks.Task<FileResponseSingle> AddFileAsync (Stream file);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Upload a new file
+        /// </remarks>
+        /// <param name="file"></param>
+        /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> AddFileAsyncWithHttpInfo (Stream file);
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Gets a file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to get</param>
+        /// <returns>FileResponseSingle</returns>
+        FileResponseSingle GetFile (long? id);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Gets a file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to get</param>
+        /// <returns>ApiResponse of FileResponseSingle</returns>
+        ApiResponse<FileResponseSingle> GetFileWithHttpInfo (long? id);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Gets a file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to get</param>
+        /// <returns>Task of FileResponseSingle</returns>
+        System.Threading.Tasks.Task<FileResponseSingle> GetFileAsync (long? id);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Gets a file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to get</param>
+        /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> GetFileAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Deletes a file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to delete</param>
+        /// <returns></returns>
+        void DeleteFile (long? id);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Deletes a file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteFileWithHttpInfo (long? id);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Deletes a file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to delete</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteFileAsync (long? id);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Deletes a file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFileAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Updates an existing file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to update</param>
+        /// <param name="data"></param>
+        /// <returns>FileResponseSingle</returns>
+        FileResponseSingle EditFile (long? id, FileObject data);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Updates an existing file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to update</param>
+        /// <param name="data"></param>
+        /// <returns>ApiResponse of FileResponseSingle</returns>
+        ApiResponse<FileResponseSingle> EditFileWithHttpInfo (long? id, FileObject data);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Updates an existing file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to update</param>
+        /// <param name="data"></param>
+        /// <returns>Task of FileResponseSingle</returns>
+        System.Threading.Tasks.Task<FileResponseSingle> EditFileAsync (long? id, FileObject data);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Updates an existing file with the specified ID
+        /// </remarks>
+        /// <param name="id">ID of file to update</param>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> EditFileAsyncWithHttpInfo (long? id, FileObject data);
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
         /// Gets global templates
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
@@ -2192,6 +2400,862 @@ namespace Squiggle
             return new ApiResponse<AddressResponseSingle>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
+            
+        }
+        
+        /// <summary>
+        ///  Gets files
+        /// </summary>
+        /// <param name="offset">The start offset of the result set</param> 
+        /// <param name="limit">Max records to return</param> 
+        /// <returns>FileResponseMultiple</returns>
+        public FileResponseMultiple FindFiles (int? offset = null, int? limit = null)
+        {
+             ApiResponse<FileResponseMultiple> response = FindFilesWithHttpInfo(offset, limit);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Gets files
+        /// </summary>
+        /// <param name="offset">The start offset of the result set</param> 
+        /// <param name="limit">Max records to return</param> 
+        /// <returns>ApiResponse of FileResponseMultiple</returns>
+        public ApiResponse< FileResponseMultiple > FindFilesWithHttpInfo (int? offset = null, int? limit = null)
+        {
+            
+    
+            var path_ = "/v1/files";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (offset != null) queryParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // query parameter
+            if (limit != null) queryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling FindFiles: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling FindFiles: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<FileResponseMultiple>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileResponseMultiple) Configuration.ApiClient.Deserialize(response, typeof(FileResponseMultiple)));
+            
+        }
+    
+        /// <summary>
+        ///  Gets files
+        /// </summary>
+        /// <param name="offset">The start offset of the result set</param>
+        /// <param name="limit">Max records to return</param>
+        /// <returns>Task of FileResponseMultiple</returns>
+        public async System.Threading.Tasks.Task<FileResponseMultiple> FindFilesAsync (int? offset = null, int? limit = null)
+        {
+             ApiResponse<FileResponseMultiple> response = await FindFilesAsyncWithHttpInfo(offset, limit);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Gets files
+        /// </summary>
+        /// <param name="offset">The start offset of the result set</param>
+        /// <param name="limit">Max records to return</param>
+        /// <returns>Task of ApiResponse (FileResponseMultiple)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FileResponseMultiple>> FindFilesAsyncWithHttpInfo (int? offset = null, int? limit = null)
+        {
+            
+    
+            var path_ = "/v1/files";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (offset != null) queryParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // query parameter
+            if (limit != null) queryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling FindFiles: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling FindFiles: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<FileResponseMultiple>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileResponseMultiple) Configuration.ApiClient.Deserialize(response, typeof(FileResponseMultiple)));
+            
+        }
+        
+        /// <summary>
+        ///  Upload a new file
+        /// </summary>
+        /// <param name="file"></param> 
+        /// <returns>FileResponseSingle</returns>
+        public FileResponseSingle AddFile (Stream file)
+        {
+             ApiResponse<FileResponseSingle> response = AddFileWithHttpInfo(file);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Upload a new file
+        /// </summary>
+        /// <param name="file"></param> 
+        /// <returns>ApiResponse of FileResponseSingle</returns>
+        public ApiResponse< FileResponseSingle > AddFileWithHttpInfo (Stream file)
+        {
+            
+            // verify the required parameter 'file' is set
+            if (file == null)
+                throw new ApiException(400, "Missing required parameter 'file' when calling SquiggleApi->AddFile");
+            
+    
+            var path_ = "/v1/files";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            if (file != null) fileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
+            
+            
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling AddFile: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling AddFile: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<FileResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(FileResponseSingle)));
+            
+        }
+    
+        /// <summary>
+        ///  Upload a new file
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns>Task of FileResponseSingle</returns>
+        public async System.Threading.Tasks.Task<FileResponseSingle> AddFileAsync (Stream file)
+        {
+             ApiResponse<FileResponseSingle> response = await AddFileAsyncWithHttpInfo(file);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Upload a new file
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> AddFileAsyncWithHttpInfo (Stream file)
+        {
+            // verify the required parameter 'file' is set
+            if (file == null) throw new ApiException(400, "Missing required parameter 'file' when calling AddFile");
+            
+    
+            var path_ = "/v1/files";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            if (file != null) fileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
+            
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling AddFile: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling AddFile: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<FileResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(FileResponseSingle)));
+            
+        }
+        
+        /// <summary>
+        ///  Gets a file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to get</param> 
+        /// <returns>FileResponseSingle</returns>
+        public FileResponseSingle GetFile (long? id)
+        {
+             ApiResponse<FileResponseSingle> response = GetFileWithHttpInfo(id);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Gets a file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to get</param> 
+        /// <returns>ApiResponse of FileResponseSingle</returns>
+        public ApiResponse< FileResponseSingle > GetFileWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->GetFile");
+            
+    
+            var path_ = "/v1/files/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetFile: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetFile: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<FileResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(FileResponseSingle)));
+            
+        }
+    
+        /// <summary>
+        ///  Gets a file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to get</param>
+        /// <returns>Task of FileResponseSingle</returns>
+        public async System.Threading.Tasks.Task<FileResponseSingle> GetFileAsync (long? id)
+        {
+             ApiResponse<FileResponseSingle> response = await GetFileAsyncWithHttpInfo(id);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Gets a file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to get</param>
+        /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> GetFileAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetFile");
+            
+    
+            var path_ = "/v1/files/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetFile: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetFile: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<FileResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(FileResponseSingle)));
+            
+        }
+        
+        /// <summary>
+        ///  Deletes a file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to delete</param> 
+        /// <returns></returns>
+        public void DeleteFile (long? id)
+        {
+             DeleteFileWithHttpInfo(id);
+        }
+
+        /// <summary>
+        ///  Deletes a file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to delete</param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteFileWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->DeleteFile");
+            
+    
+            var path_ = "/v1/files/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteFile: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteFile: " + response.ErrorMessage, response.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+    
+        /// <summary>
+        ///  Deletes a file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to delete</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteFileAsync (long? id)
+        {
+             await DeleteFileAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        ///  Deletes a file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFileAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteFile");
+            
+    
+            var path_ = "/v1/files/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteFile: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteFile: " + response.ErrorMessage, response.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
+        ///  Updates an existing file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to update</param> 
+        /// <param name="data"></param> 
+        /// <returns>FileResponseSingle</returns>
+        public FileResponseSingle EditFile (long? id, FileObject data)
+        {
+             ApiResponse<FileResponseSingle> response = EditFileWithHttpInfo(id, data);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Updates an existing file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to update</param> 
+        /// <param name="data"></param> 
+        /// <returns>ApiResponse of FileResponseSingle</returns>
+        public ApiResponse< FileResponseSingle > EditFileWithHttpInfo (long? id, FileObject data)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->EditFile");
+            
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditFile");
+            
+    
+            var path_ = "/v1/files/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (data.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                postBody = data; // byte array
+            }
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling EditFile: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling EditFile: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<FileResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(FileResponseSingle)));
+            
+        }
+    
+        /// <summary>
+        ///  Updates an existing file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to update</param>
+        /// <param name="data"></param>
+        /// <returns>Task of FileResponseSingle</returns>
+        public async System.Threading.Tasks.Task<FileResponseSingle> EditFileAsync (long? id, FileObject data)
+        {
+             ApiResponse<FileResponseSingle> response = await EditFileAsyncWithHttpInfo(id, data);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Updates an existing file with the specified ID
+        /// </summary>
+        /// <param name="id">ID of file to update</param>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> EditFileAsyncWithHttpInfo (long? id, FileObject data)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditFile");
+            // verify the required parameter 'data' is set
+            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditFile");
+            
+    
+            var path_ = "/v1/files/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling EditFile: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling EditFile: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<FileResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(FileResponseSingle)));
             
         }
         
