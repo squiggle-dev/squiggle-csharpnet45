@@ -1415,13 +1415,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -1499,13 +1499,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -1585,13 +1585,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -1674,13 +1674,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -1759,13 +1759,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -1842,13 +1842,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -1926,13 +1926,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2008,13 +2008,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2099,13 +2099,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2193,13 +2193,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2279,13 +2279,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2361,13 +2361,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2436,13 +2436,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2520,13 +2520,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2612,7 +2612,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2695,7 +2695,7 @@ namespace Squiggle
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2774,13 +2774,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2857,13 +2857,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -2941,13 +2941,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3023,13 +3023,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3114,13 +3114,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3208,13 +3208,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3292,13 +3292,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3376,13 +3376,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3462,13 +3462,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3551,13 +3551,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3636,13 +3636,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3719,13 +3719,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3803,13 +3803,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3885,13 +3885,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -3976,13 +3976,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4070,13 +4070,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4154,13 +4154,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4238,13 +4238,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4324,13 +4324,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4413,13 +4413,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4498,13 +4498,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4581,13 +4581,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4665,13 +4665,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4747,13 +4747,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4838,13 +4838,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -4932,13 +4932,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5016,13 +5016,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5100,13 +5100,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5186,13 +5186,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5275,13 +5275,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5360,13 +5360,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5443,13 +5443,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5527,13 +5527,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5609,13 +5609,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5700,13 +5700,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5794,13 +5794,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5878,13 +5878,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -5962,13 +5962,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -6048,13 +6048,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -6137,13 +6137,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -6222,13 +6222,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -6305,13 +6305,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -6389,13 +6389,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -6471,13 +6471,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -6562,13 +6562,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
@@ -6656,13 +6656,13 @@ namespace Squiggle
 
             // to determine the Content-Type header
             String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
 
             // to determine the Accept header
             String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
+                "application/json"
             };
             String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
             if (httpHeaderAccept != null)
