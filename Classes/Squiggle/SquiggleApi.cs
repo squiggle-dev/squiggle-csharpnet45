@@ -20,46 +20,6 @@ namespace Squiggle
         /// 
         /// </summary>
         /// <remarks>
-        /// Request JWT for Address
-        /// </remarks>
-        /// <param name="data"></param>
-        /// <returns>JSONWebTokenResponse</returns>
-        JSONWebTokenResponse RequestAddressToken (LoginDetails data);
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Request JWT for Address
-        /// </remarks>
-        /// <param name="data"></param>
-        /// <returns>ApiResponse of JSONWebTokenResponse</returns>
-        ApiResponse<JSONWebTokenResponse> RequestAddressTokenWithHttpInfo (LoginDetails data);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Request JWT for Address
-        /// </remarks>
-        /// <param name="data"></param>
-        /// <returns>Task of JSONWebTokenResponse</returns>
-        System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (LoginDetails data);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Request JWT for Address
-        /// </remarks>
-        /// <param name="data"></param>
-        /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> RequestAddressTokenAsyncWithHttpInfo (LoginDetails data);
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
         /// Gets addresses
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
@@ -263,6 +223,46 @@ namespace Squiggle
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
         System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> EditAddressAsyncWithHttpInfo (long? id, Address data);
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>JSONWebTokenResponse</returns>
+        JSONWebTokenResponse RequestAddressToken (LoginDetails data);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>ApiResponse of JSONWebTokenResponse</returns>
+        ApiResponse<JSONWebTokenResponse> RequestAddressTokenWithHttpInfo (LoginDetails data);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>Task of JSONWebTokenResponse</returns>
+        System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (LoginDetails data);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> RequestAddressTokenAsyncWithHttpInfo (LoginDetails data);
         
         /// <summary>
         /// 
@@ -1383,6 +1383,868 @@ namespace Squiggle
    
         
         /// <summary>
+        ///  Gets addresses
+        /// </summary>
+        /// <param name="offset">The start offset of the result set</param> 
+        /// <param name="limit">Max records to return</param> 
+        /// <returns>AddressResponseMultiple</returns>
+        public AddressResponseMultiple FindAddresses (int? offset = null, int? limit = null)
+        {
+             ApiResponse<AddressResponseMultiple> response = FindAddressesWithHttpInfo(offset, limit);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Gets addresses
+        /// </summary>
+        /// <param name="offset">The start offset of the result set</param> 
+        /// <param name="limit">Max records to return</param> 
+        /// <returns>ApiResponse of AddressResponseMultiple</returns>
+        public ApiResponse< AddressResponseMultiple > FindAddressesWithHttpInfo (int? offset = null, int? limit = null)
+        {
+            
+    
+            var path_ = "/addresses";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (offset != null) queryParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // query parameter
+            if (limit != null) queryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling FindAddresses: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling FindAddresses: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<AddressResponseMultiple>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressResponseMultiple) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseMultiple)));
+            
+        }
+    
+        /// <summary>
+        ///  Gets addresses
+        /// </summary>
+        /// <param name="offset">The start offset of the result set</param>
+        /// <param name="limit">Max records to return</param>
+        /// <returns>Task of AddressResponseMultiple</returns>
+        public async System.Threading.Tasks.Task<AddressResponseMultiple> FindAddressesAsync (int? offset = null, int? limit = null)
+        {
+             ApiResponse<AddressResponseMultiple> response = await FindAddressesAsyncWithHttpInfo(offset, limit);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Gets addresses
+        /// </summary>
+        /// <param name="offset">The start offset of the result set</param>
+        /// <param name="limit">Max records to return</param>
+        /// <returns>Task of ApiResponse (AddressResponseMultiple)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseMultiple>> FindAddressesAsyncWithHttpInfo (int? offset = null, int? limit = null)
+        {
+            
+    
+            var path_ = "/addresses";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (offset != null) queryParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // query parameter
+            if (limit != null) queryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling FindAddresses: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling FindAddresses: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<AddressResponseMultiple>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressResponseMultiple) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseMultiple)));
+            
+        }
+        
+        /// <summary>
+        ///  Creates a new address
+        /// </summary>
+        /// <param name="data"></param> 
+        /// <returns>AddressResponseSingle</returns>
+        public AddressResponseSingle AddAddress (Address data)
+        {
+             ApiResponse<AddressResponseSingle> response = AddAddressWithHttpInfo(data);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Creates a new address
+        /// </summary>
+        /// <param name="data"></param> 
+        /// <returns>ApiResponse of AddressResponseSingle</returns>
+        public ApiResponse< AddressResponseSingle > AddAddressWithHttpInfo (Address data)
+        {
+            
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->AddAddress");
+            
+    
+            var path_ = "/addresses";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            if (data.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                postBody = data; // byte array
+            }
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling AddAddress: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling AddAddress: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<AddressResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
+            
+        }
+    
+        /// <summary>
+        ///  Creates a new address
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Task of AddressResponseSingle</returns>
+        public async System.Threading.Tasks.Task<AddressResponseSingle> AddAddressAsync (Address data)
+        {
+             ApiResponse<AddressResponseSingle> response = await AddAddressAsyncWithHttpInfo(data);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Creates a new address
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> AddAddressAsyncWithHttpInfo (Address data)
+        {
+            // verify the required parameter 'data' is set
+            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddAddress");
+            
+    
+            var path_ = "/addresses";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling AddAddress: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling AddAddress: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<AddressResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
+            
+        }
+        
+        /// <summary>
+        ///  Gets an address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to get</param> 
+        /// <returns>AddressResponseSingle</returns>
+        public AddressResponseSingle GetAddress (long? id)
+        {
+             ApiResponse<AddressResponseSingle> response = GetAddressWithHttpInfo(id);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Gets an address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to get</param> 
+        /// <returns>ApiResponse of AddressResponseSingle</returns>
+        public ApiResponse< AddressResponseSingle > GetAddressWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->GetAddress");
+            
+    
+            var path_ = "/addresses/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetAddress: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetAddress: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<AddressResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
+            
+        }
+    
+        /// <summary>
+        ///  Gets an address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to get</param>
+        /// <returns>Task of AddressResponseSingle</returns>
+        public async System.Threading.Tasks.Task<AddressResponseSingle> GetAddressAsync (long? id)
+        {
+             ApiResponse<AddressResponseSingle> response = await GetAddressAsyncWithHttpInfo(id);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Gets an address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to get</param>
+        /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> GetAddressAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetAddress");
+            
+    
+            var path_ = "/addresses/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetAddress: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetAddress: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<AddressResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
+            
+        }
+        
+        /// <summary>
+        ///  Deletes an address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to delete</param> 
+        /// <returns></returns>
+        public void DeleteAddress (long? id)
+        {
+             DeleteAddressWithHttpInfo(id);
+        }
+
+        /// <summary>
+        ///  Deletes an address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to delete</param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteAddressWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->DeleteAddress");
+            
+    
+            var path_ = "/addresses/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteAddress: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteAddress: " + response.ErrorMessage, response.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+    
+        /// <summary>
+        ///  Deletes an address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to delete</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteAddressAsync (long? id)
+        {
+             await DeleteAddressAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        ///  Deletes an address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAddressAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteAddress");
+            
+    
+            var path_ = "/addresses/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteAddress: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteAddress: " + response.ErrorMessage, response.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
+        ///  Updates an existing address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to update</param> 
+        /// <param name="data"></param> 
+        /// <returns>AddressResponseSingle</returns>
+        public AddressResponseSingle EditAddress (long? id, Address data)
+        {
+             ApiResponse<AddressResponseSingle> response = EditAddressWithHttpInfo(id, data);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Updates an existing address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to update</param> 
+        /// <param name="data"></param> 
+        /// <returns>ApiResponse of AddressResponseSingle</returns>
+        public ApiResponse< AddressResponseSingle > EditAddressWithHttpInfo (long? id, Address data)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->EditAddress");
+            
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditAddress");
+            
+    
+            var path_ = "/addresses/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (data.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                postBody = data; // byte array
+            }
+
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling EditAddress: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling EditAddress: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<AddressResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
+            
+        }
+    
+        /// <summary>
+        ///  Updates an existing address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to update</param>
+        /// <param name="data"></param>
+        /// <returns>Task of AddressResponseSingle</returns>
+        public async System.Threading.Tasks.Task<AddressResponseSingle> EditAddressAsync (long? id, Address data)
+        {
+             ApiResponse<AddressResponseSingle> response = await EditAddressAsyncWithHttpInfo(id, data);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Updates an existing address with the specified ID
+        /// </summary>
+        /// <param name="id">ID of address to update</param>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> EditAddressAsyncWithHttpInfo (long? id, Address data)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditAddress");
+            // verify the required parameter 'data' is set
+            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditAddress");
+            
+    
+            var path_ = "/addresses/{id}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/vnd.api+json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            
+
+            
+            // authentication (jwt) required
+            
+            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
+            if (!String.IsNullOrEmpty(apiKeyValue))
+            {
+                headerParams["Authorization"] = apiKeyValue;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling EditAddress: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling EditAddress: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<AddressResponseSingle>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
+            
+        }
+        
+        /// <summary>
         ///  Request JWT for Address
         /// </summary>
         /// <param name="data"></param> 
@@ -1542,868 +2404,6 @@ namespace Squiggle
         }
         
         /// <summary>
-        ///  Gets addresses
-        /// </summary>
-        /// <param name="offset">The start offset of the result set</param> 
-        /// <param name="limit">Max records to return</param> 
-        /// <returns>AddressResponseMultiple</returns>
-        public AddressResponseMultiple FindAddresses (int? offset = null, int? limit = null)
-        {
-             ApiResponse<AddressResponseMultiple> response = FindAddressesWithHttpInfo(offset, limit);
-             return response.Data;
-        }
-
-        /// <summary>
-        ///  Gets addresses
-        /// </summary>
-        /// <param name="offset">The start offset of the result set</param> 
-        /// <param name="limit">Max records to return</param> 
-        /// <returns>ApiResponse of AddressResponseMultiple</returns>
-        public ApiResponse< AddressResponseMultiple > FindAddressesWithHttpInfo (int? offset = null, int? limit = null)
-        {
-            
-    
-            var path_ = "/v1/addresses";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (offset != null) queryParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // query parameter
-            if (limit != null) queryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
-                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FindAddresses: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FindAddresses: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<AddressResponseMultiple>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AddressResponseMultiple) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseMultiple)));
-            
-        }
-    
-        /// <summary>
-        ///  Gets addresses
-        /// </summary>
-        /// <param name="offset">The start offset of the result set</param>
-        /// <param name="limit">Max records to return</param>
-        /// <returns>Task of AddressResponseMultiple</returns>
-        public async System.Threading.Tasks.Task<AddressResponseMultiple> FindAddressesAsync (int? offset = null, int? limit = null)
-        {
-             ApiResponse<AddressResponseMultiple> response = await FindAddressesAsyncWithHttpInfo(offset, limit);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        ///  Gets addresses
-        /// </summary>
-        /// <param name="offset">The start offset of the result set</param>
-        /// <param name="limit">Max records to return</param>
-        /// <returns>Task of ApiResponse (AddressResponseMultiple)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseMultiple>> FindAddressesAsyncWithHttpInfo (int? offset = null, int? limit = null)
-        {
-            
-    
-            var path_ = "/v1/addresses";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (offset != null) queryParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // query parameter
-            if (limit != null) queryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
-                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FindAddresses: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FindAddresses: " + response.ErrorMessage, response.ErrorMessage);
-
-            return new ApiResponse<AddressResponseMultiple>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AddressResponseMultiple) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseMultiple)));
-            
-        }
-        
-        /// <summary>
-        ///  Creates a new address
-        /// </summary>
-        /// <param name="data"></param> 
-        /// <returns>AddressResponseSingle</returns>
-        public AddressResponseSingle AddAddress (Address data)
-        {
-             ApiResponse<AddressResponseSingle> response = AddAddressWithHttpInfo(data);
-             return response.Data;
-        }
-
-        /// <summary>
-        ///  Creates a new address
-        /// </summary>
-        /// <param name="data"></param> 
-        /// <returns>ApiResponse of AddressResponseSingle</returns>
-        public ApiResponse< AddressResponseSingle > AddAddressWithHttpInfo (Address data)
-        {
-            
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->AddAddress");
-            
-    
-            var path_ = "/v1/addresses";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            
-            
-            
-            if (data.GetType() != typeof(byte[]))
-            {
-                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                postBody = data; // byte array
-            }
-
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
-                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AddAddress: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AddAddress: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<AddressResponseSingle>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
-            
-        }
-    
-        /// <summary>
-        ///  Creates a new address
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns>Task of AddressResponseSingle</returns>
-        public async System.Threading.Tasks.Task<AddressResponseSingle> AddAddressAsync (Address data)
-        {
-             ApiResponse<AddressResponseSingle> response = await AddAddressAsyncWithHttpInfo(data);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        ///  Creates a new address
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> AddAddressAsyncWithHttpInfo (Address data)
-        {
-            // verify the required parameter 'data' is set
-            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddAddress");
-            
-    
-            var path_ = "/v1/addresses";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            
-
-            
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
-                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AddAddress: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AddAddress: " + response.ErrorMessage, response.ErrorMessage);
-
-            return new ApiResponse<AddressResponseSingle>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
-            
-        }
-        
-        /// <summary>
-        ///  Gets an address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to get</param> 
-        /// <returns>AddressResponseSingle</returns>
-        public AddressResponseSingle GetAddress (long? id)
-        {
-             ApiResponse<AddressResponseSingle> response = GetAddressWithHttpInfo(id);
-             return response.Data;
-        }
-
-        /// <summary>
-        ///  Gets an address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to get</param> 
-        /// <returns>ApiResponse of AddressResponseSingle</returns>
-        public ApiResponse< AddressResponseSingle > GetAddressWithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->GetAddress");
-            
-    
-            var path_ = "/v1/addresses/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
-                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetAddress: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetAddress: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<AddressResponseSingle>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
-            
-        }
-    
-        /// <summary>
-        ///  Gets an address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to get</param>
-        /// <returns>Task of AddressResponseSingle</returns>
-        public async System.Threading.Tasks.Task<AddressResponseSingle> GetAddressAsync (long? id)
-        {
-             ApiResponse<AddressResponseSingle> response = await GetAddressAsyncWithHttpInfo(id);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        ///  Gets an address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to get</param>
-        /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> GetAddressAsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetAddress");
-            
-    
-            var path_ = "/v1/addresses/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
-                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetAddress: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetAddress: " + response.ErrorMessage, response.ErrorMessage);
-
-            return new ApiResponse<AddressResponseSingle>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
-            
-        }
-        
-        /// <summary>
-        ///  Deletes an address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to delete</param> 
-        /// <returns></returns>
-        public void DeleteAddress (long? id)
-        {
-             DeleteAddressWithHttpInfo(id);
-        }
-
-        /// <summary>
-        ///  Deletes an address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to delete</param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteAddressWithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->DeleteAddress");
-            
-    
-            var path_ = "/v1/addresses/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
-                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteAddress: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteAddress: " + response.ErrorMessage, response.ErrorMessage);
-    
-            
-            return new ApiResponse<Object>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-    
-        /// <summary>
-        ///  Deletes an address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to delete</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAddressAsync (long? id)
-        {
-             await DeleteAddressAsyncWithHttpInfo(id);
-
-        }
-
-        /// <summary>
-        ///  Deletes an address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to delete</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAddressAsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteAddress");
-            
-    
-            var path_ = "/v1/addresses/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
-                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteAddress: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteAddress: " + response.ErrorMessage, response.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-        
-        /// <summary>
-        ///  Updates an existing address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to update</param> 
-        /// <param name="data"></param> 
-        /// <returns>AddressResponseSingle</returns>
-        public AddressResponseSingle EditAddress (long? id, Address data)
-        {
-             ApiResponse<AddressResponseSingle> response = EditAddressWithHttpInfo(id, data);
-             return response.Data;
-        }
-
-        /// <summary>
-        ///  Updates an existing address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to update</param> 
-        /// <param name="data"></param> 
-        /// <returns>ApiResponse of AddressResponseSingle</returns>
-        public ApiResponse< AddressResponseSingle > EditAddressWithHttpInfo (long? id, Address data)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->EditAddress");
-            
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditAddress");
-            
-    
-            var path_ = "/v1/addresses/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (data.GetType() != typeof(byte[]))
-            {
-                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                postBody = data; // byte array
-            }
-
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
-                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling EditAddress: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling EditAddress: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<AddressResponseSingle>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
-            
-        }
-    
-        /// <summary>
-        ///  Updates an existing address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to update</param>
-        /// <param name="data"></param>
-        /// <returns>Task of AddressResponseSingle</returns>
-        public async System.Threading.Tasks.Task<AddressResponseSingle> EditAddressAsync (long? id, Address data)
-        {
-             ApiResponse<AddressResponseSingle> response = await EditAddressAsyncWithHttpInfo(id, data);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        ///  Updates an existing address with the specified ID
-        /// </summary>
-        /// <param name="id">ID of address to update</param>
-        /// <param name="data"></param>
-        /// <returns>Task of ApiResponse (AddressResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AddressResponseSingle>> EditAddressAsyncWithHttpInfo (long? id, Address data)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditAddress");
-            // verify the required parameter 'data' is set
-            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditAddress");
-            
-    
-            var path_ = "/v1/addresses/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/vnd.api+json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            
-
-            
-            // authentication (jwt) required
-            
-            var apiKeyValue = Configuration.GetApiKeyWithPrefix("Authorization");
-            if (!String.IsNullOrEmpty(apiKeyValue))
-            {
-                headerParams["Authorization"] = apiKeyValue;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
-                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling EditAddress: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling EditAddress: " + response.ErrorMessage, response.ErrorMessage);
-
-            return new ApiResponse<AddressResponseSingle>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
-            
-        }
-        
-        /// <summary>
         ///  Gets files
         /// </summary>
         /// <param name="offset">The start offset of the result set</param> 
@@ -2425,7 +2425,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/files";
+            var path_ = "/files";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2509,7 +2509,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/files";
+            var path_ = "/files";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2595,7 +2595,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'file' when calling SquiggleApi->AddFile");
             
     
-            var path_ = "/v1/files";
+            var path_ = "/files";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2678,7 +2678,7 @@ namespace Squiggle
             if (file == null) throw new ApiException(400, "Missing required parameter 'file' when calling AddFile");
             
     
-            var path_ = "/v1/files";
+            var path_ = "/files";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2763,7 +2763,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->GetFile");
             
     
-            var path_ = "/v1/files/{id}";
+            var path_ = "/files/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2846,7 +2846,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetFile");
             
     
-            var path_ = "/v1/files/{id}";
+            var path_ = "/files/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -2930,7 +2930,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->DeleteFile");
             
     
-            var path_ = "/v1/files/{id}";
+            var path_ = "/files/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3012,7 +3012,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteFile");
             
     
-            var path_ = "/v1/files/{id}";
+            var path_ = "/files/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3103,7 +3103,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditFile");
             
     
-            var path_ = "/v1/files/{id}";
+            var path_ = "/files/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3197,7 +3197,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditFile");
             
     
-            var path_ = "/v1/files/{id}";
+            var path_ = "/files/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3281,7 +3281,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/global-templates";
+            var path_ = "/global-templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3365,7 +3365,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/global-templates";
+            var path_ = "/global-templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3451,7 +3451,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->AddGlobalTemplate");
             
     
-            var path_ = "/v1/global-templates";
+            var path_ = "/global-templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3540,7 +3540,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddGlobalTemplate");
             
     
-            var path_ = "/v1/global-templates";
+            var path_ = "/global-templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3625,7 +3625,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->GetGlobalTemplate");
             
     
-            var path_ = "/v1/global-templates/{id}";
+            var path_ = "/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3708,7 +3708,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetGlobalTemplate");
             
     
-            var path_ = "/v1/global-templates/{id}";
+            var path_ = "/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3792,7 +3792,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->DeleteGlobalTemplate");
             
     
-            var path_ = "/v1/global-templates/{id}";
+            var path_ = "/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3874,7 +3874,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteGlobalTemplate");
             
     
-            var path_ = "/v1/global-templates/{id}";
+            var path_ = "/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -3965,7 +3965,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditGlobalTemplate");
             
     
-            var path_ = "/v1/global-templates/{id}";
+            var path_ = "/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4059,7 +4059,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditGlobalTemplate");
             
     
-            var path_ = "/v1/global-templates/{id}";
+            var path_ = "/global-templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4143,7 +4143,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/snippets";
+            var path_ = "/snippets";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4227,7 +4227,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/snippets";
+            var path_ = "/snippets";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4313,7 +4313,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->AddSnippet");
             
     
-            var path_ = "/v1/snippets";
+            var path_ = "/snippets";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4402,7 +4402,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddSnippet");
             
     
-            var path_ = "/v1/snippets";
+            var path_ = "/snippets";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4487,7 +4487,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->GetSnippet");
             
     
-            var path_ = "/v1/snippets/{id}";
+            var path_ = "/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4570,7 +4570,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetSnippet");
             
     
-            var path_ = "/v1/snippets/{id}";
+            var path_ = "/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4654,7 +4654,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->DeleteSnippet");
             
     
-            var path_ = "/v1/snippets/{id}";
+            var path_ = "/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4736,7 +4736,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteSnippet");
             
     
-            var path_ = "/v1/snippets/{id}";
+            var path_ = "/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4827,7 +4827,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditSnippet");
             
     
-            var path_ = "/v1/snippets/{id}";
+            var path_ = "/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -4921,7 +4921,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditSnippet");
             
     
-            var path_ = "/v1/snippets/{id}";
+            var path_ = "/snippets/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5005,7 +5005,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/templates";
+            var path_ = "/templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5089,7 +5089,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/templates";
+            var path_ = "/templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5175,7 +5175,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->AddTemplate");
             
     
-            var path_ = "/v1/templates";
+            var path_ = "/templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5264,7 +5264,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddTemplate");
             
     
-            var path_ = "/v1/templates";
+            var path_ = "/templates";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5349,7 +5349,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->GetTemplate");
             
     
-            var path_ = "/v1/templates/{id}";
+            var path_ = "/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5432,7 +5432,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetTemplate");
             
     
-            var path_ = "/v1/templates/{id}";
+            var path_ = "/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5516,7 +5516,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->DeleteTemplate");
             
     
-            var path_ = "/v1/templates/{id}";
+            var path_ = "/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5598,7 +5598,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteTemplate");
             
     
-            var path_ = "/v1/templates/{id}";
+            var path_ = "/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5689,7 +5689,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditTemplate");
             
     
-            var path_ = "/v1/templates/{id}";
+            var path_ = "/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5783,7 +5783,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditTemplate");
             
     
-            var path_ = "/v1/templates/{id}";
+            var path_ = "/templates/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5867,7 +5867,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/users";
+            var path_ = "/users";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -5951,7 +5951,7 @@ namespace Squiggle
         {
             
     
-            var path_ = "/v1/users";
+            var path_ = "/users";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -6037,7 +6037,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->AddUser");
             
     
-            var path_ = "/v1/users";
+            var path_ = "/users";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -6126,7 +6126,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AddUser");
             
     
-            var path_ = "/v1/users";
+            var path_ = "/users";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -6211,7 +6211,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->GetUser");
             
     
-            var path_ = "/v1/users/{id}";
+            var path_ = "/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -6294,7 +6294,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetUser");
             
     
-            var path_ = "/v1/users/{id}";
+            var path_ = "/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -6378,7 +6378,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->DeleteUser");
             
     
-            var path_ = "/v1/users/{id}";
+            var path_ = "/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -6460,7 +6460,7 @@ namespace Squiggle
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteUser");
             
     
-            var path_ = "/v1/users/{id}";
+            var path_ = "/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -6551,7 +6551,7 @@ namespace Squiggle
                 throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditUser");
             
     
-            var path_ = "/v1/users/{id}";
+            var path_ = "/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
@@ -6645,7 +6645,7 @@ namespace Squiggle
             if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditUser");
             
     
-            var path_ = "/v1/users/{id}";
+            var path_ = "/users/{id}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
