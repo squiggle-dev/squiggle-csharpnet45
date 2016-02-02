@@ -111,6 +111,20 @@ namespace Squiggle.Model
   
         
         /// <summary>
+        /// Gets or Sets Website
+        /// </summary>
+        [DataMember(Name="website", EmitDefaultValue=false)]
+        public string Website { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Tel
+        /// </summary>
+        [DataMember(Name="tel", EmitDefaultValue=false)]
+        public string Tel { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Linkedin
         /// </summary>
         [DataMember(Name="linkedin", EmitDefaultValue=false)]
@@ -173,6 +187,8 @@ namespace Squiggle.Model
             sb.Append("  AddressCity: ").Append(AddressCity).Append("\n");
             sb.Append("  AddressPostcode: ").Append(AddressPostcode).Append("\n");
             sb.Append("  AddressCountry: ").Append(AddressCountry).Append("\n");
+            sb.Append("  Website: ").Append(Website).Append("\n");
+            sb.Append("  Tel: ").Append(Tel).Append("\n");
             sb.Append("  Linkedin: ").Append(Linkedin).Append("\n");
             sb.Append("  Facebook: ").Append(Facebook).Append("\n");
             sb.Append("  Twitter: ").Append(Twitter).Append("\n");
@@ -277,6 +293,16 @@ namespace Squiggle.Model
                     this.AddressCountry.Equals(other.AddressCountry)
                 ) && 
                 (
+                    this.Website == other.Website ||
+                    this.Website != null &&
+                    this.Website.Equals(other.Website)
+                ) && 
+                (
+                    this.Tel == other.Tel ||
+                    this.Tel != null &&
+                    this.Tel.Equals(other.Tel)
+                ) && 
+                (
                     this.Linkedin == other.Linkedin ||
                     this.Linkedin != null &&
                     this.Linkedin.Equals(other.Linkedin)
@@ -355,6 +381,12 @@ namespace Squiggle.Model
                 
                 if (this.AddressCountry != null)
                     hash = hash * 59 + this.AddressCountry.GetHashCode();
+                
+                if (this.Website != null)
+                    hash = hash * 59 + this.Website.GetHashCode();
+                
+                if (this.Tel != null)
+                    hash = hash * 59 + this.Tel.GetHashCode();
                 
                 if (this.Linkedin != null)
                     hash = hash * 59 + this.Linkedin.GetHashCode();
