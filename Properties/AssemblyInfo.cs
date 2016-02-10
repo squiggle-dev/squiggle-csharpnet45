@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Squiggle Api")]
-[assembly: AssemblyDescription("C# wrapper for the Squiggle API")]
+[assembly: AssemblyTitle("Squiggle Api .NET 4.5")]
+[assembly: AssemblyDescription("C# .NET v4.5 wrapper for the Squiggle API")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Occam Software")]
-[assembly: AssemblyProduct("SquiggleApi")]
+[assembly: AssemblyProduct("SquiggleApi.Net45")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.19")]
-[assembly: AssemblyFileVersion("0.0.19")]
+[assembly: AssemblyVersion("0.0.1")]
+[assembly: AssemblyFileVersion("0.0.1")]
