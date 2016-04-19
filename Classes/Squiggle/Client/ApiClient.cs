@@ -20,17 +20,17 @@ namespace Squiggle.Client
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default configuration and base path (http://squiggle-api.sitlabs.co.uk/v1).
+        /// with default configuration and base path (http://api.squigglesignatures.com/v1).
         /// </summary>
         public ApiClient()
         {
             Configuration = Configuration.Default;
-            RestClient = new RestClient("http://squiggle-api.sitlabs.co.uk/v1");
+            RestClient = new RestClient("http://api.squigglesignatures.com/v1");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (http://squiggle-api.sitlabs.co.uk/v1).
+        /// with default base path (http://api.squigglesignatures.com/v1).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config = null)
@@ -40,7 +40,7 @@ namespace Squiggle.Client
             else
                 Configuration = config;
 
-            RestClient = new RestClient("http://squiggle-api.sitlabs.co.uk/v1");
+            RestClient = new RestClient("http://api.squigglesignatures.com/v1");
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Squiggle.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "http://squiggle-api.sitlabs.co.uk/v1")
+        public ApiClient(String basePath = "http://api.squigglesignatures.com/v1")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

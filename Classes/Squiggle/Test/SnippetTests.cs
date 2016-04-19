@@ -54,6 +54,15 @@ namespace Squiggle.Test
         }
         
         /// <summary>
+        /// Test the property 'User' 
+        /// </summary>
+        [Test]
+        public void UserTest()
+        {
+            // TODO: unit test for the property 'User' 
+        }
+        
+        /// <summary>
         /// Test the property 'ContentHtml' 
         /// </summary>
         [Test]
@@ -72,30 +81,30 @@ namespace Squiggle.Test
         }
         
         /// <summary>
-        /// Test the property 'ContentRichtext' 
+        /// Test the property 'Image' 
         /// </summary>
         [Test]
-        public void ContentRichtextTest()
+        public void ImageTest()
         {
-            // TODO: unit test for the property 'ContentRichtext' 
+            // TODO: unit test for the property 'Image' 
         }
         
         /// <summary>
-        /// Test the property 'Thumbnail' 
+        /// Test the property 'CreatedAt' 
         /// </summary>
         [Test]
-        public void ThumbnailTest()
+        public void CreatedAtTest()
         {
-            // TODO: unit test for the property 'Thumbnail' 
+            // TODO: unit test for the property 'CreatedAt' 
         }
         
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'UpdatedAt' 
         /// </summary>
         [Test]
-        public void UserTest()
+        public void UpdatedAtTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'UpdatedAt' 
         }
         
 

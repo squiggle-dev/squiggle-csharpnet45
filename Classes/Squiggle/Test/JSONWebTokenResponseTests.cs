@@ -53,15 +53,6 @@ namespace Squiggle.Test
             // TODO: unit test for the property 'Data' 
         }
         
-        /// <summary>
-        /// Test the property 'Links' 
-        /// </summary>
-        [Test]
-        public void LinksTest()
-        {
-            // TODO: unit test for the property 'Links' 
-        }
-        
 
     }
 

@@ -160,10 +160,31 @@ namespace Squiggle.Model
   
         
         /// <summary>
+        /// Gets or Sets Logo
+        /// </summary>
+        [DataMember(Name="logo", EmitDefaultValue=false)]
+        public int? Logo { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Snippet
         /// </summary>
         [DataMember(Name="snippet", EmitDefaultValue=false)]
         public int? Snippet { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets CreatedAt
+        /// </summary>
+        [DataMember(Name="created_at", EmitDefaultValue=false)]
+        public DateTime? CreatedAt { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets UpdatedAt
+        /// </summary>
+        [DataMember(Name="updated_at", EmitDefaultValue=false)]
+        public DateTime? UpdatedAt { get; set; }
   
         
   
@@ -194,7 +215,10 @@ namespace Squiggle.Model
             sb.Append("  Twitter: ").Append(Twitter).Append("\n");
             sb.Append("  Instagram: ").Append(Instagram).Append("\n");
             sb.Append("  Googleplus: ").Append(Googleplus).Append("\n");
+            sb.Append("  Logo: ").Append(Logo).Append("\n");
             sb.Append("  Snippet: ").Append(Snippet).Append("\n");
+            sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+            sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -328,9 +352,24 @@ namespace Squiggle.Model
                     this.Googleplus.Equals(other.Googleplus)
                 ) && 
                 (
+                    this.Logo == other.Logo ||
+                    this.Logo != null &&
+                    this.Logo.Equals(other.Logo)
+                ) && 
+                (
                     this.Snippet == other.Snippet ||
                     this.Snippet != null &&
                     this.Snippet.Equals(other.Snippet)
+                ) && 
+                (
+                    this.CreatedAt == other.CreatedAt ||
+                    this.CreatedAt != null &&
+                    this.CreatedAt.Equals(other.CreatedAt)
+                ) && 
+                (
+                    this.UpdatedAt == other.UpdatedAt ||
+                    this.UpdatedAt != null &&
+                    this.UpdatedAt.Equals(other.UpdatedAt)
                 );
         }
 
@@ -403,8 +442,17 @@ namespace Squiggle.Model
                 if (this.Googleplus != null)
                     hash = hash * 59 + this.Googleplus.GetHashCode();
                 
+                if (this.Logo != null)
+                    hash = hash * 59 + this.Logo.GetHashCode();
+                
                 if (this.Snippet != null)
                     hash = hash * 59 + this.Snippet.GetHashCode();
+                
+                if (this.CreatedAt != null)
+                    hash = hash * 59 + this.CreatedAt.GetHashCode();
+                
+                if (this.UpdatedAt != null)
+                    hash = hash * 59 + this.UpdatedAt.GetHashCode();
                 
                 return hash;
             }

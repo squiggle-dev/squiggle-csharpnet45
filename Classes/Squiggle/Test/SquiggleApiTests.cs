@@ -114,19 +114,6 @@ namespace Squiggle.Test
         }
         
         /// <summary>
-        /// Test RequestAddressToken
-        /// </summary>
-        [Test]
-        public void RequestAddressTokenTest()
-        {
-            // TODO: add unit test for the method 'RequestAddressToken'
-            LoginDetails data = null; // TODO: replace null with proper value
-            
-            var response = instance.RequestAddressToken(data);
-            Assert.IsInstanceOf<JSONWebTokenResponse> (response, "response is JSONWebTokenResponse"); 
-        }
-        
-        /// <summary>
         /// Test FindFiles
         /// </summary>
         [Test]
@@ -392,6 +379,32 @@ namespace Squiggle.Test
             
             var response = instance.EditTemplate(id, data);
             Assert.IsInstanceOf<TemplateResponseSingle> (response, "response is TemplateResponseSingle"); 
+        }
+        
+        /// <summary>
+        /// Test GetAddressToken
+        /// </summary>
+        [Test]
+        public void GetAddressTokenTest()
+        {
+            // TODO: add unit test for the method 'GetAddressToken'
+            LoginDetails data = null; // TODO: replace null with proper value
+            
+            var response = instance.GetAddressToken(data);
+            Assert.IsInstanceOf<JSONWebTokenResponse> (response, "response is JSONWebTokenResponse"); 
+        }
+        
+        /// <summary>
+        /// Test GetUserToken
+        /// </summary>
+        [Test]
+        public void GetUserTokenTest()
+        {
+            // TODO: add unit test for the method 'GetUserToken'
+            LoginDetails data = null; // TODO: replace null with proper value
+            
+            var response = instance.GetUserToken(data);
+            Assert.IsInstanceOf<JSONWebTokenResponse> (response, "response is JSONWebTokenResponse"); 
         }
         
         /// <summary>

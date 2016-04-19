@@ -15,7 +15,7 @@ namespace Squiggle.Model
     /// 
     /// </summary>
     [DataContract]
-    public class JSONWebTokenResponse : Response,  IEquatable<JSONWebTokenResponse>
+    public class JSONWebTokenResponse :  IEquatable<JSONWebTokenResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="JSONWebTokenResponse" /> class.
@@ -33,13 +33,6 @@ namespace Squiggle.Model
         public JSONWebToken Data { get; set; }
   
         
-        /// <summary>
-        /// Gets or Sets Links
-        /// </summary>
-        [DataMember(Name="links", EmitDefaultValue=false)]
-        public ResponseLinks Links { get; set; }
-  
-        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -50,7 +43,6 @@ namespace Squiggle.Model
             var sb = new StringBuilder();
             sb.Append("class JSONWebTokenResponse {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -60,7 +52,7 @@ namespace Squiggle.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -92,11 +84,6 @@ namespace Squiggle.Model
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.Equals(other.Data)
-                ) && 
-                (
-                    this.Links == other.Links ||
-                    this.Links != null &&
-                    this.Links.Equals(other.Links)
                 );
         }
 
@@ -114,9 +101,6 @@ namespace Squiggle.Model
                 
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
-                if (this.Links != null)
-                    hash = hash * 59 + this.Links.GetHashCode();
                 
                 return hash;
             }

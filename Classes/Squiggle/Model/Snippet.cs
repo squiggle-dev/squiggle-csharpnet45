@@ -34,6 +34,13 @@ namespace Squiggle.Model
   
         
         /// <summary>
+        /// Gets or Sets User
+        /// </summary>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public int? User { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets ContentHtml
         /// </summary>
         [DataMember(Name="content_html", EmitDefaultValue=false)]
@@ -48,24 +55,24 @@ namespace Squiggle.Model
   
         
         /// <summary>
-        /// Gets or Sets ContentRichtext
+        /// Gets or Sets Image
         /// </summary>
-        [DataMember(Name="content_richtext", EmitDefaultValue=false)]
-        public string ContentRichtext { get; set; }
+        [DataMember(Name="image", EmitDefaultValue=false)]
+        public int? Image { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Thumbnail
+        /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name="thumbnail", EmitDefaultValue=false)]
-        public string Thumbnail { get; set; }
+        [DataMember(Name="created_at", EmitDefaultValue=false)]
+        public DateTime? CreatedAt { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets User
+        /// Gets or Sets UpdatedAt
         /// </summary>
-        [DataMember(Name="user", EmitDefaultValue=false)]
-        public int? User { get; set; }
+        [DataMember(Name="updated_at", EmitDefaultValue=false)]
+        public DateTime? UpdatedAt { get; set; }
   
         
   
@@ -78,11 +85,12 @@ namespace Squiggle.Model
             var sb = new StringBuilder();
             sb.Append("class Snippet {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ContentHtml: ").Append(ContentHtml).Append("\n");
             sb.Append("  ContentPlaintext: ").Append(ContentPlaintext).Append("\n");
-            sb.Append("  ContentRichtext: ").Append(ContentRichtext).Append("\n");
-            sb.Append("  Thumbnail: ").Append(Thumbnail).Append("\n");
-            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+            sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -126,6 +134,11 @@ namespace Squiggle.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
+                ) && 
+                (
                     this.ContentHtml == other.ContentHtml ||
                     this.ContentHtml != null &&
                     this.ContentHtml.Equals(other.ContentHtml)
@@ -136,19 +149,19 @@ namespace Squiggle.Model
                     this.ContentPlaintext.Equals(other.ContentPlaintext)
                 ) && 
                 (
-                    this.ContentRichtext == other.ContentRichtext ||
-                    this.ContentRichtext != null &&
-                    this.ContentRichtext.Equals(other.ContentRichtext)
+                    this.Image == other.Image ||
+                    this.Image != null &&
+                    this.Image.Equals(other.Image)
                 ) && 
                 (
-                    this.Thumbnail == other.Thumbnail ||
-                    this.Thumbnail != null &&
-                    this.Thumbnail.Equals(other.Thumbnail)
+                    this.CreatedAt == other.CreatedAt ||
+                    this.CreatedAt != null &&
+                    this.CreatedAt.Equals(other.CreatedAt)
                 ) && 
                 (
-                    this.User == other.User ||
-                    this.User != null &&
-                    this.User.Equals(other.User)
+                    this.UpdatedAt == other.UpdatedAt ||
+                    this.UpdatedAt != null &&
+                    this.UpdatedAt.Equals(other.UpdatedAt)
                 );
         }
 
@@ -167,20 +180,23 @@ namespace Squiggle.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.ContentHtml != null)
                     hash = hash * 59 + this.ContentHtml.GetHashCode();
                 
                 if (this.ContentPlaintext != null)
                     hash = hash * 59 + this.ContentPlaintext.GetHashCode();
                 
-                if (this.ContentRichtext != null)
-                    hash = hash * 59 + this.ContentRichtext.GetHashCode();
+                if (this.Image != null)
+                    hash = hash * 59 + this.Image.GetHashCode();
                 
-                if (this.Thumbnail != null)
-                    hash = hash * 59 + this.Thumbnail.GetHashCode();
+                if (this.CreatedAt != null)
+                    hash = hash * 59 + this.CreatedAt.GetHashCode();
                 
-                if (this.User != null)
-                    hash = hash * 59 + this.User.GetHashCode();
+                if (this.UpdatedAt != null)
+                    hash = hash * 59 + this.UpdatedAt.GetHashCode();
                 
                 return hash;
             }

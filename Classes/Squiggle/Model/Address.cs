@@ -131,6 +131,20 @@ namespace Squiggle.Model
         public int? User { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets CreatedAt
+        /// </summary>
+        [DataMember(Name="created_at", EmitDefaultValue=false)]
+        public DateTime? CreatedAt { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets UpdatedAt
+        /// </summary>
+        [DataMember(Name="updated_at", EmitDefaultValue=false)]
+        public DateTime? UpdatedAt { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -155,6 +169,8 @@ namespace Squiggle.Model
             sb.Append("  Googleplus: ").Append(Googleplus).Append("\n");
             sb.Append("  Signatures: ").Append(Signatures).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+            sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -266,6 +282,16 @@ namespace Squiggle.Model
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
+                ) && 
+                (
+                    this.CreatedAt == other.CreatedAt ||
+                    this.CreatedAt != null &&
+                    this.CreatedAt.Equals(other.CreatedAt)
+                ) && 
+                (
+                    this.UpdatedAt == other.UpdatedAt ||
+                    this.UpdatedAt != null &&
+                    this.UpdatedAt.Equals(other.UpdatedAt)
                 );
         }
 
@@ -325,6 +351,12 @@ namespace Squiggle.Model
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
+                if (this.CreatedAt != null)
+                    hash = hash * 59 + this.CreatedAt.GetHashCode();
+                
+                if (this.UpdatedAt != null)
+                    hash = hash * 59 + this.UpdatedAt.GetHashCode();
                 
                 return hash;
             }

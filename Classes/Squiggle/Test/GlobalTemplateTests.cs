@@ -99,21 +99,30 @@ namespace Squiggle.Test
         }
         
         /// <summary>
-        /// Test the property 'ContentRichtext' 
-        /// </summary>
-        [Test]
-        public void ContentRichtextTest()
-        {
-            // TODO: unit test for the property 'ContentRichtext' 
-        }
-        
-        /// <summary>
         /// Test the property 'Settings' 
         /// </summary>
         [Test]
         public void SettingsTest()
         {
             // TODO: unit test for the property 'Settings' 
+        }
+        
+        /// <summary>
+        /// Test the property 'CreatedAt' 
+        /// </summary>
+        [Test]
+        public void CreatedAtTest()
+        {
+            // TODO: unit test for the property 'CreatedAt' 
+        }
+        
+        /// <summary>
+        /// Test the property 'UpdatedAt' 
+        /// </summary>
+        [Test]
+        public void UpdatedAtTest()
+        {
+            // TODO: unit test for the property 'UpdatedAt' 
         }
         
 

@@ -228,46 +228,6 @@ namespace Squiggle
         /// 
         /// </summary>
         /// <remarks>
-        /// Request JWT for Address
-        /// </remarks>
-        /// <param name="data"></param>
-        /// <returns>JSONWebTokenResponse</returns>
-        JSONWebTokenResponse RequestAddressToken (LoginDetails data);
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Request JWT for Address
-        /// </remarks>
-        /// <param name="data"></param>
-        /// <returns>ApiResponse of JSONWebTokenResponse</returns>
-        ApiResponse<JSONWebTokenResponse> RequestAddressTokenWithHttpInfo (LoginDetails data);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Request JWT for Address
-        /// </remarks>
-        /// <param name="data"></param>
-        /// <returns>Task of JSONWebTokenResponse</returns>
-        System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (LoginDetails data);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Request JWT for Address
-        /// </remarks>
-        /// <param name="data"></param>
-        /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> RequestAddressTokenAsyncWithHttpInfo (LoginDetails data);
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
         /// Gets files
         /// </remarks>
         /// <param name="offset">The start offset of the result set</param>
@@ -1095,6 +1055,86 @@ namespace Squiggle
         /// <param name="data"></param>
         /// <returns>Task of ApiResponse (TemplateResponseSingle)</returns>
         System.Threading.Tasks.Task<ApiResponse<TemplateResponseSingle>> EditTemplateAsyncWithHttpInfo (long? id, Template data);
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>JSONWebTokenResponse</returns>
+        JSONWebTokenResponse GetAddressToken (LoginDetails data);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>ApiResponse of JSONWebTokenResponse</returns>
+        ApiResponse<JSONWebTokenResponse> GetAddressTokenWithHttpInfo (LoginDetails data);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>Task of JSONWebTokenResponse</returns>
+        System.Threading.Tasks.Task<JSONWebTokenResponse> GetAddressTokenAsync (LoginDetails data);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for Address
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> GetAddressTokenAsyncWithHttpInfo (LoginDetails data);
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for User
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>JSONWebTokenResponse</returns>
+        JSONWebTokenResponse GetUserToken (LoginDetails data);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for User
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>ApiResponse of JSONWebTokenResponse</returns>
+        ApiResponse<JSONWebTokenResponse> GetUserTokenWithHttpInfo (LoginDetails data);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for User
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>Task of JSONWebTokenResponse</returns>
+        System.Threading.Tasks.Task<JSONWebTokenResponse> GetUserTokenAsync (LoginDetails data);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Request JWT for User
+        /// </remarks>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> GetUserTokenAsyncWithHttpInfo (LoginDetails data);
         
         /// <summary>
         /// 
@@ -2241,165 +2281,6 @@ namespace Squiggle
             return new ApiResponse<AddressResponseSingle>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AddressResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(AddressResponseSingle)));
-            
-        }
-        
-        /// <summary>
-        ///  Request JWT for Address
-        /// </summary>
-        /// <param name="data"></param> 
-        /// <returns>JSONWebTokenResponse</returns>
-        public JSONWebTokenResponse RequestAddressToken (LoginDetails data)
-        {
-             ApiResponse<JSONWebTokenResponse> response = RequestAddressTokenWithHttpInfo(data);
-             return response.Data;
-        }
-
-        /// <summary>
-        ///  Request JWT for Address
-        /// </summary>
-        /// <param name="data"></param> 
-        /// <returns>ApiResponse of JSONWebTokenResponse</returns>
-        public ApiResponse< JSONWebTokenResponse > RequestAddressTokenWithHttpInfo (LoginDetails data)
-        {
-            
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->RequestAddressToken");
-            
-    
-            var path_ = "/authentication/address";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            
-            
-            
-            if (data.GetType() != typeof(byte[]))
-            {
-                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                postBody = data; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
-                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RequestAddressToken: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RequestAddressToken: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<JSONWebTokenResponse>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (JSONWebTokenResponse) Configuration.ApiClient.Deserialize(response, typeof(JSONWebTokenResponse)));
-            
-        }
-    
-        /// <summary>
-        ///  Request JWT for Address
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns>Task of JSONWebTokenResponse</returns>
-        public async System.Threading.Tasks.Task<JSONWebTokenResponse> RequestAddressTokenAsync (LoginDetails data)
-        {
-             ApiResponse<JSONWebTokenResponse> response = await RequestAddressTokenAsyncWithHttpInfo(data);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        ///  Request JWT for Address
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> RequestAddressTokenAsyncWithHttpInfo (LoginDetails data)
-        {
-            // verify the required parameter 'data' is set
-            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling RequestAddressToken");
-            
-    
-            var path_ = "/authentication/address";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
-
-            // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
-                "application/json"
-            };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
-
-            // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
-                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
-                pathParams, httpContentType);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RequestAddressToken: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RequestAddressToken: " + response.ErrorMessage, response.ErrorMessage);
-
-            return new ApiResponse<JSONWebTokenResponse>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (JSONWebTokenResponse) Configuration.ApiClient.Deserialize(response, typeof(JSONWebTokenResponse)));
             
         }
         
@@ -5842,6 +5723,324 @@ namespace Squiggle
             return new ApiResponse<TemplateResponseSingle>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TemplateResponseSingle) Configuration.ApiClient.Deserialize(response, typeof(TemplateResponseSingle)));
+            
+        }
+        
+        /// <summary>
+        ///  Request JWT for Address
+        /// </summary>
+        /// <param name="data"></param> 
+        /// <returns>JSONWebTokenResponse</returns>
+        public JSONWebTokenResponse GetAddressToken (LoginDetails data)
+        {
+             ApiResponse<JSONWebTokenResponse> response = GetAddressTokenWithHttpInfo(data);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Request JWT for Address
+        /// </summary>
+        /// <param name="data"></param> 
+        /// <returns>ApiResponse of JSONWebTokenResponse</returns>
+        public ApiResponse< JSONWebTokenResponse > GetAddressTokenWithHttpInfo (LoginDetails data)
+        {
+            
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->GetAddressToken");
+            
+    
+            var path_ = "/token/address";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            if (data.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                postBody = data; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetAddressToken: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetAddressToken: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<JSONWebTokenResponse>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (JSONWebTokenResponse) Configuration.ApiClient.Deserialize(response, typeof(JSONWebTokenResponse)));
+            
+        }
+    
+        /// <summary>
+        ///  Request JWT for Address
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Task of JSONWebTokenResponse</returns>
+        public async System.Threading.Tasks.Task<JSONWebTokenResponse> GetAddressTokenAsync (LoginDetails data)
+        {
+             ApiResponse<JSONWebTokenResponse> response = await GetAddressTokenAsyncWithHttpInfo(data);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Request JWT for Address
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> GetAddressTokenAsyncWithHttpInfo (LoginDetails data)
+        {
+            // verify the required parameter 'data' is set
+            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling GetAddressToken");
+            
+    
+            var path_ = "/token/address";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetAddressToken: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetAddressToken: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<JSONWebTokenResponse>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (JSONWebTokenResponse) Configuration.ApiClient.Deserialize(response, typeof(JSONWebTokenResponse)));
+            
+        }
+        
+        /// <summary>
+        ///  Request JWT for User
+        /// </summary>
+        /// <param name="data"></param> 
+        /// <returns>JSONWebTokenResponse</returns>
+        public JSONWebTokenResponse GetUserToken (LoginDetails data)
+        {
+             ApiResponse<JSONWebTokenResponse> response = GetUserTokenWithHttpInfo(data);
+             return response.Data;
+        }
+
+        /// <summary>
+        ///  Request JWT for User
+        /// </summary>
+        /// <param name="data"></param> 
+        /// <returns>ApiResponse of JSONWebTokenResponse</returns>
+        public ApiResponse< JSONWebTokenResponse > GetUserTokenWithHttpInfo (LoginDetails data)
+        {
+            
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->GetUserToken");
+            
+    
+            var path_ = "/token/user";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            if (data.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                postBody = data; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetUserToken: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetUserToken: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<JSONWebTokenResponse>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (JSONWebTokenResponse) Configuration.ApiClient.Deserialize(response, typeof(JSONWebTokenResponse)));
+            
+        }
+    
+        /// <summary>
+        ///  Request JWT for User
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Task of JSONWebTokenResponse</returns>
+        public async System.Threading.Tasks.Task<JSONWebTokenResponse> GetUserTokenAsync (LoginDetails data)
+        {
+             ApiResponse<JSONWebTokenResponse> response = await GetUserTokenAsyncWithHttpInfo(data);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        ///  Request JWT for User
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Task of ApiResponse (JSONWebTokenResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<JSONWebTokenResponse>> GetUserTokenAsyncWithHttpInfo (LoginDetails data)
+        {
+            // verify the required parameter 'data' is set
+            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling GetUserToken");
+            
+    
+            var path_ = "/token/user";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetUserToken: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetUserToken: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<JSONWebTokenResponse>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (JSONWebTokenResponse) Configuration.ApiClient.Deserialize(response, typeof(JSONWebTokenResponse)));
             
         }
         

@@ -54,15 +54,6 @@ namespace Squiggle.Test
         }
         
         /// <summary>
-        /// Test the property 'Address' 
-        /// </summary>
-        [Test]
-        public void AddressTest()
-        {
-            // TODO: unit test for the property 'Address' 
-        }
-        
-        /// <summary>
         /// Test the property 'Template' 
         /// </summary>
         [Test]
@@ -78,15 +69,6 @@ namespace Squiggle.Test
         public void PlainTest()
         {
             // TODO: unit test for the property 'Plain' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Rich' 
-        /// </summary>
-        [Test]
-        public void RichTest()
-        {
-            // TODO: unit test for the property 'Rich' 
         }
         
         /// <summary>

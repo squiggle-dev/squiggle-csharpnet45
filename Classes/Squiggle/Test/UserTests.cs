@@ -216,12 +216,39 @@ namespace Squiggle.Test
         }
         
         /// <summary>
+        /// Test the property 'Logo' 
+        /// </summary>
+        [Test]
+        public void LogoTest()
+        {
+            // TODO: unit test for the property 'Logo' 
+        }
+        
+        /// <summary>
         /// Test the property 'Snippet' 
         /// </summary>
         [Test]
         public void SnippetTest()
         {
             // TODO: unit test for the property 'Snippet' 
+        }
+        
+        /// <summary>
+        /// Test the property 'CreatedAt' 
+        /// </summary>
+        [Test]
+        public void CreatedAtTest()
+        {
+            // TODO: unit test for the property 'CreatedAt' 
+        }
+        
+        /// <summary>
+        /// Test the property 'UpdatedAt' 
+        /// </summary>
+        [Test]
+        public void UpdatedAtTest()
+        {
+            // TODO: unit test for the property 'UpdatedAt' 
         }
         
 

@@ -51,7 +51,7 @@ namespace Squiggle.Model
         /// Gets or Sets Thumbnail
         /// </summary>
         [DataMember(Name="thumbnail", EmitDefaultValue=false)]
-        public string Thumbnail { get; set; }
+        public int? Thumbnail { get; set; }
   
         
         /// <summary>
@@ -69,17 +69,24 @@ namespace Squiggle.Model
   
         
         /// <summary>
-        /// Gets or Sets ContentRichtext
-        /// </summary>
-        [DataMember(Name="content_richtext", EmitDefaultValue=false)]
-        public string ContentRichtext { get; set; }
-  
-        
-        /// <summary>
         /// Gets or Sets Settings
         /// </summary>
         [DataMember(Name="settings", EmitDefaultValue=false)]
         public string Settings { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets CreatedAt
+        /// </summary>
+        [DataMember(Name="created_at", EmitDefaultValue=false)]
+        public DateTime? CreatedAt { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets UpdatedAt
+        /// </summary>
+        [DataMember(Name="updated_at", EmitDefaultValue=false)]
+        public DateTime? UpdatedAt { get; set; }
   
         
   
@@ -97,8 +104,9 @@ namespace Squiggle.Model
             sb.Append("  Thumbnail: ").Append(Thumbnail).Append("\n");
             sb.Append("  ContentHtml: ").Append(ContentHtml).Append("\n");
             sb.Append("  ContentPlaintext: ").Append(ContentPlaintext).Append("\n");
-            sb.Append("  ContentRichtext: ").Append(ContentRichtext).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
+            sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+            sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -167,14 +175,19 @@ namespace Squiggle.Model
                     this.ContentPlaintext.Equals(other.ContentPlaintext)
                 ) && 
                 (
-                    this.ContentRichtext == other.ContentRichtext ||
-                    this.ContentRichtext != null &&
-                    this.ContentRichtext.Equals(other.ContentRichtext)
-                ) && 
-                (
                     this.Settings == other.Settings ||
                     this.Settings != null &&
                     this.Settings.Equals(other.Settings)
+                ) && 
+                (
+                    this.CreatedAt == other.CreatedAt ||
+                    this.CreatedAt != null &&
+                    this.CreatedAt.Equals(other.CreatedAt)
+                ) && 
+                (
+                    this.UpdatedAt == other.UpdatedAt ||
+                    this.UpdatedAt != null &&
+                    this.UpdatedAt.Equals(other.UpdatedAt)
                 );
         }
 
@@ -208,11 +221,14 @@ namespace Squiggle.Model
                 if (this.ContentPlaintext != null)
                     hash = hash * 59 + this.ContentPlaintext.GetHashCode();
                 
-                if (this.ContentRichtext != null)
-                    hash = hash * 59 + this.ContentRichtext.GetHashCode();
-                
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
+                
+                if (this.CreatedAt != null)
+                    hash = hash * 59 + this.CreatedAt.GetHashCode();
+                
+                if (this.UpdatedAt != null)
+                    hash = hash * 59 + this.UpdatedAt.GetHashCode();
                 
                 return hash;
             }

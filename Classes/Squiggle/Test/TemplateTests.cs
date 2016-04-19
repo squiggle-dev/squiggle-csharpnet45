@@ -54,6 +54,24 @@ namespace Squiggle.Test
         }
         
         /// <summary>
+        /// Test the property 'User' 
+        /// </summary>
+        [Test]
+        public void UserTest()
+        {
+            // TODO: unit test for the property 'User' 
+        }
+        
+        /// <summary>
+        /// Test the property 'GlobalTemplate' 
+        /// </summary>
+        [Test]
+        public void GlobalTemplateTest()
+        {
+            // TODO: unit test for the property 'GlobalTemplate' 
+        }
+        
+        /// <summary>
         /// Test the property 'Name' 
         /// </summary>
         [Test]
@@ -69,15 +87,6 @@ namespace Squiggle.Test
         public void DescriptionTest()
         {
             // TODO: unit test for the property 'Description' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Thumbnail' 
-        /// </summary>
-        [Test]
-        public void ThumbnailTest()
-        {
-            // TODO: unit test for the property 'Thumbnail' 
         }
         
         /// <summary>
@@ -99,12 +108,12 @@ namespace Squiggle.Test
         }
         
         /// <summary>
-        /// Test the property 'ContentRichtext' 
+        /// Test the property 'Thumbnail' 
         /// </summary>
         [Test]
-        public void ContentRichtextTest()
+        public void ThumbnailTest()
         {
-            // TODO: unit test for the property 'ContentRichtext' 
+            // TODO: unit test for the property 'Thumbnail' 
         }
         
         /// <summary>
@@ -117,21 +126,21 @@ namespace Squiggle.Test
         }
         
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'CreatedAt' 
         /// </summary>
         [Test]
-        public void UserTest()
+        public void CreatedAtTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'CreatedAt' 
         }
         
         /// <summary>
-        /// Test the property '_Template' 
+        /// Test the property 'UpdatedAt' 
         /// </summary>
         [Test]
-        public void _TemplateTest()
+        public void UpdatedAtTest()
         {
-            // TODO: unit test for the property '_Template' 
+            // TODO: unit test for the property 'UpdatedAt' 
         }
         
 
