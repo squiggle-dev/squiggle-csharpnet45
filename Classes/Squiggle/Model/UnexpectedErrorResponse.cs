@@ -27,10 +27,24 @@ namespace Squiggle.Model
 
         
         /// <summary>
+        /// Gets or Sets Code
+        /// </summary>
+        [DataMember(Name="code", EmitDefaultValue=false)]
+        public int? Code { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Message
+        /// </summary>
+        [DataMember(Name="message", EmitDefaultValue=false)]
+        public string Message { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name="errors", EmitDefaultValue=false)]
-        public List<Error> Errors { get; set; }
+        public Dictionary<string, string> Errors { get; set; }
   
         
   
@@ -42,6 +56,8 @@ namespace Squiggle.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UnexpectedErrorResponse {\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             
             sb.Append("}\n");
@@ -81,6 +97,16 @@ namespace Squiggle.Model
 
             return 
                 (
+                    this.Code == other.Code ||
+                    this.Code != null &&
+                    this.Code.Equals(other.Code)
+                ) && 
+                (
+                    this.Message == other.Message ||
+                    this.Message != null &&
+                    this.Message.Equals(other.Message)
+                ) && 
+                (
                     this.Errors == other.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(other.Errors)
@@ -98,6 +124,12 @@ namespace Squiggle.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Code != null)
+                    hash = hash * 59 + this.Code.GetHashCode();
+                
+                if (this.Message != null)
+                    hash = hash * 59 + this.Message.GetHashCode();
                 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();

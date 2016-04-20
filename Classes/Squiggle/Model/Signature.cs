@@ -54,6 +54,13 @@ namespace Squiggle.Model
         public string Html { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets Errors
+        /// </summary>
+        [DataMember(Name="errors", EmitDefaultValue=false)]
+        public Dictionary<string, string> Errors { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,6 +74,7 @@ namespace Squiggle.Model
             sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  Plain: ").Append(Plain).Append("\n");
             sb.Append("  Html: ").Append(Html).Append("\n");
+            sb.Append("  Errors: ").Append(Errors).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -123,6 +131,11 @@ namespace Squiggle.Model
                     this.Html == other.Html ||
                     this.Html != null &&
                     this.Html.Equals(other.Html)
+                ) && 
+                (
+                    this.Errors == other.Errors ||
+                    this.Errors != null &&
+                    this.Errors.SequenceEqual(other.Errors)
                 );
         }
 
@@ -149,6 +162,9 @@ namespace Squiggle.Model
                 
                 if (this.Html != null)
                     hash = hash * 59 + this.Html.GetHashCode();
+                
+                if (this.Errors != null)
+                    hash = hash * 59 + this.Errors.GetHashCode();
                 
                 return hash;
             }

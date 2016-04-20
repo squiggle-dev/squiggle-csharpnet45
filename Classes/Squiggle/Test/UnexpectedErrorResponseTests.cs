@@ -45,6 +45,24 @@ namespace Squiggle.Test
 
         
         /// <summary>
+        /// Test the property 'Code' 
+        /// </summary>
+        [Test]
+        public void CodeTest()
+        {
+            // TODO: unit test for the property 'Code' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Message' 
+        /// </summary>
+        [Test]
+        public void MessageTest()
+        {
+            // TODO: unit test for the property 'Message' 
+        }
+        
+        /// <summary>
         /// Test the property 'Errors' 
         /// </summary>
         [Test]

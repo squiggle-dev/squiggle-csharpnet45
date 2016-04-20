@@ -80,6 +80,15 @@ namespace Squiggle.Test
             // TODO: unit test for the property 'Html' 
         }
         
+        /// <summary>
+        /// Test the property 'Errors' 
+        /// </summary>
+        [Test]
+        public void ErrorsTest()
+        {
+            // TODO: unit test for the property 'Errors' 
+        }
+        
 
     }
 
