@@ -34,6 +34,13 @@ namespace Squiggle.Model
   
         
         /// <summary>
+        /// Gets or Sets Label
+        /// </summary>
+        [DataMember(Name="label", EmitDefaultValue=false)]
+        public string Label { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Template
         /// </summary>
         [DataMember(Name="template", EmitDefaultValue=false)]
@@ -71,6 +78,7 @@ namespace Squiggle.Model
             var sb = new StringBuilder();
             sb.Append("class Signature {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  Plain: ").Append(Plain).Append("\n");
             sb.Append("  Html: ").Append(Html).Append("\n");
@@ -118,6 +126,11 @@ namespace Squiggle.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
+                    this.Label == other.Label ||
+                    this.Label != null &&
+                    this.Label.Equals(other.Label)
+                ) && 
+                (
                     this.Template == other.Template ||
                     this.Template != null &&
                     this.Template.Equals(other.Template)
@@ -153,6 +166,9 @@ namespace Squiggle.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Label != null)
+                    hash = hash * 59 + this.Label.GetHashCode();
                 
                 if (this.Template != null)
                     hash = hash * 59 + this.Template.GetHashCode();
