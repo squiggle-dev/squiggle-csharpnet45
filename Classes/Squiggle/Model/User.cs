@@ -174,6 +174,20 @@ namespace Squiggle.Model
   
         
         /// <summary>
+        /// Gets or Sets SecretKey
+        /// </summary>
+        [DataMember(Name="secret_key", EmitDefaultValue=false)]
+        public string SecretKey { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets AccessToken
+        /// </summary>
+        [DataMember(Name="access_token", EmitDefaultValue=false)]
+        public string AccessToken { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
@@ -217,6 +231,8 @@ namespace Squiggle.Model
             sb.Append("  Googleplus: ").Append(Googleplus).Append("\n");
             sb.Append("  Logo: ").Append(Logo).Append("\n");
             sb.Append("  Snippet: ").Append(Snippet).Append("\n");
+            sb.Append("  SecretKey: ").Append(SecretKey).Append("\n");
+            sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             
@@ -362,6 +378,16 @@ namespace Squiggle.Model
                     this.Snippet.Equals(other.Snippet)
                 ) && 
                 (
+                    this.SecretKey == other.SecretKey ||
+                    this.SecretKey != null &&
+                    this.SecretKey.Equals(other.SecretKey)
+                ) && 
+                (
+                    this.AccessToken == other.AccessToken ||
+                    this.AccessToken != null &&
+                    this.AccessToken.Equals(other.AccessToken)
+                ) && 
+                (
                     this.CreatedAt == other.CreatedAt ||
                     this.CreatedAt != null &&
                     this.CreatedAt.Equals(other.CreatedAt)
@@ -447,6 +473,12 @@ namespace Squiggle.Model
                 
                 if (this.Snippet != null)
                     hash = hash * 59 + this.Snippet.GetHashCode();
+                
+                if (this.SecretKey != null)
+                    hash = hash * 59 + this.SecretKey.GetHashCode();
+                
+                if (this.AccessToken != null)
+                    hash = hash * 59 + this.AccessToken.GetHashCode();
                 
                 if (this.CreatedAt != null)
                     hash = hash * 59 + this.CreatedAt.GetHashCode();

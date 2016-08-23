@@ -234,6 +234,24 @@ namespace Squiggle.Test
         }
         
         /// <summary>
+        /// Test the property 'SecretKey' 
+        /// </summary>
+        [Test]
+        public void SecretKeyTest()
+        {
+            // TODO: unit test for the property 'SecretKey' 
+        }
+        
+        /// <summary>
+        /// Test the property 'AccessToken' 
+        /// </summary>
+        [Test]
+        public void AccessTokenTest()
+        {
+            // TODO: unit test for the property 'AccessToken' 
+        }
+        
+        /// <summary>
         /// Test the property 'CreatedAt' 
         /// </summary>
         [Test]
