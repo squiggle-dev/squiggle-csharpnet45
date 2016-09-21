@@ -135,8 +135,9 @@ namespace Squiggle.Test
         {
             // TODO: add unit test for the method 'AddFile'
             Stream file = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
             
-            var response = instance.AddFile(file);
+            var response = instance.AddFile(file, name);
             Assert.IsInstanceOf<FileResponseSingle> (response, "response is FileResponseSingle"); 
         }
         
@@ -174,9 +175,10 @@ namespace Squiggle.Test
         {
             // TODO: add unit test for the method 'EditFile'
             long? id = null; // TODO: replace null with proper value
-            FileObject data = null; // TODO: replace null with proper value
+            Stream file = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
             
-            var response = instance.EditFile(id, data);
+            var response = instance.EditFile(id, file, name);
             Assert.IsInstanceOf<FileResponseSingle> (response, "response is FileResponseSingle"); 
         }
         

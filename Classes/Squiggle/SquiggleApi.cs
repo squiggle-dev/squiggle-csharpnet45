@@ -275,8 +275,9 @@ namespace Squiggle
         /// Upload a new file
         /// </remarks>
         /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>FileResponseSingle</returns>
-        FileResponseSingle AddFile (Stream file);
+        FileResponseSingle AddFile (Stream file, string name = null);
   
         /// <summary>
         /// 
@@ -285,8 +286,9 @@ namespace Squiggle
         /// Upload a new file
         /// </remarks>
         /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>ApiResponse of FileResponseSingle</returns>
-        ApiResponse<FileResponseSingle> AddFileWithHttpInfo (Stream file);
+        ApiResponse<FileResponseSingle> AddFileWithHttpInfo (Stream file, string name = null);
 
         /// <summary>
         /// 
@@ -295,8 +297,9 @@ namespace Squiggle
         /// Upload a new file
         /// </remarks>
         /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>Task of FileResponseSingle</returns>
-        System.Threading.Tasks.Task<FileResponseSingle> AddFileAsync (Stream file);
+        System.Threading.Tasks.Task<FileResponseSingle> AddFileAsync (Stream file, string name = null);
 
         /// <summary>
         /// 
@@ -305,8 +308,9 @@ namespace Squiggle
         /// Upload a new file
         /// </remarks>
         /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> AddFileAsyncWithHttpInfo (Stream file);
+        System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> AddFileAsyncWithHttpInfo (Stream file, string name = null);
         
         /// <summary>
         /// 
@@ -395,9 +399,10 @@ namespace Squiggle
         /// Updates an existing file with the specified ID
         /// </remarks>
         /// <param name="id">ID of file to update</param>
-        /// <param name="data"></param>
+        /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>FileResponseSingle</returns>
-        FileResponseSingle EditFile (long? id, FileObject data);
+        FileResponseSingle EditFile (long? id, Stream file = null, string name = null);
   
         /// <summary>
         /// 
@@ -406,9 +411,10 @@ namespace Squiggle
         /// Updates an existing file with the specified ID
         /// </remarks>
         /// <param name="id">ID of file to update</param>
-        /// <param name="data"></param>
+        /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>ApiResponse of FileResponseSingle</returns>
-        ApiResponse<FileResponseSingle> EditFileWithHttpInfo (long? id, FileObject data);
+        ApiResponse<FileResponseSingle> EditFileWithHttpInfo (long? id, Stream file = null, string name = null);
 
         /// <summary>
         /// 
@@ -417,9 +423,10 @@ namespace Squiggle
         /// Updates an existing file with the specified ID
         /// </remarks>
         /// <param name="id">ID of file to update</param>
-        /// <param name="data"></param>
+        /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>Task of FileResponseSingle</returns>
-        System.Threading.Tasks.Task<FileResponseSingle> EditFileAsync (long? id, FileObject data);
+        System.Threading.Tasks.Task<FileResponseSingle> EditFileAsync (long? id, Stream file = null, string name = null);
 
         /// <summary>
         /// 
@@ -428,9 +435,10 @@ namespace Squiggle
         /// Updates an existing file with the specified ID
         /// </remarks>
         /// <param name="id">ID of file to update</param>
-        /// <param name="data"></param>
+        /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> EditFileAsyncWithHttpInfo (long? id, FileObject data);
+        System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> EditFileAsyncWithHttpInfo (long? id, Stream file = null, string name = null);
         
         /// <summary>
         /// 
@@ -2456,10 +2464,11 @@ namespace Squiggle
         ///  Upload a new file
         /// </summary>
         /// <param name="file"></param> 
+        /// <param name="name"></param> 
         /// <returns>FileResponseSingle</returns>
-        public FileResponseSingle AddFile (Stream file)
+        public FileResponseSingle AddFile (Stream file, string name = null)
         {
-             ApiResponse<FileResponseSingle> response = AddFileWithHttpInfo(file);
+             ApiResponse<FileResponseSingle> response = AddFileWithHttpInfo(file, name);
              return response.Data;
         }
 
@@ -2467,8 +2476,9 @@ namespace Squiggle
         ///  Upload a new file
         /// </summary>
         /// <param name="file"></param> 
+        /// <param name="name"></param> 
         /// <returns>ApiResponse of FileResponseSingle</returns>
-        public ApiResponse< FileResponseSingle > AddFileWithHttpInfo (Stream file)
+        public ApiResponse< FileResponseSingle > AddFileWithHttpInfo (Stream file, string name = null)
         {
             
             // verify the required parameter 'file' is set
@@ -2506,6 +2516,7 @@ namespace Squiggle
             
             
             if (file != null) fileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
+            if (name != null) formParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // form parameter
             
             
 
@@ -2540,10 +2551,11 @@ namespace Squiggle
         ///  Upload a new file
         /// </summary>
         /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>Task of FileResponseSingle</returns>
-        public async System.Threading.Tasks.Task<FileResponseSingle> AddFileAsync (Stream file)
+        public async System.Threading.Tasks.Task<FileResponseSingle> AddFileAsync (Stream file, string name = null)
         {
-             ApiResponse<FileResponseSingle> response = await AddFileAsyncWithHttpInfo(file);
+             ApiResponse<FileResponseSingle> response = await AddFileAsyncWithHttpInfo(file, name);
              return response.Data;
 
         }
@@ -2552,8 +2564,9 @@ namespace Squiggle
         ///  Upload a new file
         /// </summary>
         /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> AddFileAsyncWithHttpInfo (Stream file)
+        public async System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> AddFileAsyncWithHttpInfo (Stream file, string name = null)
         {
             // verify the required parameter 'file' is set
             if (file == null) throw new ApiException(400, "Missing required parameter 'file' when calling AddFile");
@@ -2589,6 +2602,7 @@ namespace Squiggle
             
             
             if (file != null) fileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
+            if (name != null) formParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // form parameter
             
             
 
@@ -2958,11 +2972,12 @@ namespace Squiggle
         ///  Updates an existing file with the specified ID
         /// </summary>
         /// <param name="id">ID of file to update</param> 
-        /// <param name="data"></param> 
+        /// <param name="file"></param> 
+        /// <param name="name"></param> 
         /// <returns>FileResponseSingle</returns>
-        public FileResponseSingle EditFile (long? id, FileObject data)
+        public FileResponseSingle EditFile (long? id, Stream file = null, string name = null)
         {
-             ApiResponse<FileResponseSingle> response = EditFileWithHttpInfo(id, data);
+             ApiResponse<FileResponseSingle> response = EditFileWithHttpInfo(id, file, name);
              return response.Data;
         }
 
@@ -2970,18 +2985,15 @@ namespace Squiggle
         ///  Updates an existing file with the specified ID
         /// </summary>
         /// <param name="id">ID of file to update</param> 
-        /// <param name="data"></param> 
+        /// <param name="file"></param> 
+        /// <param name="name"></param> 
         /// <returns>ApiResponse of FileResponseSingle</returns>
-        public ApiResponse< FileResponseSingle > EditFileWithHttpInfo (long? id, FileObject data)
+        public ApiResponse< FileResponseSingle > EditFileWithHttpInfo (long? id, Stream file = null, string name = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling SquiggleApi->EditFile");
-            
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling SquiggleApi->EditFile");
             
     
             var path_ = "/files/{id}";
@@ -3014,15 +3026,10 @@ namespace Squiggle
             
             
             
+            if (file != null) fileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
+            if (name != null) formParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // form parameter
             
-            if (data.GetType() != typeof(byte[]))
-            {
-                postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                postBody = data; // byte array
-            }
+            
 
             // authentication (jwt) required
             
@@ -3055,11 +3062,12 @@ namespace Squiggle
         ///  Updates an existing file with the specified ID
         /// </summary>
         /// <param name="id">ID of file to update</param>
-        /// <param name="data"></param>
+        /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>Task of FileResponseSingle</returns>
-        public async System.Threading.Tasks.Task<FileResponseSingle> EditFileAsync (long? id, FileObject data)
+        public async System.Threading.Tasks.Task<FileResponseSingle> EditFileAsync (long? id, Stream file = null, string name = null)
         {
-             ApiResponse<FileResponseSingle> response = await EditFileAsyncWithHttpInfo(id, data);
+             ApiResponse<FileResponseSingle> response = await EditFileAsyncWithHttpInfo(id, file, name);
              return response.Data;
 
         }
@@ -3068,14 +3076,13 @@ namespace Squiggle
         ///  Updates an existing file with the specified ID
         /// </summary>
         /// <param name="id">ID of file to update</param>
-        /// <param name="data"></param>
+        /// <param name="file"></param>
+        /// <param name="name"></param>
         /// <returns>Task of ApiResponse (FileResponseSingle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> EditFileAsyncWithHttpInfo (long? id, FileObject data)
+        public async System.Threading.Tasks.Task<ApiResponse<FileResponseSingle>> EditFileAsyncWithHttpInfo (long? id, Stream file = null, string name = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EditFile");
-            // verify the required parameter 'data' is set
-            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling EditFile");
             
     
             var path_ = "/files/{id}";
@@ -3108,8 +3115,9 @@ namespace Squiggle
             
             
             
+            if (file != null) fileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
+            if (name != null) formParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // form parameter
             
-            postBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
             
 
             
