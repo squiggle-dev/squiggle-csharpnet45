@@ -22,7 +22,5 @@
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
 
-SquiggleApi.sln
-Squiggle.sln
 src/Squiggle/packages.config
 src/Squiggle.Test/packages.config

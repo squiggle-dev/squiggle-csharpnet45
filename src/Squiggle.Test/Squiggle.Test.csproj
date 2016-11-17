@@ -74,7 +74,7 @@ OpenAPI spec version: 0.0.1
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Squiggle\Squiggle.csproj">
-          <Project>{79D1B998-03F7-4E30-BBF0-98C781C0BA5A}</Project>
+          <Project>{16B38327-3A26-408B-802B-DDA69B57E433}</Project>
           <Name>Squiggle</Name>
       </ProjectReference>
   </ItemGroup>
